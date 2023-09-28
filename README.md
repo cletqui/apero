@@ -1,14 +1,14 @@
-# 🍹 Apero 🍷
+# 🍹 Apéro 🍷
 
-You don't know when it's time for apero? 🥂 It's always apero time! (at least somewhere in the world) 🍻
+You don't know when it's time for apéro? 🥂 It's always apéro time! (at least somewhere in the world) 🍻
 
 ## Description
 
-Apero provides everything you need to know about some place in the world where it's time for a drink. You can discover specialities (drinks, snacks...), customs and even how to cheer in various countries.
+Apéro provides everything you need to know about some place in the world where it's time for a drink. You can discover specialities (drinks, snacks...), customs and even how to cheer in various countries.
 
 ## Table of Contents
 
-- [🍹 Apero 🍷](#-apero-)
+- [🍹 Apéro 🍷](#-apéro-)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
@@ -49,7 +49,7 @@ cd apero
 
 - [ ] Complete `apero.json` with every countries.
 - [ ] Add non-alcoholic drinks (juices, mocktails).
-- [ ] Improve the timezone field and detect Apero time efficiently.
+- [ ] Improve the timezone field and detect apéro time efficiently.
 - [ ] Add more fields to `apero.json`.
 - [ ] Build a GUI to provide the information easily and in a funny user-friendly way (webpage?).
 
