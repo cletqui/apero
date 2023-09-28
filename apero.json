@@ -92,7 +92,7 @@
       "aperitifMusic": "Traditional British folk music",
       "famousAperitifBrands": ["Gordon's Gin", "Tanqueray", "Pimm's"],
       "aperitifEtiquette": "Order drinks at the bar and wait to be served.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -117,12 +117,7 @@
     {
       "name": "Spain",
       "aperitifTime": "Around 7 PM",
-      "specialDrinks": [
-        "Sangria",
-        "Tinto de Verano",
-        "Cava",
-        "Vermouth"
-      ],
+      "specialDrinks": ["Sangria", "Tinto de Verano", "Cava", "Vermouth"],
       "aperitifSnacks": ["Tapas", "Olives", "Jamon Iberico"],
       "aperitifRituals": "Sharing small plates and socializing with friends.",
       "aperitifVenues": "Tapas bars and terraces",
@@ -130,7 +125,7 @@
       "aperitifMusic": "Flamenco and Spanish guitar",
       "famousAperitifBrands": ["Martini", "Lustau", "Yzaguirre"],
       "aperitifEtiquette": "Sharing is common, and it's polite to order something for the group.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -155,12 +150,7 @@
     {
       "name": "Greece",
       "aperitifTime": "Around 8 PM",
-      "specialDrinks": [
-        "Ouzo",
-        "Retsina",
-        "Tsipouro",
-        "Metaxa"
-      ],
+      "specialDrinks": ["Ouzo", "Retsina", "Tsipouro", "Metaxa"],
       "aperitifSnacks": ["Olives", "Feta cheese", "Tzatziki"],
       "aperitifRituals": "Enjoying meze (small dishes) with drinks and lively conversations.",
       "aperitifVenues": "Tavernas and ouzerias",
@@ -168,7 +158,7 @@
       "aperitifMusic": "Traditional Greek music",
       "famousAperitifBrands": ["Ouzo Plomari", "Retsina Kourtaki", "Metaxa"],
       "aperitifEtiquette": "Offer a 'yamas' (cheers) before taking a sip.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -193,12 +183,7 @@
     {
       "name": "Mexico",
       "aperitifTime": "Around 6 PM",
-      "specialDrinks": [
-        "Margarita",
-        "Paloma",
-        "Michelada",
-        "Tequila Sunrise"
-      ],
+      "specialDrinks": ["Margarita", "Paloma", "Michelada", "Tequila Sunrise"],
       "aperitifSnacks": ["Guacamole", "Salsa", "Tacos"],
       "aperitifRituals": "Enjoying drinks and snacks with lively conversation.",
       "aperitifVenues": "Cantinas and outdoor terraces",
@@ -206,7 +191,7 @@
       "aperitifMusic": "Mariachi music",
       "famousAperitifBrands": ["Patrón", "Sauza", "Jose Cuervo"],
       "aperitifEtiquette": "It's common to say 'Salud' (health) when toasting.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -231,12 +216,7 @@
     {
       "name": "Russia",
       "aperitifTime": "Around 5 PM",
-      "specialDrinks": [
-        "Vodka",
-        "Kvass",
-        "Mors",
-        "Russian Sparkling Wine"
-      ],
+      "specialDrinks": ["Vodka", "Kvass", "Mors", "Russian Sparkling Wine"],
       "aperitifSnacks": ["Pickled cucumbers", "Herring", "Piroshki"],
       "aperitifRituals": "Enjoying drinks and zakuski (appetizers) before a meal.",
       "aperitifVenues": "Bars, restaurants, and homes",
@@ -244,7 +224,7 @@
       "aperitifMusic": "Russian folk music",
       "famousAperitifBrands": ["Stolichnaya", "Russian Standard", "Beluga"],
       "aperitifEtiquette": "Toasting is common, and it's customary to make eye contact during toasts.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -282,7 +262,7 @@
       "aperitifMusic": "Folk music and contemporary pop",
       "famousAperitifBrands": ["Nemiroff", "Khlibny Dar", "Lvivske"],
       "aperitifEtiquette": "It's common to offer a toast before taking a sip.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -320,7 +300,7 @@
       "aperitifMusic": "Background Japanese music or J-pop",
       "famousAperitifBrands": ["Gekkeikan", "Choya", "Suntory"],
       "aperitifEtiquette": "It's polite to pour drinks for others and use both hands when receiving a drink.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -358,7 +338,7 @@
       "aperitifMusic": "Traditional Chinese music or contemporary pop",
       "famousAperitifBrands": ["Maotai", "Wuliangye", "Tsingtao"],
       "aperitifEtiquette": "Toasting and clinking glasses is a common gesture of goodwill.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -383,20 +363,20 @@
     {
       "name": "South Korea",
       "aperitifTime": "Around 5 PM",
-      "specialDrinks": [
-        "Soju",
-        "Makgeolli",
-        "Hwachae",
-        "Sikhye"
+      "specialDrinks": ["Soju", "Makgeolli", "Hwachae", "Sikhye"],
+      "aperitifSnacks": [
+        "Pajeon (Green Onion Pancake)",
+        "Tteokbokki (Spicy Rice Cakes)",
+        "Kimbap",
+        "Dried Squid"
       ],
-      "aperitifSnacks": ["Pajeon (Green Onion Pancake)", "Tteokbokki (Spicy Rice Cakes)", "Kimbap", "Dried Squid"],
       "aperitifRituals": "Enjoying drinks and snacks with colleagues and friends after work.",
       "aperitifVenues": "Izakayas and Korean-style pubs (hofs)",
       "recommendedAperitifGlass": "Soju shot glass",
       "aperitifMusic": "K-Pop and popular Korean hits",
       "famousAperitifBrands": ["Chamisul", "Chum-Churum", "Jinro"],
       "aperitifEtiquette": "Pour drinks for others as a sign of respect, and use both hands when receiving a drink.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -421,20 +401,19 @@
     {
       "name": "India",
       "aperitifTime": "Around 7 PM",
-      "specialDrinks": [
-        "Masala Chai",
-        "Lassi",
-        "Kingfisher Beer",
-        "Bhang"
-      ],
+      "specialDrinks": ["Masala Chai", "Lassi", "Kingfisher Beer", "Bhang"],
       "aperitifSnacks": ["Samosa", "Pakora", "Chaat"],
       "aperitifRituals": "Enjoying tea or drinks with snacks while socializing with family and friends.",
       "aperitifVenues": "Tea stalls, street vendors, and homes",
       "recommendedAperitifGlass": "Tea cup or glass",
       "aperitifMusic": "Traditional Indian music or Bollywood songs",
-      "famousAperitifBrands": ["Kingfisher", "Royal Challenge Whisky", "Old Monk Rum"],
+      "famousAperitifBrands": [
+        "Kingfisher",
+        "Royal Challenge Whisky",
+        "Old Monk Rum"
+      ],
       "aperitifEtiquette": "Sharing food and drinks is common to foster camaraderie.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -459,12 +438,7 @@
     {
       "name": "Canada",
       "aperitifTime": "Around 5 PM",
-      "specialDrinks": [
-        "Caesar",
-        "Ice Wine",
-        "Canadian Whisky",
-        "Craft Beer"
-      ],
+      "specialDrinks": ["Caesar", "Ice Wine", "Canadian Whisky", "Craft Beer"],
       "aperitifSnacks": ["Poutine", "Nanaimo Bars", "Bannock"],
       "aperitifRituals": "Enjoying drinks and snacks with friends and family.",
       "aperitifVenues": "Pubs, breweries, and patios",
@@ -472,7 +446,7 @@
       "aperitifMusic": "A mix of genres including rock, pop, and folk",
       "famousAperitifBrands": ["Crown Royal", "Molson", "Sleeman"],
       "aperitifEtiquette": "Casual and friendly atmosphere.",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -508,9 +482,13 @@
       "aperitifVenues": "Bars, pubs, and outdoor plazas",
       "recommendedAperitifGlass": "Old Fashioned glass",
       "aperitifMusic": "Vallenato, Cumbia, Salsa",
-      "famousAperitifBrands": ["Aguardiente Antioqueño", "Ron Medellín", "Club Colombia"],
+      "famousAperitifBrands": [
+        "Aguardiente Antioqueño",
+        "Ron Medellín",
+        "Club Colombia"
+      ],
       "aperitifEtiquette": "It's common to offer a toast with 'Salud!' (health).",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
@@ -546,9 +524,13 @@
       "aperitifVenues": "Botecos, beach kiosks, and restaurants",
       "recommendedAperitifGlass": "Tumbler glass for Caipirinha",
       "aperitifMusic": "Samba and Bossa Nova",
-      "famousAperitifBrands": ["Cachaça 51", "Leblon Cachaça", "Velho Barreiro"],
+      "famousAperitifBrands": [
+        "Cachaça 51",
+        "Leblon Cachaça",
+        "Velho Barreiro"
+      ],
       "aperitifEtiquette": "It's common to offer a toast with 'Saúde!' (Health!).",
-      "commonToast":  ["N/A"],
+      "commonToast": ["N/A"],
       "toastGesture": "N/A",
       "majorCities": [
         {
