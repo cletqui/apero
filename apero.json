@@ -526,11 +526,7 @@
       "aperoVenues": "Botecos, beach kiosks, and restaurants",
       "recommendedaperoGlass": "Tumbler glass for Caipirinha",
       "aperoMusic": "Samba and Bossa Nova",
-      "famousAperoBrands": [
-        "Cachaça 51",
-        "Leblon Cachaça",
-        "Velho Barreiro"
-      ],
+      "famousAperoBrands": ["Cachaça 51", "Leblon Cachaça", "Velho Barreiro"],
       "aperoEtiquette": "It's common to offer a toast with 'Saúde!' (Health!).",
       "commonToast": ["N/A"],
       "toastGesture": "N/A",

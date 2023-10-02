@@ -3,21 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>">
+    <title>Apéro Clock</title>
     <script src="script.js"></script>
-    <title>Date and Time</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="light-mode.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="dark-mode.css" media="(prefers-color-scheme: dark)">
   </head>
   <body>
     <div class="container">
-      <h1>Date and Time</h1>
+      <h1 id="clock"></h1>
       <div id="date-and-time">
-          <p id="date-time"></p>
-          <p id="timezone"></p>
-          <p id="location"></p>
+        <p id="date-time"></p>
+        <p id="timezone"></p>
       </div>
-      <div id="apero-status">
-          <p id="apero-message"></p>
+      <button id="apero-button">🍺</button>
+      <div id="apero">
+        <p id="apero-status"></p>
+        <p id="apero-info"></p>
       </div>
-  </div>
-  </body>
+    </div>
 </html>

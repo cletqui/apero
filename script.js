@@ -1,67 +1,109 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // TODO: improve UI, allow to browse timezones to find apero places, refactor code, add more entries in JSON
+  const clockElement = document.getElementById("clock");
   const dateTimeElement = document.getElementById("date-time");
   const timezoneElement = document.getElementById("timezone");
-  const locationElement = document.getElementById("location");
-  const aperoMessageElement = document.getElementById("apero-message");
+  const aperoButton = document.getElementById("apero-button");
+  const aperoStatusElement = document.getElementById("apero-status");
+  const aperoInfoElement = document.getElementById("apero-info");
 
-  const options = {
+  const timeOptions = {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  };
+  const dateTimeOptions = {
     weekday: "long",
     year: "numeric",
     month: "long",
     day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    timeZoneName: "short",
   };
 
-  const updateDateTime = () => {
+  const getTimezoneTime = (now, timezone) => {
+    const timeZoneOptions = {
+      timeZone: timezone,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "short",
+      hour12: false,
+    };
+    return now.toLocaleDateString(undefined, timeZoneOptions);
+  };
+
+  let isAperoVisible = false;
+
+  aperoButton.addEventListener("click", () => {
+    isAperoVisible = !isAperoVisible;
+    aperoStatusElement.style.display = isAperoVisible ? "block" : "none";
+    const locations = findAperitifLocation();
+    if (locations) {
+      aperitifResult.textContent = `It's aperitif time in ${locations}!`;
+    } else {
+      aperitifResult.textContent = "It's not aperitif time anywhere right now.";
+    }
+  });
+
+  const updateClock = () => {
     const now = new Date();
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const userLocation = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-    dateTimeElement.textContent = now.toLocaleDateString(undefined, options);
-    timezoneElement.textContent = "Timezone: " + userTimezone;
-    locationElement.textContent = "Location: " + userLocation;
+    clockElement.textContent = now.toLocaleTimeString(undefined, timeOptions);
+    dateTimeElement.textContent = now.toLocaleDateString(
+      undefined,
+      dateTimeOptions
+    );
+    timezoneElement.textContent = `(${userTimezone})`;
 
-    // Fetch and process apero.json
-    fetch("apero.json")
+    fetch("timezone.json")
       .then((response) => response.json())
       .then((data) => {
-        const countryInfo = data.countries.find((country) =>
-          country.timezone.includes(userTimezone)
-        );
-        if (countryInfo) {
-          // Split the time into hours and minutes
-          const [hours, minutes] = countryInfo.aperoTime.split(":").map(Number);
+        try {
+          const [continent, city] = userTimezone.split("/");
 
-          // Create a Date object representing today's date with the aperitif time
-          const aperoTime = new Date();
-          console.log(aperoTime);
-          aperoTime.setHours(hours);
-          console.log(aperoTime);
-          aperoTime.setMinutes(minutes);
-          aperoTime.setSeconds(0);
-          
-          if (now < aperoTime) {
-            aperoMessageElement.textContent = "Apero is coming!";
-          } else if (now > aperoTime) {
-            aperoMessageElement.textContent = "Apero has just happened!";
+          if (
+            data.hasOwnProperty(continent) &&
+            data[continent].hasOwnProperty(city)
+          ) {
+            const timezoneInfo = data[continent][city];
+            const countryInfo = timezoneInfo["countryInfo"];
+            const aperoInfo = timezoneInfo["aperoInfo"];
+
+            if (aperoInfo && aperoInfo.time) {
+              const aperoTime = aperoInfo.time;
+              const [aperoHours, aperoMinutes] = aperoTime
+                .split(":")
+                .map(Number);
+              const nowHours = now.getHours();
+
+              if (nowHours < aperoHours - 1) {
+                aperoStatusElement.textContent = `😌 It's not yet time for apéro, you need to be patient until ${aperoTime}! ⏳`;
+              } else if (nowHours === aperoHours - 1) {
+                aperoStatusElement.textContent = `😬 Apéro is coming soon, it will be time at ${aperoTime}! ⌛`;
+              } else if (nowHours === aperoHours) {
+                aperoStatusElement.textContent = `🥳 It's time for apéro! 🍻`;
+              } else {
+                aperoStatusElement.textContent = `🙁 Apéro has already happened at ${aperoTime}, wait until tomorrow at the same time! ⌚`;
+              }
+            } else {
+              aperoStatusElement.textContent =
+                "Apéro information (time) not available for your location. 🌍";
+            }
           } else {
-            aperoMessageElement.textContent = "It's Apero time!";
+            console.log(`Timezone information not found for: ${userTimezone}.`);
           }
-        } else {
-          aperoMessageElement.textContent =
-            "Apero information not available for your location.";
+        } catch (error) {
+          console.error(`Error: ${error}`);
+          console.log(`Invalid user timezone: ${userTimezone}`);
         }
       })
       .catch((error) => {
-        console.error("Error fetching apero.json:", error);
-        aperoMessageElement.textContent =
-          "Apero information not available at the moment.";
+        console.error(`Error fetching timezone.json: ${error}`);
+        aperoStatusElement.textContent = `Apéro information not available at the moment. ❓`;
       });
   };
 
-  setInterval(updateDateTime, 1000);
-  updateDateTime();
+  setInterval(updateClock, 1000);
+  updateClock();
 });
