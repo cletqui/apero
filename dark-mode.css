@@ -1,29 +1,64 @@
-body {
-  background-color: #1a1a1a;
-  color: #f4f4f4;
+/* https://github.com/bypedroneres/Minimalistic-Clock/ */
+
+header {
   font-family: "Roboto Mono", monospace;
-  margin: 0;
-  padding: 0;
+  text-align: right;
+  background-color: #0f0f0f;
+  color: #f4f4f4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-right: 15px;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
   height: 100vh;
+}
+
+footer {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+  background-color: #0f0f0f;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .clock {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  font-size: 90px;
-  color: #f4f4f4;
-  margin-bottom: 25px;
-  text-align: center; /* Add text-align center */
 }
 
 .time {
+  font-size: 100px;
   color: #f4f4f4;
+  margin-bottom: 25px;
+}
+
+.date {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.timezone {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.apero-status {
+  display: none;
 }
 
 /* Social Media Buttons */
@@ -35,22 +70,20 @@ body {
   align-items: center;
 }
 
-.behance {
+.links {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 5px;
 }
 
-.behance img {
+.links img {
   display: block;
   width: 25px;
   height: 25px;
-  margin-right: 5px;
-  margin-left: 5px;
   cursor: pointer;
+  margin: 10px-;
 }
+
 button {
   font-family: "Roboto Mono", monospace;
   font-size: 15px;
@@ -69,17 +102,18 @@ button:hover {
   background-color: #f4f4f4;
   color: #1a1a1a;
 }
-.date {
-  font-size: 20px;
-  margin-top: 10px;
+
+p {
+  margin: 4px;
 }
+
 /* Media queries for responsiveness */
 @media (max-width: 600px) {
   .clock {
     font-size: 40px;
   }
 
-  .behance img {
+  .links img {
     width: 15px;
     height: 15px;
     margin-right: 2px;
