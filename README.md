@@ -14,6 +14,7 @@ Apéro provides everything you need to know about some place in the world where 
   - [Installation](#installation)
   - [How to Use](#how-to-use)
   - [Roadmap](#roadmap)
+  - [Inspiration](#inspiration)
   - [Support](#support)
   - [Contribute](#contribute)
   - [License](#license)
@@ -52,6 +53,10 @@ cd apero
 - [ ] Improve the timezone field and detect apéro time efficiently.
 - [ ] Add more fields to `apero.json`.
 - [ ] Build a GUI to provide the information easily and in a funny user-friendly way (webpage?).
+
+## Inspiration
+
+Website UI is largely inspired from [bypedroneres](https://github.com/bypedroneres)'s [Minimalistic-Clock](https://github.com/bypedroneres/Minimalistic-Clock/), thanks for the inspiration!
 
 ## Support
 
