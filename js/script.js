@@ -62,7 +62,7 @@ const showMenu = () => {
     ? "#0f0f0f"
     : "";
   document.getElementById("menu-button").src = isMenuVisible
-    ? "./icons/cross-small.svg"
+    ? "./icons/cross.svg"
     : "./icons/menu-burger.svg";
 };
 
