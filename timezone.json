@@ -83,7 +83,46 @@
     "Belize": {},
     "Blanc-Sablon": {},
     "Boa_Vista": {},
-    "Bogota": {},
+    "Bogota": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Boise": {},
     "Cambridge_Bay": {},
     "Campo_Grande": {},
@@ -152,7 +191,46 @@
     "Menominee": {},
     "Merida": {},
     "Metlakatla": {},
-    "Mexico_City": {},
+    "Mexico_City": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Miquelon": {},
     "Moncton": {},
     "Monterrey": {},
@@ -188,7 +266,46 @@
     "Santarem": {},
     "Santiago": {},
     "Santo_Domingo": {},
-    "Sao_Paulo": {},
+    "Sao_Paulo": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Scoresbysund": {},
     "Sitka": {},
     "St_Barthelemy": {},
@@ -202,7 +319,46 @@
     "Thule": {},
     "Thunder_Bay": {},
     "Tijuana": {},
-    "Toronto": {},
+    "Toronto": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Tortola": {},
     "Vancouver": {},
     "Whitehorse": {},
@@ -290,8 +446,86 @@
     "Riyadh": {},
     "Sakhalin": {},
     "Samarkand": {},
-    "Seoul": {},
-    "Shanghai": {},
+    "Seoul": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
+    "Shanghai": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Singapore": {},
     "Srednekolymsk": {},
     "Taipei": {},
@@ -299,7 +533,46 @@
     "Tbilisi": {},
     "Tehran": {},
     "Thimphu": {},
-    "Tokyo": {},
+    "Tokyo": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Tomsk": {},
     "Ulaanbaatar": {},
     "Urumqi": {},
@@ -348,7 +621,46 @@
     "Amsterdam": {},
     "Andorra": {},
     "Astrakhan": {},
-    "Athens": {},
+    "Athens": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Belgrade": {},
     "Berlin": {},
     "Bratislava": {},
@@ -366,24 +678,258 @@
     "Istanbul": {},
     "Jersey": {},
     "Kaliningrad": {},
-    "Kiev": {},
+    "Kiev": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Kirov": {},
     "Lisbon": {},
     "Ljubljana": {},
-    "London": {},
+    "London": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Luxembourg": {},
-    "Madrid": {},
+    "Madrid": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Malta": {},
     "Mariehamn": {},
     "Minsk": {},
     "Monaco": {},
-    "Moscow": {},
+    "Moscow": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Oslo": {},
-    "Paris": {},
+    "Paris": {
+      "timezone": "Europe/Paris",
+      "utcTimezones": ["UTC+1", "UTC+2 (DST)"],
+      "countryInfo": {
+        "name": "France",
+        "capital": "Paris",
+        "language": "french",
+        "demonym": "French",
+        "population": "68M",
+        "currency": "Euro (€)"
+      },
+      "aperoInfo": {
+        "time": "18:00",
+        "snacks": ["Cheese", "Baguette", "Pâté"],
+        "rituals": "Savoring wine and conversation with friends.",
+        "venues": "Cafés and brasseries",
+        "music": "Chanson française",
+        "famousBrands": ["Lillet", "Suze", "Byrrh"],
+        "etiquette": "It's customary to greet with 'à votre santé' (to your health).",
+        "commonToast": ["Santé !", "Tchin tchin", "À votre santé !"],
+        "toastGesture": "Raise your glass and make eye contact. In formal settings, clink glasses gently."
+      },
+      "majorCities": [
+        {
+          "name": "Paris",
+          "utcTimezone": "UTC+1",
+          "population": "2.1M"
+        },
+        {
+          "name": "Marseille",
+          "utcTimezone": "UTC+1",
+          "population": "861k"
+        },
+        {
+          "name": "Lyon",
+          "utcTimezone": "UTC+1",
+          "population": "515k"
+        }
+      ]
+    },
     "Podgorica": {},
     "Prague": {},
     "Riga": {},
-    "Rome": {},
+    "Rome": {
+      "timezone": "",
+      "utcTimezones": [],
+      "countryInfo": {
+        "name": "",
+        "capital": "",
+        "language": "",
+        "demonym": "",
+        "population": "",
+        "currency": ""
+      },
+      "aperoInfo": {
+        "time": "",
+        "snacks": [],
+        "rituals": "",
+        "venues": "",
+        "music": "",
+        "famousBrands": [],
+        "etiquette": "",
+        "commonToast": [],
+        "toastGesture": ""
+      },
+      "majorCities": [
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        },
+        {
+          "name": "",
+          "utcTimezone": "",
+          "population": ""
+        }
+      ]
+    },
     "Samara": {},
     "San_Marino": {},
     "Sarajevo": {},

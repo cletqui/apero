@@ -14,6 +14,7 @@ Apéro provides everything you need to know about some place in the world where 
   - [Installation](#installation)
   - [How to Use](#how-to-use)
   - [Roadmap](#roadmap)
+  - [Inspiration](#inspiration)
   - [Support](#support)
   - [Contribute](#contribute)
   - [License](#license)
@@ -49,9 +50,17 @@ cd apero
 
 - [ ] Complete `apero.json` with every countries.
 - [ ] Add non-alcoholic drinks (juices, mocktails).
-- [ ] Improve the timezone field and detect apéro time efficiently.
+- [ ] Improve the timezone field and detect apéro time efficiently, handle all cases.
 - [ ] Add more fields to `apero.json`.
-- [ ] Build a GUI to provide the information easily and in a funny user-friendly way (webpage?).
+- [x] Build static webage.
+- [ ] Implement dark/light mode.
+- [ ] Organise all buttons with emojis in a dropdown hidden header (minimalistic).
+- [ ] Handle errors.
+- [ ] Add animations in GUI.
+
+## Inspiration
+
+Website UI is largely inspired from [bypedroneres](https://github.com/bypedroneres)'s [Minimalistic-Clock](https://github.com/bypedroneres/Minimalistic-Clock/), thanks for the inspiration!
 
 ## Support
 

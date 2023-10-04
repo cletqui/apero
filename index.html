@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>"
+    />
+    <title>Apéro Clock</title>
+    <script src="script.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="light-mode.css"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="stylesheet"
+      href="dark-mode.css"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
+
+  <header id="header">
+    <div class="menu" id="menu">
+      <button type="button" onClick="toggleDarkMode()">
+        <img
+          class="icon"
+          src="./icons/moon.svg"
+          id="dark-light"
+          alt="dark-light"
+        />
+      </button>
+      <button type="button" onclick="toggleSeconds()">
+        <img
+          class="icon"
+          src="./icons/stopwatch.svg"
+          id="seconds-minutes"
+          alt="seconds-minutes"
+        />
+      </button>
+      <button type="button" onclick="toggleLanguage()">
+        <img class="icon" src="./icons/language.svg" alt="language" />
+      </button>
+    </div>
+    <div class="menu-button">
+      <img
+        class="icon"
+        src="./icons/menu-burger.svg"
+        id="menu-button"
+        alt="menu"
+        onclick="showMenu()"
+      />
+    </div>
+  </header>
+
+  <body>
+    <div class="clock">
+      <div class="time" id="time"></div>
+      <div class="date" id="date"></div>
+      <div class="timezone" id="timezone"></div>
+    </div>
+
+    <button type="button" onclick="showApero()" id="apero-button">🍺</button>
+
+    <div class="apero" id="apero">
+      <p class="apero-status" id="apero-status"></p>
+      <p id="apero-info"></p>
+    </div>
+  </body>
+
+  <footer>
+    <div class="link github">
+      <a href="https://github.com/cletqui/apero"
+        ><img class="link" src="./icons/github.svg" alt="GitHub"
+      /></a>
+    </div>
+    <div class="link bmac">
+      <a href="https://www.buymeacoffee.com/cletqui"
+        ><img class="link" src="./icons/coffee.svg" alt="GitHub"
+      /></a>
+    </div>
+  </footer>
+</html>
