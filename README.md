@@ -50,9 +50,13 @@ cd apero
 
 - [ ] Complete `apero.json` with every countries.
 - [ ] Add non-alcoholic drinks (juices, mocktails).
-- [ ] Improve the timezone field and detect apéro time efficiently.
+- [ ] Improve the timezone field and detect apéro time efficiently, handle all cases.
 - [ ] Add more fields to `apero.json`.
-- [ ] Build a GUI to provide the information easily and in a funny user-friendly way (webpage?).
+- [x] Build static webage.
+- [ ] Implement dark/light mode.
+- [ ] Organise all buttons with emojis in a dropdown hidden header (minimalistic).
+- [ ] Handle errors.
+- [ ] Add animations in GUI.
 
 ## Inspiration
 

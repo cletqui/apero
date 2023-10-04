@@ -1,8 +1,9 @@
-let is12HourFormat = false; // Time format
 let showSeconds = true; // Show seconds status
 let isDarkMode = true; // Dark mode
-let languageFormat = "en-US"; // Language format
+let languageFormat = "fr-FR"; // Language format
 let isAperoVisible = false; // Apero information status
+let isMenuVisible = false; // Menu showdown status
+let timezone = {}; // Timezone JSON object
 
 let timeOptions = {
   hour: "2-digit",
@@ -18,10 +19,12 @@ let dateTimeOptions = {
   day: "numeric",
 };
 
-// Function to toggle between 12-hour and 24-hour formats
-const toggleTimeFormat = () => {
-  is12HourFormat = !is12HourFormat;
-  timeOptions.hour12 = is12HourFormat;
+const toggleDarkMode = () => {
+  // TODO: implement dark/light mode switch
+  isDarkMode = !isDarkMode;
+  document.getElementById("dark-light").src = isDarkMode
+    ? "./icons/moon.svg"
+    : "./icons/sun.svg";
   updateClock();
 };
 
@@ -30,8 +33,10 @@ const toggleSeconds = () => {
   showSeconds = !showSeconds;
   if (showSeconds) {
     timeOptions.second = "2-digit";
+    document.getElementById("seconds-minutes").src = "./icons/stopwatch.svg";
   } else {
     delete timeOptions.second;
+    document.getElementById("seconds-minutes").src = "./icons/clock-five.svg";
   }
   updateClock();
 };
@@ -40,18 +45,25 @@ const toggleLanguage = () => {
   // TODO: implement language switching for every line printed
   if (languageFormat === "en-US") {
     languageFormat = "fr-FR";
+    timeOptions.hour12 = false;
   } else {
     languageFormat = "en-US";
+    timeOptions.hour12 = true;
   }
-  console.log(`Language format: ${languageFormat}`);
   updateClock();
 };
 
-const toggleDarkMode = () => {
-  // TODO: implement dark/light mode switch
-  isDarkMode = !isDarkMode;
-  console.log(`Dark Mode: ${isDarkMode}`);
-  updateClock();
+const showMenu = () => {
+  isMenuVisible = !isMenuVisible;
+  document.getElementById("menu").style.display = isMenuVisible
+    ? "block"
+    : "none";
+  document.getElementById("header").style.backgroundColor = isMenuVisible
+    ? "#0f0f0f"
+    : "";
+  document.getElementById("menu-button").src = isMenuVisible
+    ? "./icons/cross-small.svg"
+    : "./icons/menu-burger.svg";
 };
 
 const getTimezoneTime = (now, timezone) => {
@@ -129,7 +141,7 @@ const updateClock = () => {
               "Apéro information (time) not available for your location. 🌍";
           }
         } else {
-          console.log(`Timezone information not found for: ${userTimezone}.`);
+          console.log(`Timezone information not found for: ${userTimezone}.`); // TODO add GitHub repo link and invite user to enhance the JSON file
         }
       } catch (error) {
         console.error(`Error: ${error}`);
@@ -144,6 +156,7 @@ const updateClock = () => {
 
 document.addEventListener("DOMContentLoaded", function () {
   // TODO: improve UI, allow to browse timezones to find apero places, refactor code, add more entries in JSON
+  // TODO: fetch apero.json only once
   setInterval(updateClock, 1000);
   updateClock();
 });

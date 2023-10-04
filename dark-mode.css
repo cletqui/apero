@@ -1,18 +1,41 @@
-/* https://github.com/bypedroneres/Minimalistic-Clock/ */
+html {
+  font-family: "Roboto Mono", monospace;
+  overflow: hidden;
+}
 
 header {
-  font-family: "Roboto Mono", monospace;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
   text-align: right;
-  background-color: #0f0f0f;
   color: #f4f4f4;
   position: fixed;
   top: 0;
   width: 100%;
+  height: 8vh;
   padding-right: 15px;
 }
 
+header .menu {
+  display: none;
+}
+
+header .icon {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  filter: invert(100%) sepia(38%) saturate(43%) hue-rotate(257deg)
+    brightness(111%) contrast(91%);
+}
+
+header .menu-button {
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
 body {
-  font-family: "Roboto Mono", monospace;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,69 +47,92 @@ body {
   height: 100vh;
 }
 
-footer {
-  font-family: "Roboto Mono", monospace;
-  display: flex;
-  justify-content: center;
-  background-color: #0f0f0f;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.clock {
+body .clock {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.time {
+body .time {
   font-size: 100px;
   color: #f4f4f4;
   margin-bottom: 25px;
 }
 
-.date {
+body .date {
   font-size: 15px;
   margin-top: 10px;
 }
 
-.timezone {
+body .timezone {
   font-size: 15px;
   margin-bottom: 25px;
 }
 
-.apero-status {
+body .apero-status {
   display: none;
 }
 
-/* Social Media Buttons */
+body p {
+  margin: 4px;
+}
 
-.image-container {
-  margin-top: 10px;
+footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2vh;
+  padding: 10px;
+}
+
+footer .link {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
-.links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.links img {
+footer .link img {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   margin: 10px-;
+  padding: 1px;
+}
+
+footer .github img {
+  border-radius: 100%;
+  background-color: #cacaca;
+}
+footer .github img:hover {
+  background-color: #696969;
+}
+
+footer .bmac img {
+  border-radius: 0%;
+  filter: invert(96%) sepia(10%) saturate(0%) hue-rotate(145deg) brightness(85%)
+    contrast(88%);
+}
+footer .bmac img:hover {
+  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(204deg) brightness(89%)
+    contrast(81%);
+}
+
+footer .bmac-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 button {
   font-family: "Roboto Mono", monospace;
-  font-size: 15px;
   padding: 15px 15px;
   background-color: #1a1a1a;
   color: #f4f4f4;
@@ -101,10 +147,10 @@ button {
 button:hover {
   background-color: #f4f4f4;
   color: #1a1a1a;
-}
-
-p {
-  margin: 4px;
+  .icon {
+    filter: invert(5%) sepia(4%) saturate(74%) hue-rotate(314deg)
+      brightness(92%) contrast(88%);
+  }
 }
 
 /* Media queries for responsiveness */
@@ -113,7 +159,7 @@ p {
     font-size: 40px;
   }
 
-  .links img {
+  .link img {
     width: 15px;
     height: 15px;
     margin-right: 2px;
@@ -132,3 +178,5 @@ p {
     margin-top: 5px;
   }
 }
+
+/* for SVG color, use: https://codepen.io/sosuke/pen/Pjoqqp */

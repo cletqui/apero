@@ -25,11 +25,37 @@
     />
   </head>
 
-  <header>
-    <button type="button" onclick="toggleTimeFormat()">12/24h</button>
-    <button type="button" onclick="toggleSeconds()">show/hide sec</button>
-    <button type="button" onclick="toggleLanguage()">en/fr</button>
-    <!--button onClick="toggleDarkMode()">☀️</button-->
+  <header id="header">
+    <div class="menu" id="menu">
+      <button type="button" onClick="toggleDarkMode()">
+        <img
+          class="icon"
+          src="./icons/moon.svg"
+          id="dark-light"
+          alt="dark-light"
+        />
+      </button>
+      <button type="button" onclick="toggleSeconds()">
+        <img
+          class="icon"
+          src="./icons/stopwatch.svg"
+          id="seconds-minutes"
+          alt="seconds-minutes"
+        />
+      </button>
+      <button type="button" onclick="toggleLanguage()">
+        <img class="icon" src="./icons/language.svg" alt="language" />
+      </button>
+    </div>
+    <div class="menu-button">
+      <img
+        class="icon"
+        src="./icons/menu-burger.svg"
+        id="menu-button"
+        alt="menu"
+        onclick="showMenu()"
+      />
+    </div>
   </header>
 
   <body>
@@ -48,12 +74,14 @@
   </body>
 
   <footer>
-    <div class="links">
+    <div class="link github">
       <a href="https://github.com/cletqui/apero"
-        ><img
-          class="link"
-          src="https://static.wixstatic.com/media/ca4433_484af6937eeb4da29bbef8af8d01c55a~mv2.png"
-          alt="GitHub"
+        ><img class="link" src="./icons/github.svg" alt="GitHub"
+      /></a>
+    </div>
+    <div class="link bmac">
+      <a href="https://www.buymeacoffee.com/cletqui"
+        ><img class="link" src="./icons/coffee.svg" alt="GitHub"
       /></a>
     </div>
   </footer>
