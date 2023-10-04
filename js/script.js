@@ -108,7 +108,7 @@ const updateClock = () => {
   );
   document.getElementById("timezone").textContent = `(${userTimezone})`;
 
-  fetch("timezone.json")
+  fetch("./data/timezone.json")
     .then((response) => response.json())
     .then((data) => {
       try {
