@@ -101,6 +101,8 @@ const showWorld = () => {
   } else {
     aperoInfo.style.display = "none";
   }
+
+  searchApero();
 };
 
 /* Operating Functions */
@@ -171,6 +173,7 @@ const updateAperoStatus = (aperoInfo, now) => {
     const [aperoHours] = aperoTime.split(":").map(Number);
     const nowHours = now.getHours();
 
+    // TODO: define a isApero function to test if an hour is apero in a specific timezone
     if (nowHours < aperoHours - 1) {
       aperoStatusElement.textContent = `It's not yet time for apéro, you need to be patient until ${aperoTime}!`;
       aperoButton.src = "./icons/hourglass-start.svg";
@@ -199,7 +202,21 @@ const updateApero = () => {
   updateAperoStatus(aperoInfo, now);
 };
 
-const searchApero = () => {};
+const searchApero = () => {
+  // TODO: improve this function to search for timeZones where it's apero time
+  for (let [continent, countries] of Object.entries(apero)) {
+    for (let [country, countryInfo] of Object.entries(countries)) {
+      const timeZone = `${continent}/${country}`;
+      if (countryInfo.aperoInfo) {
+        const { aperoInfo } = countryInfo;
+        if (aperoInfo.time != "") {
+          const now = new Date();
+          console.log(timeZone, getTimezoneTime(timeZone, now), aperoInfo.time);
+        }
+      }
+    }
+  }
+};
 
 const getTimezoneTime = (timeZone, now) => {
   const timeZoneOptions = {

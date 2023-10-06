@@ -84,42 +84,53 @@
     "Blanc-Sablon": {},
     "Boa_Vista": {},
     "Bogota": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "America/Bogota",
+      "utcTimeZones": ["UTC-5"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Colombia",
+        "capital": "Bogota",
+        "language": "spanish",
+        "demonym": "Colombian",
+        "population": "52M",
+        "currency": "$ (Colombian peso)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "18:00",
+        "specialDrinks": [
+          "Aguardiente",
+          "Rum (e.g., Ron Medellín)",
+          "Canelazo",
+          "Chicha"
+        ],
+        "snacks": ["Empanadas", "Arepa de Queso", "Patacones"],
+        "rituals": "Enjoying drinks and snacks with lively conversation.",
+        "venues": "Bars, pubs, and outdoor plazas",
+        "aperoGlass": "Old Fashioned glass",
+        "music": "Vallenato, Cumbia, Salsa",
+        "famousBrands": [
+          "Aguardiente Antioqueño",
+          "Ron Medellín",
+          "Club Colombia"
+        ],
+        "etiquette": "It's common to offer a toast with 'Salud!' (health).",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Bogotá",
+          "utcTimeZone": "UTC-5",
+          "population": "7.4 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Medellín",
+          "utcTimeZone": "UTC-5",
+          "population": "2.5 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Cali",
+          "utcTimeZone": "UTC-5",
+          "population": "2.2 million"
         }
       ]
     },
@@ -192,42 +203,49 @@
     "Merida": {},
     "Metlakatla": {},
     "Mexico_City": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "America/Mexico_City",
+      "utcTimeZones": ["UTC-6", "UTC-5 (DST)"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Mexico",
+        "capital": "Mexico City",
+        "language": "spanish",
+        "demonym": "Mexican",
+        "population": "128M",
+        "currency": "$ (Mexican peso)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "18:00",
+        "specialDrinks": [
+          "Margarita",
+          "Paloma",
+          "Michelada",
+          "Tequila Sunrise"
+        ],
+        "snacks": ["Guacamole", "Salsa", "Tacos"],
+        "rituals": "Enjoying drinks and snacks with lively conversation.",
+        "venues": "Cantinas and outdoor terraces",
+        "aperoGlass": "Margarita glass",
+        "music": "Mariachi music",
+        "famousBrands": ["Patrón", "Sauza", "Jose Cuervo"],
+        "etiquette": "It's common to say 'Salud' (health) when toasting.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Mexico City",
+          "utcTimeZone": "UTC-6",
+          "population": "8.9M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Guadalajara",
+          "utcTimeZone": "UTC-6",
+          "population": "1.5M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Monterrey",
+          "utcTimeZone": "UTC-6",
+          "population": "1.1M"
         }
       ]
     },
@@ -267,42 +285,49 @@
     "Santiago": {},
     "Santo_Domingo": {},
     "Sao_Paulo": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "America/Sao_Paulo",
+      "utcTimeZones": ["UTC-3", "UTC-2 (DST)"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Brazil",
+        "capital": "Brasilia",
+        "language": "portuguese",
+        "demonym": "Brazilian",
+        "population": "216M",
+        "currency": "R$ (Real)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "18:00",
+        "specialDrinks": [
+          "Caipirinha",
+          "Batida",
+          "Quentão",
+          "Chopp (draft beer)"
+        ],
+        "snacks": ["Pastel", "Coxinha", "Pão de Queijo"],
+        "rituals": "Enjoying drinks and snacks at botecos (bars) with friends.",
+        "venues": "Botecos, beach kiosks, and restaurants",
+        "aperoGlass": "Tumbler glass for Caipirinha",
+        "music": "Samba and Bossa Nova",
+        "famousBrands": ["Cachaça 51", "Leblon Cachaça", "Velho Barreiro"],
+        "etiquette": "It's common to offer a toast with 'Saúde!' (Health!).",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "São Paulo",
+          "utcTimezone": "UTC-3",
+          "population": "12.3 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Rio de Janeiro",
+          "utcTimezone": "UTC-3",
+          "population": "6.7 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Salvador",
+          "utcTimezone": "UTC-3",
+          "population": "2.9 million"
         }
       ]
     },
@@ -320,42 +345,49 @@
     "Thunder_Bay": {},
     "Tijuana": {},
     "Toronto": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "America/Toronto",
+      "utcTimeZones": ["UTC-5", "UTC-6", "UTC-7", "UTC-8"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Canada",
+        "capital": "Ottawa",
+        "language": "english/french",
+        "demonym": "Canadian",
+        "population": "40M",
+        "currency": "$ (Canadian dollar)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "17:00",
+        "specialDrinks": [
+          "Caesar",
+          "Ice Wine",
+          "Canadian Whisky",
+          "Craft Beer"
+        ],
+        "snacks": ["Poutine", "Nanaimo Bars", "Bannock"],
+        "rituals": "Enjoying drinks and snacks with friends and family.",
+        "venues": "Pubs, breweries, and patios",
+        "aperoGlass": "Pint glass",
+        "music": "A mix of genres including rock, pop, and folk",
+        "famousBrands": ["Crown Royal", "Molson", "Sleeman"],
+        "etiquette": "Casual and friendly atmosphere.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Toronto",
+          "utcTimeZone": "UTC-5",
+          "population": "2.93 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Montreal",
+          "utcTimeZone": "UTC-5",
+          "population": "1.78 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Vancouver",
+          "utcTimeZone": "UTC-7",
+          "population": "631,486"
         }
       ]
     },
@@ -447,82 +479,96 @@
     "Sakhalin": {},
     "Samarkand": {},
     "Seoul": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Asia/Seoul",
+      "utcTimeZones": ["UTC+9"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "South Korea",
+        "capital": "Seoul",
+        "language": "korean",
+        "demonym": "Korean",
+        "population": "51M",
+        "currency": "₩ (Won)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "17:00",
+        "specialDrinks": ["Soju", "Makgeolli", "Hwachae", "Sikhye"],
+        "snacks": [
+          "Pajeon (Green Onion Pancake)",
+          "Tteokbokki (Spicy Rice Cakes)",
+          "Kimbap",
+          "Dried Squid"
+        ],
+        "rituals": "Enjoying drinks and snacks with colleagues and friends after work.",
+        "venues": "Izakayas and Korean-style pubs (hofs)",
+        "aperoGlass": "Soju shot glass",
+        "music": "K-Pop and popular Korean hits",
+        "famousBrands": ["Chamisul", "Chum-Churum", "Jinro"],
+        "etiquette": "Pour drinks for others as a sign of respect, and use both hands when receiving a drink.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Seoul",
+          "utcTimeZone": "UTC+9",
+          "population": "9.7 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Busan",
+          "utcTimeZone": "UTC+9",
+          "population": "3.4 million"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Incheon",
+          "utcTimeZone": "UTC+9",
+          "population": "2.9 million"
         }
       ]
     },
     "Shanghai": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Asia/Shanghai",
+      "utcTimeZones": ["UTC+8"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "China",
+        "capital": "Beijing",
+        "language": "chinese",
+        "demonym": "Chinese",
+        "population": "1.4B",
+        "currency": "¥ (Yuan)"
       },
       "aperoInfo": {
         "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "specialDrinks": [
+          "Baijiu",
+          "Chinese wine (e.g., Maotai)",
+          "Tsingtao Beer",
+          "Green Tea"
+        ],
+        "snacks": ["Dim Sum", "Spring Rolls", "Sichuan Peanuts"],
+        "rituals": "Gathering with friends or family for tea or drinks and small bites.",
+        "venues": "Teahouses, local bars, and restaurants",
+        "aperoGlass": "Teacup or small liquor glass",
+        "music": "Traditional Chinese music or contemporary pop",
+        "famousBrands": ["Maotai", "Wuliangye", "Tsingtao"],
+        "etiquette": "Toasting and clinking glasses is a common gesture of goodwill.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Beijing",
+          "utcTimeZone": "UTC+8",
+          "population": "21.5M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Shanghai",
+          "utcTimeZone": "UTC+8",
+          "population": "27.1M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Guangzhou",
+          "utcTimeZone": "UTC+8",
+          "population": "14.5M"
         }
       ]
     },
@@ -534,42 +580,49 @@
     "Tehran": {},
     "Thimphu": {},
     "Tokyo": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Asia/Tokyo",
+      "utcTimeZones": ["UTC+9"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Japan",
+        "capital": "Tokyo",
+        "language": "japanese",
+        "demonym": "Japanese",
+        "population": "123M",
+        "currency": "¥ (Yen)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "17:00",
+        "specialDrinks": [
+          "Sake",
+          "Shochu",
+          "Umeshu (Plum Wine)",
+          "Highball (Whiskey and Soda)"
+        ],
+        "snacks": ["Edamame", "Sushi", "Yakitori"],
+        "rituals": "Enjoying drinks and small dishes at izakayas (Japanese pubs).",
+        "venues": "Izakayas and rooftop bars",
+        "aperoGlass": "Sake cup (ochoko)",
+        "music": "Background Japanese music or J-pop",
+        "famousBrands": ["Gekkeikan", "Choya", "Suntory"],
+        "etiquette": "It's polite to pour drinks for others and use both hands when receiving a drink.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Tokyo",
+          "utcTimeZone": "UTC+9",
+          "population": "14M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Osaka",
+          "utcTimeZone": "UTC+9",
+          "population": "2.7M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Kyoto",
+          "utcTimeZone": "UTC+9",
+          "population": "1.5M"
         }
       ]
     },
@@ -622,42 +675,44 @@
     "Andorra": {},
     "Astrakhan": {},
     "Athens": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Europe/Athens",
+      "utcTimeZones": ["UTC+2", "UTC+3 (DST)"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Greece",
+        "capital": "Athens",
+        "language": "greek",
+        "demonym": "Greek",
+        "population": "10M",
+        "currency": "€ (Euro)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "20:00",
+        "specialDrinks": ["Ouzo", "Retsina", "Tsipouro", "Metaxa"],
+        "snacks": ["Olives", "Feta cheese", "Tzatziki"],
+        "rituals": "Enjoying meze (small dishes) with drinks and lively conversations.",
+        "venues": "Tavernas and ouzerias",
+        "aperoGlass": "Ouzo glass",
+        "music": "Traditional Greek music",
+        "famousBrands": ["Ouzo Plomari", "Retsina Kourtaki", "Metaxa"],
+        "etiquette": "Offer a 'yamas' (cheers) before taking a sip.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Athens",
+          "utcTimeZone": "UTC+2",
+          "population": "3.2M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Thessaloniki",
+          "utcTimeZone": "UTC+2",
+          "population": "1.1M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Patras",
+          "utcTimeZone": "UTC+2",
+          "population": "213,984"
         }
       ]
     },
@@ -679,42 +734,49 @@
     "Jersey": {},
     "Kaliningrad": {},
     "Kiev": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Europe/Kiev",
+      "utcTimeZones": ["UTC+2"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Ukraine",
+        "capital": "Kiev",
+        "language": "ukrainian",
+        "demonym": "Ukrainian",
+        "population": "36M",
+        "currency": "₴ (Hryvnia)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "18:00",
+        "specialDrinks": [
+          "Horilka (vodka)",
+          "Nalyvka (fruit liqueurs)",
+          "Uzvar (dried fruit compote)",
+          "Medovukha (honey-based alcoholic beverage)"
+        ],
+        "snacks": ["Salo (salted pork fat)", "Pickles", "Herring"],
+        "rituals": "Enjoying drinks and snacks with friends or family.",
+        "venues": "Cafes, bars, and home gatherings",
+        "aperoGlass": "Shot glass",
+        "music": "Folk music and contemporary pop",
+        "famousBrands": ["Nemiroff", "Khlibny Dar", "Lvivske"],
+        "etiquette": "It's common to offer a toast before taking a sip.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Kyiv",
+          "utcTimeZone": "UTC+2",
+          "population": "2.8M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Kharkiv",
+          "utcTimeZone": "UTC+2",
+          "population": "1.4M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Lviv",
+          "utcTimeZone": "UTC+2",
+          "population": "724,314"
         }
       ]
     },
@@ -722,83 +784,92 @@
     "Lisbon": {},
     "Ljubljana": {},
     "London": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Europe/London",
+      "utcTimeZones": ["UTC+0", "UTC+1 (DST)"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "England",
+        "capital": "London",
+        "language": "english",
+        "demonym": "English",
+        "population": "56M",
+        "currency": "£ (Pound)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "17:00",
+        "specialDrinks": [
+          "Gin and Tonic",
+          "Pimm's",
+          "Bitter Ale",
+          "English Sparkling Wine"
+        ],
+        "snacks": ["Crisps", "Pork Scratchings", "Scotch Eggs"],
+        "rituals": "Enjoying drinks at a local pub or during afternoon tea.",
+        "venues": "Pubs and tearooms",
+        "aperoGlass": "Highball glass",
+        "music": "Traditional British folk music",
+        "famousBrands": ["Gordon's Gin", "Tanqueray", "Pimm's"],
+        "etiquette": "Order drinks at the bar and wait to be served.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "London",
+          "utcTimeZone": "UTC+0",
+          "population": "8.9M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Birmingham",
+          "utcTimeZone": "UTC+0",
+          "population": "1.1M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Manchester",
+          "utcTimeZone": "UTC+0",
+          "population": "547,627"
         }
       ]
     },
     "Luxembourg": {},
     "Madrid": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Europe/Madrid",
+      "utcTimeZones": ["UTC+1", "UTC+2 (DST)"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Spain",
+        "capital": "Madrid",
+        "language": "spanish",
+        "demonym": "Spanish",
+        "population": "47M",
+        "currency": "€ (Euro)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "19:00",
+        "specialDrinks": ["Sangria", "Tinto de Verano", "Cava", "Vermouth"],
+        "snacks": ["Tapas", "Olives", "Jamon Iberico"],
+        "rituals": "Sharing small plates and socializing with friends.",
+        "venues": "Tapas bars and terraces",
+        "aperoGlass": "Copa de Balón (Balloon glass)",
+        "music": "Flamenco and Spanish guitar",
+        "famousBrands": ["Martini", "Lustau", "Yzaguirre"],
+        "etiquette": "Sharing is common, and it's polite to order something for the group.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Madrid",
+          "utcTimeZone": "UTC+1",
+          "population": "3.2M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Barcelona",
+          "utcTimeZone": "UTC+1",
+          "population": "1.6M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Seville",
+          "utcTimeZone": "UTC+1",
+          "population": "689,434"
         }
       ]
     },
@@ -807,42 +878,44 @@
     "Minsk": {},
     "Monaco": {},
     "Moscow": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Europe/Moscow",
+      "utcTimeZones": ["UTC+2 to UTC+12"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Russia",
+        "capital": "Moscow",
+        "language": "russian",
+        "demonym": "Russian",
+        "population": "144M",
+        "currency": "₽ (Russian Ruble)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
+        "time": "17:00",
+        "specialDrinks": ["Vodka", "Kvass", "Mors", "Russian Sparkling Wine"],
+        "snacks": ["Pickled cucumbers", "Herring", "Piroshki"],
+        "rituals": "Enjoying drinks and zakuski (appetizers) before a meal.",
+        "venues": "Bars, restaurants, and homes",
+        "aperoGlass": "Shot glass for vodka",
+        "music": "Russian folk music",
+        "famousBrands": ["Stolichnaya", "Russian Standard", "Beluga"],
+        "etiquette": "Toasting is common, and it's customary to make eye contact during toasts.",
         "commonToast": [],
         "toastGesture": ""
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Moscow",
+          "utcTimeZone": "UTC+3",
+          "population": "12.5M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Saint Petersburg",
+          "utcTimeZone": "UTC+3",
+          "population": "5.4M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Novosibirsk",
+          "utcTimeZone": "UTC+7",
+          "population": "1.6M"
         }
       ]
     },
@@ -855,14 +928,21 @@
         "capital": "Paris",
         "language": "french",
         "demonym": "French",
-        "population": "68M",
-        "currency": "Euro (€)"
+        "population": "64M",
+        "currency": "€ (Euro)"
       },
       "aperoInfo": {
         "time": "18:00",
+        "specialDrinks": [
+          "Wine (e.g., Bordeaux, Champagne)",
+          "Pastis",
+          "Kir",
+          "Champagne Cocktail"
+        ],
         "snacks": ["Cheese", "Baguette", "Pâté"],
         "rituals": "Savoring wine and conversation with friends.",
         "venues": "Cafés and brasseries",
+        "aperoGlass": "Wine glass",
         "music": "Chanson française",
         "famousBrands": ["Lillet", "Suze", "Byrrh"],
         "etiquette": "It's customary to greet with 'à votre santé' (to your health).",
@@ -891,42 +971,49 @@
     "Prague": {},
     "Riga": {},
     "Rome": {
-      "timeZone": "",
-      "utcTimeZones": [],
+      "timeZone": "Europe/Rome",
+      "utcTimeZones": ["UTC+1", "UTC+2 (DST)"],
       "countryInfo": {
-        "name": "",
-        "capital": "",
-        "language": "",
-        "demonym": "",
-        "population": "",
-        "currency": ""
+        "name": "Italy",
+        "capital": "Rome",
+        "language": "italian",
+        "demonym": "Italian",
+        "population": "58M",
+        "currency": "Euro (€)"
       },
       "aperoInfo": {
-        "time": "",
-        "snacks": [],
-        "rituals": "",
-        "venues": "",
-        "music": "",
-        "famousBrands": [],
-        "etiquette": "",
-        "commonToast": [],
-        "toastGesture": ""
+        "time": "18:00",
+        "specialDrinks": [
+          "Aperol Spritz",
+          "Negroni",
+          "Prosecco",
+          "Campari and Soda"
+        ],
+        "snacks": ["Bruschetta", "Olives", "Crostini"],
+        "rituals": "Enjoying drinks and appetizers with friends and family.",
+        "venues": "Outdoor cafes and bars",
+        "aperoGlass": "Wine glass or highball glass",
+        "music": "Italian jazz and pop",
+        "famousBrands": ["Aperol", "Campari", "Martini"],
+        "etiquette": "It's common to say 'Salute!' (Cheers!) when toasting.",
+        "commonToast": ["Salute!"],
+        "toastGesture": "Raise your glass while making eye contact, and clink glasses with everyone at the table."
       },
       "majorCities": [
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Rome",
+          "utcTimeZone": "UTC+1",
+          "population": "2.8M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Milan",
+          "utcTimeZone": "UTC+1",
+          "population": "1.4M"
         },
         {
-          "name": "",
-          "utcTimeZone": "",
-          "population": ""
+          "name": "Naples",
+          "utcTimeZone": "UTC+1",
+          "population": "967,069"
         }
       ]
     },
