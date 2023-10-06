@@ -1,82 +1,67 @@
-# 🍹 Apéro 🍷
+# 🍹 Apéro Time 🍷
 
-You don't know when it's time for apéro? 🥂 It's always apéro time! (at least somewhere in the world) 🍻
+You don't know when it's time for apéro? It's always apéro time! (at least somewhere in the world...)
 
 ## Description
 
-Apéro provides everything you need to know about some place in the world where it's time for a drink. You can discover specialities (drinks, snacks...), customs and even how to cheer in various countries.
+🕒 It's Apéro Time - Time to Raise Your Glass! 🥂 Apéro Time is a Worldly Aperitif Clock, it is your passport to a global aperitif adventure. 🌍 Not only does it show you the current time with style but it also helps you determine which country to raise a glass to! 🍻
 
 ## Table of Contents
 
-- [🍹 Apéro 🍷](#-apéro-)
+- [🍹 Apéro Time 🍷](#-apéro-time-)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [How to Use](#how-to-use)
+  - [Website URLs](#website-urls)
+  - [Features](#features)
   - [Roadmap](#roadmap)
+  - [Contributing](#contributing)
   - [Inspiration](#inspiration)
-  - [Support](#support)
-  - [Contribute](#contribute)
   - [License](#license)
   - [Project Status](#project-status)
 
-## Installation
+## Website URLs
 
-Provide instructions on how to install your project. You can include any prerequisites, dependencies, or setup steps. For example:
+You can access the website at the following URLs:
 
-```bash
-# Clone the repository
-git clone https://github.com/cletqui/apero.git
+- [Apéro Time - GitHub Pages](https://cletqui.github.io/apero)
+- [Apéro Time - Cloudflare Pages](https://apero.pages.dev)
 
-# Navigate to the project directory
-cd apero
-```
+Feel free to visit and explore the website!
 
-## How to Use
+## Features
 
-1. Choose a Country:
-   Pick a country you'd like to learn more about, or let our project choose a random destination for your aperitif journey.
+🕓 **Current Time:** Watch the clock as it keeps perfect time. Choose your style with options for dark or light themes, decide if seconds should be in the spotlight, and set the language that tickles your fancy.
 
-2. Discover Aperitif Time:
-   Find out when it's aperitif time in your chosen country. It's always around 6 PM somewhere, right?
+🍺 **Aperitif Time:** Is it too early for an aperitif, the golden hour, or time to call it a day? Apéro Time will let you know. Plus, discover where on Earth it's prime aperitif time and join in the global toast.
 
-3. Special Drinks & More:
-   Explore the special drinks and aperitif traditions of each country. Impress your friends with your newfound knowledge!
-
-4. Raise Your Glass:
-   Don't forget to use the local toasting customs we've provided. Cheers in style with a "Cheers!" or "À votre santé !"
+🌍 **Country Information:** Dive into fascinating facts about the selected country, including its culinary delights and signature drinks. Want to fit in like a local? Learn how to raise your glass the right way!
 
 ## Roadmap
 
-- [ ] Complete `apero.json` with every countries.
+- [x] Build static webpage.
+- [x] Implement dark/light mode.
+- [x] Organise all buttons with emojis in a dropdown hidden header (minimalistic).
+- [ ] Complete `data/apero.json` with every countries and more fields.
 - [ ] Add non-alcoholic drinks (juices, mocktails).
 - [ ] Improve the timezone field and detect apéro time efficiently, handle all cases.
-- [ ] Add more fields to `apero.json`.
-- [x] Build static webage.
-- [ ] Implement dark/light mode.
-- [ ] Organise all buttons with emojis in a dropdown hidden header (minimalistic).
 - [ ] Handle errors.
 - [ ] Add animations in GUI.
+
+## Contributing
+
+We're raising our glasses to welcome contributions that make Apéro Time even more delightful! 🍻 Here's how you can join the fun:
+
+1. **Bug Reports:** If you stumble upon any quirky bugs or hiccups while exploring the website, kindly raise your glass and [open an issue](https://github.com/cletqui/apero/issues) to report it. Provide all the juicy details!
+
+2. **Feature Requests:** Got a brilliant idea for a new feature or a quirky improvement? Don't keep it to yourself—share it with us by [opening an issue](https://github.com/cletqui/apero/issues).
+
+3. **Data Contributions:** Apéro Time is all about the world's aperitif traditions, and it starts with the data in `data/apero.json` Pour in your knowledge, correct inaccuracies, or add missing info about countries. To do that, [fork this repository](https://github.com/cletqui/apero/fork), make your updates to the JSON file, and raise a toast with a pull request.
+
+Let's make Apéro Time the life of the global party together! 🌟
 
 ## Inspiration
 
 Website UI is largely inspired from [bypedroneres](https://github.com/bypedroneres)'s [Minimalistic-Clock](https://github.com/bypedroneres/Minimalistic-Clock/), thanks for the inspiration!
-
-## Support
-
-If you have any questions or encounter issues, please open an [issue](https://github.com/cletqui/apero/issues).
-
-## Contribute
-
-Want to add more countries, aperitif rituals, or unique drinks to the project? We welcome contributions from fellow aperitif enthusiasts! Here's how:
-
-1. Fork this Repository.
-
-2. Make Your Enhancements.
-
-3. Submit a Pull Request.
-
-We're excited to see how you can make our aperitif journey even more exciting!
 
 ## License
 
