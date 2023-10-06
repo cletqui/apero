@@ -9,32 +9,18 @@
     />
     <title>Apéro Clock</title>
     <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="./css/light-mode.css"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/dark-mode.css"
-      media="(prefers-color-scheme: dark)"
-    />
   </head>
 
   <body>
-    <header id="header">
+    <header class="menu-hidden" id="header">
       <div class="menu" id="menu">
-        <button type="button" onClick="toggleDarkMode()">
-          <img
-            class="icon"
-            src="./icons/moon.svg"
-            id="dark-light"
-            alt="dark-light"
-          />
+        <button type="button" onClick="toggleTheme()">
+          <img class="icon" src="./icons/moon.svg" id="theme" alt="theme" />
         </button>
         <button type="button" onclick="toggleSeconds()">
           <img
@@ -62,34 +48,52 @@
 
     <main>
       <div class="clock">
-        <div class="time" id="time"></div>
-        <div class="date" id="date"></div>
-        <div class="timezone" id="timezone"></div>
+        <div class="time" id="time">00:00:00</div>
+        <div class="date" id="date">jeudi 1 janvier 1970</div>
+        <div class="timezone" id="timezone">(/)</div>
       </div>
 
       <div class="apero-button">
-        <button type="button" onclick="showApero()" id="apero-button">
-          🍺
+        <button type="button" onclick="showApero()">
+          <img
+            class="icon"
+            src="./icons/beer.svg"
+            id="apero-button"
+            alt="apero-button"
+          />
+        </button>
+
+        <button type="button" onclick="showWorld()">
+          <img
+            class="icon"
+            src="./icons/planet-ringed.svg"
+            id="world-button"
+            alt="world-button"
+          />
         </button>
       </div>
 
-      <div class="apero" id="apero">
-        <p class="apero-status" id="apero-status"></p>
+      <div class="apero">
+        <p class="apero-status" id="apero-status">
+          No Javascript, no time, no beer!
+        </p>
         <p id="apero-info"></p>
       </div>
     </main>
 
     <footer>
-      <div class="link github">
+      <div class="link">
         <a
+          title="GitHub"
           href="https://github.com/cletqui/apero"
           target="_blank"
           rel="noopener noreferrer"
           ><img class="link" src="./icons/github.svg" alt="GitHub"
         /></a>
       </div>
-      <div class="link bmac">
+      <div class="link">
         <a
+          title="Buy Me A Coffee"
           href="https://www.buymeacoffee.com/cletqui"
           target="_blank"
           rel="noopener noreferrer"
