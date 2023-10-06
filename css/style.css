@@ -1,0 +1,253 @@
+:root {
+  color-scheme: light dark;
+}
+
+/* Themes */
+
+[data-theme="dark-theme"] {
+  --text-color: #f4f4f4;
+  --text-color-svg: brightness(0) saturate(100%) invert(82%) sepia(100%)
+    saturate(15%) hue-rotate(355deg) brightness(109%) contrast(91%); /* #f4f4f4 */
+  --background-color: #1a1a1a;
+  --background-color-svg: brightness(0) saturate(100%) invert(5%) sepia(2%)
+    saturate(48%) hue-rotate(314deg) brightness(101%) contrast(89%); /* #1a1a1a */
+  --header-background-color: #000000;
+  --header-background-color-svg: brightness(0) saturate(100%) invert(0%)
+    sepia(27%) saturate(6520%) hue-rotate(33deg) brightness(91%) contrast(106%); /* #000000 */
+  --footer-img-color: #cacaca;
+  --footer-img-color-svg: brightness(0) saturate(100%) invert(93%) sepia(0%)
+    saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */
+  --footer-img-color-hover: #696969;
+  --footer-img-color-hover-svg: brightness(0) saturate(100%) invert(44%)
+    sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */
+}
+
+[data-theme="light-theme"] {
+  --text-color: #636363;
+  --text-color-svg: brightness(0) saturate(100%) invert(43%) sepia(6%)
+    saturate(0%) hue-rotate(193deg) brightness(87%) contrast(95%); /* #636363 */
+  --background-color: #f4f4f4;
+  --background-color-svg: brightness(0) saturate(100%) invert(82%) sepia(100%)
+    saturate(15%) hue-rotate(355deg) brightness(109%) contrast(91%); /* #f4f4f4 */
+  --header-background-color: #aaaaaa;
+  --header-background-color-svg: brightness(0) saturate(100%) invert(65%)
+    sepia(0%) saturate(604%) hue-rotate(174deg) brightness(106%) contrast(87%); /* #aaaaaa */
+  --footer-img-color: #cacaca;
+  --footer-img-color-svg: brightness(0) saturate(100%) invert(93%) sepia(0%)
+    saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */
+  --footer-img-color-hover: #696969;
+  --footer-img-color-hover-svg: brightness(0) saturate(100%) invert(44%)
+    sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */
+}
+
+/* Body */
+
+body {
+  font-family: "Roboto Mono", monospace;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  background-color: var(--background-color);
+  color: #f4f4f4;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  text-align: right;
+  color: #f4f4f4;
+  color: var(--text-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8vh;
+  padding-right: 15px;
+}
+
+header.menu-hidden {
+  transition: background-image 0.3s ease-in-out;
+  background-image: none;
+}
+
+header.menu-hidden .menu {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+header.menu-visible {
+  transition: background-image 0.3s ease-in-out;
+  background-image: linear-gradient(
+    190deg,
+    var(--header-background-color),
+    var(--background-color) 42%
+  );
+}
+
+header.menu-visible .menu {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+header .menu-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .time {
+  font-size: 150px;
+  color: #f4f4f4;
+  color: var(--text-color);
+  margin-bottom: 25px;
+}
+
+main .date {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+main .timezone {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+main .apero-status {
+  display: none;
+}
+
+main p {
+  margin: 4px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2vh;
+  padding: 10px;
+}
+
+footer .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+footer .link img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 10px-;
+  padding: 1px;
+  border-radius: 0%;
+  filter: invert(93%) sepia(0%) saturate(28%) hue-rotate(159deg) brightness(84%)
+    contrast(103%);
+  filter: var(--footer-img-color-svg);
+}
+footer .link img:hover {
+  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
+    contrast(83%);
+  filter: var(--footer-img-color-hover-svg);
+}
+
+.icon {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg)
+    brightness(109%) contrast(91%);
+  filter: var(--text-color-svg);
+}
+
+/* Global */
+
+button:hover .icon {
+  filter: invert(5%) sepia(2%) saturate(48%) hue-rotate(314deg) brightness(101%)
+    contrast(89%);
+  filter: var(--background-color-svg);
+}
+
+button {
+  padding: 15px 15px;
+  background-color: #1a1a1a;
+  background-color: var(--background-color);
+  color: #f4f4f4;
+  color: var(--text-color);
+  border: 2px solid #f4f4f4;
+  border: 2px solid var(--text-color);
+  cursor: pointer;
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: #f4f4f4;
+  background-color: var(--text-color);
+  color: #1a1a1a;
+  color: var(--background-color);
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 600px) {
+  .clock {
+    font-size: 40px;
+  }
+
+  .link img {
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}
+
+/* for SVG color, use: https://codepen.io/sosuke/pen/Pjoqqp */
