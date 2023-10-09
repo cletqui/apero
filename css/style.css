@@ -133,12 +133,16 @@ main .date {
   margin-top: 10px;
 }
 
-main .timezone {
+main .time-zone {
   font-size: 15px;
   margin-bottom: 25px;
 }
 
-main .apero-status {
+main .apero-info {
+  display: block;
+}
+
+main .apero-info-hidden {
   display: none;
 }
 
