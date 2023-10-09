@@ -366,10 +366,79 @@ const searchAperoWorld = () => {
   return [aperoWorld, almostAperoWorld];
 };
 
+const pickRandomTimeZone = (aperoWorld) => {
+  return aperoWorld[Math.floor(Math.random() * aperoWorld.length)];
+};
+
+const getContinentIcon = (timeZone) => {
+  let icon;
+
+  try {
+    // Validate the provided time zone and split it into continent and city
+    const [continent] = timeZone.split("/");
+
+    switch (continent) {
+      case "Antarctica":
+      case "Arctic":
+      case "Europe":
+        icon = "./icons/earth-europa.svg";
+        break;
+      case "Atlantic":
+      case "Africa":
+        icon = "./icons/earth-africa.svg";
+        break;
+      case "America":
+      case "Canada":
+      case "US":
+        icon = "./icons/earth-americas.svg";
+        break;
+      case "Asia":
+      case "Australia":
+      case "Indian":
+      case "Pacific":
+        icon = "./icons/earth-asia.svg";
+        break;
+      default:
+        icon = "./icons/planet-ringed.svg";
+    }
+
+    return icon;
+  } catch (error) {
+    console.error(`Invalid user time zone: ${timeZone}: ${error}`);
+    throw new Error(
+      `Your time zone appears to be invalid. You can report this issue at https://github.com/cletqui/apero/issues.`
+    );
+  }
+};
+
 const updateAperoWorld = () => {
-  const [aperoWorld, almostAperoWorld] = searchAperoWorld();
-  console.log(`Apero around the world: ${aperoWorld}`);
-  console.log(`Almost apero around the world: ${almostAperoWorld}`);
+  let message = "Unknown error.";
+  let icon = "./icons/interrogation.svg";
+
+  try {
+    let worldTimeZone;
+    const [aperoWorld, almostAperoWorld] = searchAperoWorld();
+    console.log(`Apero around the world: ${aperoWorld}`);
+    console.log(`Almost apero around the world: ${almostAperoWorld}`);
+
+    if (aperoWorld.length > 0) {
+      worldTimeZone = pickRandomTimeZone(aperoWorld);
+      icon = getContinentIcon(worldTimeZone);
+    } else if (almostAperoWorld.length > 0) {
+      worldTimeZone = pickRandomTimeZone(almostAperoWorld);
+      icon = getContinentIcon(worldTimeZone);
+    } else {
+      message = "No apéro found across the globe, try even further!";
+      icon = "./icons/planet-ringed.svg";
+    }
+  } catch (error) {
+    console.error(`Error updating world apéro: ${error}`);
+    message = error.message;
+    icon = "./icons/exclamation.svg";
+  } finally {
+    document.getElementById("apero-world").textContent = message;
+    document.getElementById("world-button").src = icon;
+  }
 };
 
 /* Startup Function */
