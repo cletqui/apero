@@ -54,7 +54,7 @@
       </div>
 
       <div class="apero-button">
-        <button type="button" onclick="showAperoLocal()">
+        <button type="button" onclick="toggleAperoLocal()">
           <img
             id="apero-button"
             class="icon"
@@ -63,7 +63,7 @@
           />
         </button>
 
-        <button type="button" onclick="showAperoWorld()">
+        <button type="button" onclick="toggleAperoWorld()">
           <img
             id="world-button"
             class="icon"
@@ -74,10 +74,10 @@
       </div>
 
       <div class="apero-info">
-        <p id="apero-local" class="apero-info-hidden">
+        <div id="apero-local" class="apero-info-hidden">
           No Javascript, no time, no beer!
-        </p>
-        <p id="apero-world" class="apero-info-hidden"></p>
+        </div>
+        <div id="apero-world" class="apero-info-hidden"></div>
       </div>
     </main>
 

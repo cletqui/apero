@@ -115,35 +115,103 @@ const toggleLanguage = () => {
 /**
  * Toggle the visibility of Apero local (user time zone) information and refresh it if necessary.
  */
-const showAperoLocal = () => {
-  // Refresh Apero information in case it needs updating
-  updateAperoLocal();
-
-  // Get the element representing Apero local info
+const toggleAperoLocal = () => {
+  // Get the apéro world element
   const aperoLocal = document.getElementById("apero-local");
 
-  // Toggle the display style of Apero local
-  aperoLocal.className =
-    aperoLocal.className === "apero-info-hidden"
-      ? "apero-info"
-      : "apero-info-hidden";
+  // Toggle the display style of apéro information
+  if (aperoLocal.className === "apero-info-hidden") {
+    // Refresh Apero information in case it needs updating
+    updateAperoLocal();
+
+    // If currently hidden, hide apéro world information and show apéro local information
+    hideAperoWorld();
+    showAperoLocal();
+  } else {
+    // If currently visible, hide apéro local information
+    hideAperoLocal();
+  }
 };
 
 /**
- * Toggle the visibility of Apero world information and trigger a search for Apero around the world.
+ * Show the apéro local information in the apéro local element and add "unselect" class for world button.
  */
-const showAperoWorld = () => {
-  // Refresh apero around the world information
-  updateAperoWorld();
+const showAperoLocal = () => {
+  // Get apéro local info element
+  const aperoLocal = document.getElementById("apero-local");
+  // Get apéro world button element
+  const worldButton = document.getElementById("world-button");
 
-  // Get the element representing Apero information
+  // Update the class to show apéro local information
+  aperoLocal.className = "apero-info";
+  // Update the class to add "unselected" color to world button
+  worldButton.classList.add("unselected");
+};
+
+/**
+ * Hide the apéro local information in the apéro local element and remove "unselect" class for world button.
+ */
+const hideAperoLocal = () => {
+  // Get apéro local info element
+  const aperoLocal = document.getElementById("apero-local");
+  // Get apéro world button element
+  const worldButton = document.getElementById("world-button");
+
+  // Update the class to hide apéro local information
+  aperoLocal.className = "apero-info-hidden";
+  // Update the class to remove "unselected" color to apéro button
+  worldButton.classList.remove("unselected");
+};
+
+/**
+ * Toggle the visibility of apéro world information and trigger a search for apéro around the world.
+ */
+const toggleAperoWorld = () => {
+  // Get the apéro world element
   const aperoWorld = document.getElementById("apero-world");
 
-  // Toggle the display style of Apero information
-  aperoWorld.className =
-    aperoWorld.className === "apero-info-hidden"
-      ? "apero-info"
-      : "apero-info-hidden";
+  // Toggle the display style of apéro information
+  if (aperoWorld.className === "apero-info-hidden") {
+    // Refresh apéro around the world information
+    updateAperoWorld();
+
+    // If currently hidden, hide apéro local information and show apéro world information
+    hideAperoLocal();
+    showAperoWorld();
+  } else {
+    // If currently visible, hide apéro world information
+    hideAperoWorld();
+  }
+};
+
+/**
+ * Show the apéro world information in the apéro world element and add "unselect" class for apero button.
+ */
+const showAperoWorld = () => {
+  // Get apéro world info element
+  const aperoWorld = document.getElementById("apero-world");
+  // Get apéro local button element
+  const aperoButton = document.getElementById("apero-button");
+
+  // Update the class to show apéro world information
+  aperoWorld.className = "apero-info";
+  // Update the class to add "unselected" color to apéro button
+  aperoButton.classList.add("unselected");
+};
+
+/**
+ * Hide the apéro world information in the apéro world and remove "unselect" class for apero button.
+ */
+const hideAperoWorld = () => {
+  // Get apéro world info element
+  const aperoWorld = document.getElementById("apero-world");
+  // Get apéro local button element
+  const aperoButton = document.getElementById("apero-button");
+
+  // Update the class to hide apéro world information
+  aperoWorld.className = "apero-info-hidden";
+  // Update the class to remove "unselected" color to apéro button
+  aperoButton.classList.remove("unselected");
 };
 
 /* Operating Functions */
@@ -212,7 +280,7 @@ const getApero = (timeZone) => {
     ) {
       return apero[continent][city]; // Return the Apero data associated with the provided time zone
     } else {
-      console.error(`No time zone ${timeZone} found in Apero data: ${error}`);
+      console.error(`No time zone ${timeZone} found in apéro data: ${error}`);
       throw new Error(
         `No time zone (${timeZone}) found in apero.json. To add this new time zone, follow: https://github.com/cletqui/apero/#contributing.`
       );
@@ -241,7 +309,7 @@ const getAperoInfo = (timeZone) => {
       return aperoTimeZone.aperoInfo; // Return the Apero information if it exists
     } else {
       console.error(
-        `Apéro info not found for ${timeZone} in Apero data: ${error}`
+        `Apéro info not found for ${timeZone} in apéro data: ${error}`
       );
       throw new Error(
         `Apéro info not found for ${timeZone}. To contribute, follow: https://github.com/cletqui/apero/#contributing.`
@@ -289,8 +357,8 @@ const isAperoTime = (aperoTime, timeZone) => {
 
     return aperoHour - timeZoneHour;
   } catch (error) {
-    console.error(`Error calculating Apero time: ${error}`);
-    throw new Error(`Error calculating Apero time. Please try again.`);
+    console.error(`Error calculating apéro time: ${error}`);
+    throw new Error(`Error calculating apéro time. Please try again.`);
   }
 };
 
@@ -313,16 +381,16 @@ const updateAperoLocal = () => {
 
     // Set message and icon based on the Apero status
     if (isAperoNow > 1) {
-      message = `It's not yet time for apéro, you need to be patient until ${aperoInfo.time}!`;
+      message = `It's not yet time for apéro in ${userTimeZone}, you need to be patient until ${aperoInfo.time}!`;
       icon = "./icons/hourglass-start.svg";
     } else if (isAperoNow === 1) {
-      message = `Apéro is coming soon, it will be time at ${aperoInfo.time}!`;
+      message = `Apéro is coming soon in ${userTimeZone}, it will be time at ${aperoInfo.time}!`;
       icon = "./icons/hourglass-end.svg";
     } else if (isAperoNow === 0) {
-      message = `It's time for apéro! Cheers!`;
+      message = `It's time for apéro in ${userTimeZone}! Cheers!`;
       icon = "./icons/glass-cheers.svg";
     } else {
-      message = `Apéro has already happened at ${aperoInfo.time}, wait until tomorrow at that time!`;
+      message = `Apéro has already happened in ${userTimeZone} at ${aperoInfo.time}, wait until tomorrow at that time!`;
       icon = "./icons/time-twenty-four.svg";
     }
   } catch (error) {
@@ -336,27 +404,34 @@ const updateAperoLocal = () => {
   }
 };
 
+/**
+ * Searches for apéro times across the world and categorizes them.
+ * @returns {Array[]} - An array containing two arrays: aperoWorld and almostAperoWorld.
+ *                      aperoWorld contains time zones where it's currently apéro time,
+ *                      almostAperoWorld contains time zones where it's almost apéro time.
+ */
 const searchAperoWorld = () => {
+  // Initialize arrays to store apéro and almost apéro time zones
   let aperoWorld = [];
   let almostAperoWorld = [];
 
-  for (let [continent, countries] of Object.entries(apero)) {
-    for (let [country, countryInfo] of Object.entries(countries)) {
-      const timeZone = `${continent}/${country}`;
+  // Iterate through the continents and cities in the 'apero' object
+  for (const continent of Object.keys(apero)) {
+    for (const city of Object.keys(apero[continent])) {
+      const timeZoneInfo = apero[continent][city];
+      const { timeZone, aperoInfo } = timeZoneInfo;
 
-      if (countryInfo.aperoInfo) {
-        const {
-          aperoInfo: { time: aperoTime },
-        } = countryInfo;
-        if (aperoTime != "") {
+      if (aperoInfo) {
+        const { time: aperoTime } = aperoInfo;
+
+        if (aperoTime) {
+          // Check if it's apéro time now, later, or not
           const isAperoNow = isAperoTime(aperoTime, timeZone);
+
           if (isAperoNow === 0) {
-            console.log(
-              `Success, it's apero time in ${timeZone} (${aperoTime})`
-            );
-            aperoWorld.push(timeZone);
+            aperoWorld.push(timeZoneInfo);
           } else if (isAperoNow === 1) {
-            almostAperoWorld.push(timeZone);
+            almostAperoWorld.push(timeZoneInfo);
           }
         }
       }
@@ -366,17 +441,32 @@ const searchAperoWorld = () => {
   return [aperoWorld, almostAperoWorld];
 };
 
+/**
+ * Picks a random time zone from the given array of time zones.
+ * @param {Array} aperoWorld - An array of time zones to choose from.
+ * @returns {string} - A randomly selected time zone.
+ */
 const pickRandomTimeZone = (aperoWorld) => {
-  return aperoWorld[Math.floor(Math.random() * aperoWorld.length)];
+  // Generate a random index within the range of the array length
+  const randomIndex = Math.floor(Math.random() * aperoWorld.length);
+
+  // Return the time zone at the randomly selected index
+  return aperoWorld[randomIndex];
 };
 
+/**
+ * Get the appropriate continent icon based on the provided time zone.
+ * @param {string} timeZone - The time zone in "continent/city" format.
+ * @returns {string} - The URL of the continent-specific icon.
+ */
 const getContinentIcon = (timeZone) => {
   let icon;
 
   try {
-    // Validate the provided time zone and split it into continent and city
+    // Split the provided time zone into continent and city
     const [continent] = timeZone.split("/");
 
+    // Determine the continent-specific icon based on the continent
     switch (continent) {
       case "Antarctica":
       case "Arctic":
@@ -404,6 +494,7 @@ const getContinentIcon = (timeZone) => {
 
     return icon;
   } catch (error) {
+    // Handle invalid time zone input
     console.error(`Invalid user time zone: ${timeZone}: ${error}`);
     throw new Error(
       `Your time zone appears to be invalid. You can report this issue at https://github.com/cletqui/apero/issues.`
@@ -411,31 +502,46 @@ const getContinentIcon = (timeZone) => {
   }
 };
 
+/**
+ * Updates the Apero information for the world view.
+ * This function displays information about apéro time or errors on the world view.
+ */
 const updateAperoWorld = () => {
+  // Default message and icon in case of errors or no data
   let message = "Unknown error.";
   let icon = "./icons/interrogation.svg";
 
   try {
-    let worldTimeZone;
+    // Variables to store the results of searchAperoWorld()
     const [aperoWorld, almostAperoWorld] = searchAperoWorld();
-    console.log(`Apero around the world: ${aperoWorld}`);
-    console.log(`Almost apero around the world: ${almostAperoWorld}`);
 
+    // Check if there are apéro locations
     if (aperoWorld.length > 0) {
-      worldTimeZone = pickRandomTimeZone(aperoWorld);
-      icon = getContinentIcon(worldTimeZone);
+      const {
+        timeZone,
+        aperoInfo: { time: aperoTime },
+      } = pickRandomTimeZone(aperoWorld);
+      message = `It's apéro time in ${timeZone} (${aperoTime}).`;
+      icon = getContinentIcon(timeZone);
     } else if (almostAperoWorld.length > 0) {
-      worldTimeZone = pickRandomTimeZone(almostAperoWorld);
-      icon = getContinentIcon(worldTimeZone);
+      const {
+        timeZone,
+        aperoInfo: { time: aperoTime },
+      } = pickRandomTimeZone(almostAperoWorld);
+      message = `It's almost apéro time in ${timeZone} (${aperoTime}).`;
+      icon = getContinentIcon(timeZone);
     } else {
+      // No apéro locations found
       message = "No apéro found across the globe, try even further!";
       icon = "./icons/planet-ringed.svg";
     }
   } catch (error) {
+    // Handle errors and log them
     console.error(`Error updating world apéro: ${error}`);
     message = error.message;
     icon = "./icons/exclamation.svg";
   } finally {
+    // Update the DOM elements with the message and icon
     document.getElementById("apero-world").textContent = message;
     document.getElementById("world-button").src = icon;
   }
@@ -447,8 +553,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   updateClock(); // Start by updating the clock
   setInterval(updateClock, 1000); // Setup automatic refresh of clock every seconds
   initiateTheme(); // Initiate default system theme
-  await fetchApero(); // Fetch apero info on ./data/apero.json
-  updateAperoLocal(); // Update apero status
-  setInterval(updateAperoLocal, 1000); // Setup automatic refresh of clock apero info every seconds
-  updateAperoWorld();
+  await fetchApero(); // Fetch apéro info on ./data/apero.json
+  updateAperoLocal(); // Update apéro local info
+  setInterval(updateAperoLocal, 1000); // Setup automatic refresh of apero local info every seconds
+  updateAperoWorld(); // Update apéro world info
+  setInterval(updateAperoWorld, 60000); // Setup automatic refresh of apero world info every minutes
 });
