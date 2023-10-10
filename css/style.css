@@ -5,39 +5,43 @@
 /* Themes */
 
 [data-theme="dark-theme"] {
-  --text-color: #f4f4f4;
+  --text-color: #f4f4f4; /* Text color */
   --text-color-svg: brightness(0) saturate(100%) invert(82%) sepia(100%)
-    saturate(15%) hue-rotate(355deg) brightness(109%) contrast(91%); /* #f4f4f4 */
-  --background-color: #1a1a1a;
+    saturate(15%) hue-rotate(355deg) brightness(109%) contrast(91%); /* #f4f4f4 */ /* Text color for svg icons */
+  --background-color: #1a1a1a; /* Background color */
   --background-color-svg: brightness(0) saturate(100%) invert(5%) sepia(2%)
-    saturate(48%) hue-rotate(314deg) brightness(101%) contrast(89%); /* #1a1a1a */
-  --header-background-color: #000000;
+    saturate(48%) hue-rotate(314deg) brightness(101%) contrast(89%); /* #1a1a1a */ /* Background color for svg icons */
+  --header-background-color: #000000; /* Header background color */
   --header-background-color-svg: brightness(0) saturate(100%) invert(0%)
-    sepia(27%) saturate(6520%) hue-rotate(33deg) brightness(91%) contrast(106%); /* #000000 */
-  --footer-img-color: #cacaca;
+    sepia(27%) saturate(6520%) hue-rotate(33deg) brightness(91%) contrast(106%); /* #000000 */ /* Header background color for svg icons */
+  --footer-img-color: #cacaca; /* Footer image color */
   --footer-img-color-svg: brightness(0) saturate(100%) invert(93%) sepia(0%)
-    saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */
-  --footer-img-color-hover: #696969;
+    saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */ /* Footer image color for svg icons */
+  --footer-img-color-hover: #696969; /* Footer image color when hovered */
   --footer-img-color-hover-svg: brightness(0) saturate(100%) invert(44%)
-    sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */
+    sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */ /* Footer image color for svg icons when hovered */
+  --icon-unselected: brightness(0) saturate(100%) invert(44%) sepia(0%)
+    saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */ /* Icon color when unselected */
 }
 
 [data-theme="light-theme"] {
-  --text-color: #636363;
+  --text-color: #636363; /* Text color */
   --text-color-svg: brightness(0) saturate(100%) invert(43%) sepia(6%)
-    saturate(0%) hue-rotate(193deg) brightness(87%) contrast(95%); /* #636363 */
-  --background-color: #f4f4f4;
+    saturate(0%) hue-rotate(193deg) brightness(87%) contrast(95%); /* #636363 */ /* Text color for svg icons */
+  --background-color: #f4f4f4; /* Background color */
   --background-color-svg: brightness(0) saturate(100%) invert(82%) sepia(100%)
-    saturate(15%) hue-rotate(355deg) brightness(109%) contrast(91%); /* #f4f4f4 */
-  --header-background-color: #aaaaaa;
+    saturate(15%) hue-rotate(355deg) brightness(109%) contrast(91%); /* #f4f4f4 */ /* Background color for svg icons */
+  --header-background-color: #aaaaaa; /* Header background color */
   --header-background-color-svg: brightness(0) saturate(100%) invert(65%)
-    sepia(0%) saturate(604%) hue-rotate(174deg) brightness(106%) contrast(87%); /* #aaaaaa */
-  --footer-img-color: #cacaca;
-  --footer-img-color-svg: brightness(0) saturate(100%) invert(93%) sepia(0%)
-    saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */
-  --footer-img-color-hover: #696969;
-  --footer-img-color-hover-svg: brightness(0) saturate(100%) invert(44%)
-    sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */
+    sepia(0%) saturate(604%) hue-rotate(174deg) brightness(106%) contrast(87%); /* #aaaaaa */ /* Header background color for svg icons */
+  --footer-img-color: #696969; /* Footer image color */
+  --footer-img-color-svg: brightness(0) saturate(100%) invert(44%) sepia(0%)
+    saturate(0%) hue-rotate(147deg) brightness(88%) contrast(83%); /* #696969 */ /* Footer image color for svg icons */
+  --footer-img-color-hover: #cacaca; /* Footer image color when hovered */
+  --footer-img-color-hover-svg: brightness(0) saturate(100%) invert(93%)
+    sepia(0%) saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */ /* Footer image color for svg icons when hovered */
+  --icon-unselected: brightness(0) saturate(100%) invert(93%) sepia(0%)
+    saturate(28%) hue-rotate(159deg) brightness(84%) contrast(103%); /* #cacaca */ /* Icon color when unselected */
 }
 
 /* Body */
@@ -71,15 +75,20 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 8vh;
-  padding-right: 15px;
+  height: 6vmax;
+  padding: 0.5vmax;
+  padding-right: 2%;
+}
+
+header .menu {
+  display: flex;
+  justify-content: right;
 }
 
 header.menu-hidden {
   transition: background-image 0.3s ease-in-out;
   background-image: none;
 }
-
 header.menu-hidden .menu {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
@@ -88,20 +97,34 @@ header.menu-hidden .menu {
 header.menu-visible {
   transition: background-image 0.3s ease-in-out;
   background-image: linear-gradient(
-    190deg,
+    200deg,
     var(--header-background-color),
-    var(--background-color) 42%
+    var(--background-color) 69%
   );
 }
-
 header.menu-visible .menu {
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 }
 
+header .menu button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 4vmax;
+  width: 4vmax;
+}
+
+header img.icon {
+  height: 2vmax;
+  width: 2vmax;
+}
+
 header .menu-button {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 2%;
+  padding-right: 2%;
   cursor: pointer;
 }
 
@@ -112,6 +135,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  width: 100vw;
 }
 
 main .clock {
@@ -122,32 +147,51 @@ main .clock {
 }
 
 main .time {
-  font-size: 150px;
+  font-size: 20vmin;
+  display: inline;
   color: #f4f4f4;
   color: var(--text-color);
-  margin-bottom: 25px;
+  margin-bottom: 4vmin;
 }
 
 main .date {
-  font-size: 15px;
-  margin-top: 10px;
+  font-size: 1vmax;
 }
 
 main .time-zone {
-  font-size: 15px;
-  margin-bottom: 25px;
+  font-size: 1vmax;
+  margin-bottom: 4vmin;
+}
+
+main .apero-button {
+  margin-bottom: 1vmin;
 }
 
 main .apero-info {
-  display: block;
+  display: flex;
+  text-align: center;
+  font-size: 1.2vmax;
 }
 
 main .apero-info-hidden {
   display: none;
 }
 
-main p {
-  margin: 4px;
+main img.icon {
+  height: 1.8vmax;
+  width: 1.8vmax;
+}
+
+main img.icon {
+  display: flex;
+  filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg)
+    brightness(109%) contrast(91%);
+  filter: var(--text-color-svg);
+}
+main img.icon.unselected {
+  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
+    contrast(83%);
+  filter: var(--icon-unselected);
 }
 
 /* Footer */
@@ -155,28 +199,26 @@ main p {
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 2vh;
-  padding: 10px;
+  height: 2.5vmax;
+  padding: 0.5vmax;
 }
 
 footer .link {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 1%;
+  padding-left: 1%;
+  width: 1.5vmax;
+  height: 1.5vmax;
 }
 
 footer .link img {
-  display: block;
-  width: 20px;
-  height: 20px;
   cursor: pointer;
-  margin: 10px-;
-  padding: 1px;
   border-radius: 0%;
   filter: invert(93%) sepia(0%) saturate(28%) hue-rotate(159deg) brightness(84%)
     contrast(103%);
@@ -188,18 +230,21 @@ footer .link img:hover {
   filter: var(--footer-img-color-hover-svg);
 }
 
-.icon {
+/* Global */
+
+img.icon {
   display: flex;
-  height: 20px;
-  width: 20px;
   filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg)
     brightness(109%) contrast(91%);
   filter: var(--text-color-svg);
 }
+img.icon.unselected {
+  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
+    contrast(83%);
+  filter: var(--icon-unselected);
+}
 
-/* Global */
-
-button:hover .icon {
+button:hover img.icon {
   filter: invert(5%) sepia(2%) saturate(48%) hue-rotate(314deg) brightness(101%)
     contrast(89%);
   filter: var(--background-color-svg);
@@ -214,9 +259,7 @@ button {
   border: 2px solid #f4f4f4;
   border: 2px solid var(--text-color);
   cursor: pointer;
-  margin: 0px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 1vmax;
   border-radius: 50px;
 }
 
@@ -225,33 +268,6 @@ button:hover {
   background-color: var(--text-color);
   color: #1a1a1a;
   color: var(--background-color);
-}
-
-/* Media queries for responsiveness */
-
-@media (max-width: 600px) {
-  .clock {
-    font-size: 40px;
-  }
-
-  .link img {
-    width: 15px;
-    height: 15px;
-    margin-right: 2px;
-    margin-left: 2px;
-  }
-
-  button {
-    font-size: 12px;
-    padding: 10px 12px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .date {
-    font-size: 16px;
-    margin-top: 5px;
-  }
 }
 
 /* for SVG color, use: https://codepen.io/sosuke/pen/Pjoqqp */
