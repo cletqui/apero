@@ -1,22 +1,220 @@
 {
   "Africa": {
-    "Abidjan": {},
+    "Abidjan": {
+      "timeZone": "Africa/Abidjan",
+      "countryInfo": {
+        "name": "Côte d'Ivoire",
+        "capital": "Yamoussoukro (official), Abidjan (economic)",
+        "language": "French",
+        "currency": "XOF",
+        "majorCities": ["Bouaké", "Daloa", "San Pedro"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Bissap (Hibiscus Drink)",
+          "Palm Wine",
+          "Flag Beer",
+          "Attieke with Grilled Fish"
+        ],
+        "snacks": [
+          "Kedjenou Chicken",
+          "Fried Plantains",
+          "Peanut Sauce with Rice"
+        ],
+        "brands": [
+          "Flag Beer",
+          "Bissap King",
+          "Palm Wine from Local Producers"
+        ],
+        "toast": ["À la vôtre!", "Santé!", "Cheers!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\" or \"Santé!\"."
+      }
+    },
+
     "Accra": {},
     "Addis_Ababa": {},
-    "Algiers": {},
+
+    "Algiers": {
+      "timeZone": "Africa/Algiers",
+      "countryInfo": {
+        "name": "Algeria",
+        "capital": "Algiers",
+        "language": "Arabic, Berber",
+        "currency": "DZD",
+        "majorCities": ["Oran", "Constantine", "Annaba"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": [
+          "Mint Tea",
+          "Café Maure",
+          "Boukha (Fig Liquor)",
+          "Algerian Wine"
+        ],
+        "snacks": [
+          "Brik (Stuffed Pastry)",
+          "Chakhchoukha (Algerian Salad)",
+          "Makroud (Date Pastry)"
+        ],
+        "brands": ["Thé Touareg", "Café Rass", "Cuvée du Président"],
+        "toast": ["À votre santé!", "بالصحة والعافية!="],
+        "tradition": "Raise your glass, say \"À votre santé!\" or \"بالصحة والعافية!\" while making eye contact with those around you. It's a warm and hospitable Algerian toast."
+      }
+    },
+
     "Asmara": {},
-    "Bamako": {},
+
+    "Bamako": {
+      "timeZone": "Africa/Bamako",
+      "countryInfo": {
+        "name": "Mali",
+        "capital": "Bamako",
+        "language": "French, Bambara",
+        "currency": "XOF",
+        "majorCities": ["Sikasso", "Mopti", "Segou"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Toumache (Hibiscus Drink)",
+          "Bissap (Hibiscus Juice)",
+          "Malien Beer",
+          "Ataya (Green Tea)"
+        ],
+        "snacks": [
+          "Brochettes (Grilled Skewers)",
+          "Fonio Salad",
+          "Beignets (Fried Pastries)"
+        ],
+        "brands": ["Malta Guiness", "Toumache by Mali Bissap", "Bière Niger"],
+        "toast": ["À la vôtre!", "Santé!", "A bè san dèmè"],
+        "tradition": "Raise your glass, say \"À la vôtre!\", \"Santé!\" or \"A bè san dèmè\"."
+      }
+    },
+
     "Bangui": {},
     "Banjul": {},
     "Bissau": {},
     "Blantyre": {},
-    "Brazzaville": {},
+
+    "Brazzaville": {
+      "timeZone": "Africa/Brazzaville",
+      "countryInfo": {
+        "name": "Republic of the Congo",
+        "capital": "Brazzaville",
+        "language": "French, Lingala",
+        "currency": "XAF",
+        "majorCities": ["Pointe-Noire", "Dolisie", "Nkayi"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Palm Wine",
+          "Nkoi Nkoi (Local Spirit)",
+          "Mossaka (Fermented Cassava Drink)",
+          "Sapeur Beer"
+        ],
+        "snacks": [
+          "Soso (Grilled Meat)",
+          "Foufou with Sauce",
+          "Ntaba (Roasted Peanuts)"
+        ],
+        "brands": ["La Sangha", "Nkoi Nkoi", "Sapeur Beer"],
+        "toast": ["À votre santé!", "Eza biongo!", "Bolingo ya vie!"],
+        "tradition": "Raise your glass, say \"À votre santé!\", \"Eza biongo!\" or \"Bolingo ya vie\"."
+      }
+    },
+
     "Bujumbura": {},
-    "Cairo": {},
-    "Casablanca": {},
+
+    "Cairo": {
+      "timeZone": "Africa/Cairo",
+      "countryInfo": {
+        "name": "Egypt",
+        "capital": "Cairo",
+        "language": "Arabic",
+        "currency": "EGP",
+        "majorCities": ["Alexandria", "Giza", "Luxor"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": [
+          "Mint Tea",
+          "Hibiscus Juice (Karkade)",
+          "Egyptian Coffee",
+          "Stella Beer"
+        ],
+        "snacks": ["Ful Medames", "Koshari", "Taameya (Egyptian Falafel)"],
+        "brands": ["Stella Beer", "El Roshdy Coffee", "Ahwa Saada"],
+        "toast": ["Cheers!", "في صحتك!", "صحة وسلامة!"],
+        "tradition": "Raise your glass, say \"Cheers!`\", \"في صحتك!\", \"صحة وسلامة!\"."
+      }
+    },
+
+    "Casablanca": {
+      "timeZone": "Africa/Casablanca",
+      "countryInfo": {
+        "name": "Morocco",
+        "capital": "Rabat",
+        "language": "Arabic, Berber, French",
+        "currency": "MAD",
+        "majorCities": ["Marrakech", "Fes", "Tangier"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": [
+          "Moroccan Mint Tea",
+          "Casablanca Beer",
+          "Mimosa",
+          "Avocado Smoothie"
+        ],
+        "snacks": [
+          "Briouat (Stuffed Pastries)",
+          "Harira Soup",
+          "Olives and Nuts"
+        ],
+        "brands": [
+          "Casablanca Beer",
+          "Thé à la Menthe Marocain",
+          "Atlas Avocado"
+        ],
+        "toast": ["Bisaha!", "على صحتك!", "Saha wa afla!"],
+        "tradition": "Raise your glass, say \"Bisaha!\", \"على صحتك!\" or \"Saha wa afla!\"."
+      }
+    },
+
     "Ceuta": {},
     "Conakry": {},
-    "Dakar": {},
+
+    "Dakar": {
+      "timeZone": "Africa/Dakar",
+      "countryInfo": {
+        "name": "Senegal",
+        "capital": "Dakar",
+        "language": "French, Wolof",
+        "currency": "XOF",
+        "majorCities": ["Thiès", "Saint-Louis", "Kaolack"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": [
+          "Bissap (Hibiscus Drink)",
+          "Ginjan (Ginger Juice)",
+          "Flag Beer",
+          "Attaya (Senegalese Tea)"
+        ],
+        "snacks": [
+          "Nems (Spring Rolls)",
+          "Dibi (Grilled Meat)",
+          "Fataya (Stuffed Pastries)"
+        ],
+        "brands": ["Flag Beer", "Bissap by Sunu Noppi", "Kinkeliba Tea"],
+        "toast": ["À la vôtre!", "Santé!", "Na nga def!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\", \"Santé!\" or \"Na nga def!\"."
+      }
+    },
+
     "Dar_es_Salaam": {},
     "Djibouti": {},
     "Douala": {},
@@ -24,12 +222,64 @@
     "Freetown": {},
     "Gaborone": {},
     "Harare": {},
-    "Johannesburg": {},
+
+    "Johannesburg": {
+      "timeZone": "Africa/Johannesburg",
+      "countryInfo": {
+        "name": "South Africa",
+        "capital": "Pretoria (administrative), Bloemfontein (judicial), Cape Town (legislative)",
+        "language": "Afrikaans, English, Zulu, Xhosa, and more",
+        "currency": "ZAR",
+        "majorCities": ["Cape Town", "Durban", "Pretoria"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Rooibos Tea",
+          "Amarula Cream Liqueur",
+          "Savanna Dry Cider",
+          "South African Wine"
+        ],
+        "snacks": ["Biltong (Dried Meat)", "Samoosas", "Boerewors Rolls"],
+        "brands": ["Amarula", "Savanna", "Klipdrift Brandy"],
+        "toast": ["Cheers!", "Gesondheid!", "Iphumile lezinto!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"Gesondheid!\" or \"Iphumile lezinto!\"."
+      }
+    },
+
     "Juba": {},
     "Kampala": {},
     "Khartoum": {},
     "Kigali": {},
-    "Kinshasa": {},
+
+    "Kinshasa": {
+      "timeZone": "Africa/Kinshasa",
+      "countryInfo": {
+        "name": "Democratic Republic of the Congo",
+        "capital": "Kinshasa",
+        "language": "French, Lingala, Swahili, Kikongo, Tshiluba",
+        "currency": "CDF",
+        "majorCities": ["Lubumbashi", "Mbuji-Mayi", "Kananga"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Palm Wine",
+          "Kilulu (Local Beer)",
+          "Chibuku (Sorghum Beer)",
+          "Makala (Sugar Cane Juice)"
+        ],
+        "snacks": [
+          "Brochettes (Grilled Meat)",
+          "Sombe (Cassava Leaves)",
+          "Fufu with Sauce"
+        ],
+        "brands": ["Kilulu", "Chibuku Shake Shake", "Makala Fresh"],
+        "toast": ["À la vôtre!", "Na lufelo!", "Na mapon'ezoba!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\", \"Na lufelo!\" or \"Na mapon'ezoba!\"."
+      }
+    },
+
     "Lagos": {},
     "Libreville": {},
     "Lome": {},
@@ -42,25 +292,200 @@
     "Mbabane": {},
     "Mogadishu": {},
     "Monrovia": {},
-    "Nairobi": {},
+
+    "Nairobi": {
+      "timeZone": "Africa/Nairobi",
+      "countryInfo": {
+        "name": "Kenya",
+        "capital": "Nairobi",
+        "language": "Swahili, English",
+        "currency": "KES",
+        "majorCities": ["Mombasa", "Kisumu", "Nakuru"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Chai (Tea with Milk)",
+          "Dawa (Honey and Lime Cocktail)",
+          "Tusker Beer",
+          "Kenyan Coffee"
+        ],
+        "snacks": [
+          "Nyama Choma (Grilled Meat)",
+          "Mandazi (Fried Dough)",
+          "Kachumbari (Salsa)"
+        ],
+        "brands": ["Tusker Beer", "Dawa Cocktail", "Kenya AA Coffee"],
+        "toast": ["Cheers!", "Afya yako!", "Mazuri!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"Afya yako!\" or \"Mazuri!\"."
+      }
+    },
+
     "Ndjamena": {},
     "Niamey": {},
     "Nouakchott": {},
-    "Ouagadougou": {},
+
+    "Ouagadougou": {
+      "timeZone": "Africa/Ouagadougou",
+      "countryInfo": {
+        "name": "Burkina Faso",
+        "capital": "Ouagadougou",
+        "language": "French, Moore, Dioula",
+        "currency": "XOF",
+        "majorCities": ["Bobo-Dioulasso", "Koudougou", "Banfora"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Dolo (Millet Beer)",
+          "Bissap (Hibiscus Drink)",
+          "Flag Beer",
+          "Palm Wine"
+        ],
+        "snacks": [
+          "Brochettes (Grilled Meat)",
+          "Riz Gras (Fatty Rice)",
+          "Akpan (Corn Porridge)"
+        ],
+        "brands": [
+          "Flag Beer",
+          "Dolo by Local Brewers",
+          "Bissap by Local Producers"
+        ],
+        "toast": ["À la vôtre!", "A la santé!", "Laafi bala!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\", \"A la santé!\" or \"Laafi bala!\"."
+      }
+    },
+
     "Porto-Novo": {},
     "Sao_Tome": {},
-    "Tripoli": {},
-    "Tunis": {},
+
+    "Tripoli": {
+      "timeZone": "Africa/Tripoli",
+      "countryInfo": {
+        "name": "Libya",
+        "capital": "Tripoli",
+        "language": "Arabic",
+        "currency": "LYD",
+        "majorCities": ["Benghazi", "Misrata", "Sirte"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": [
+          "Libyan Mint Tea",
+          "Date Palm Juice",
+          "Birell (Non-Alcoholic Beverage)",
+          "Arabic Coffee"
+        ],
+        "snacks": [
+          "Sfeeha (Meat Pies)",
+          "Harira Soup",
+          "Maakouda (Potato Patties)"
+        ],
+        "brands": ["Birell", "Libyan Tea Company", "Café Afrik"],
+        "toast": [
+          "في صحتك! (Fi sahtek, meaning 'To your health!')",
+          "صحة وعافية! (Sahha wa 'afiya, meaning 'Health and well-being!')",
+          "بالحياة والسلام! (Bil-hayat wa's-salam, meaning 'To life and peace!')"
+        ],
+        "tradition": "Raise your glass, say 'في صحتك!' (Fi sahtek), 'صحة وعافية!' (Sahha wa 'afiya) or 'بالحياة والسلام!' (Bil-hayat wa's-salam), and enjoy the flavors of Libya's cuisine and the warmth of its culture."
+      }
+    },
+
+    "Tunis": {
+      "timeZone": "Africa/Tunis",
+      "countryInfo": {
+        "name": "Tunisia",
+        "capital": "Tunis",
+        "language": "Arabic, Tunisian Arabic, French",
+        "currency": "TND",
+        "majorCities": ["Sfax", "Sousse", "Kairouan"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": [
+          "Mint Tea (Thé à la Menthe)",
+          "Boukha (Date Palm Liqueur)",
+          "Celtia Beer",
+          "Café Express (Espresso Coffee)"
+        ],
+        "snacks": [
+          "Brik (Stuffed Pastry)",
+          "Mechoui (Roast Lamb)",
+          "Fricassé (Fried Sandwich)"
+        ],
+        "brands": [
+          "Celtia Beer",
+          "Thé à la Menthe by El Alj",
+          "Boukha Tunisie"
+        ],
+        "toast": ["À la vôtre!", "بالصحة والعافية!", "Choukran!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\", \"بالصحة والعافية!\" or \"Choukran!\"."
+      }
+    },
+
     "Windhoek": {}
   },
+
   "America": {
     "Adak": {},
-    "Anchorage": {},
+
+    "Anchorage": {
+      "timeZone": "America/Anchorage",
+      "stateInfo": {
+        "name": "Alaska",
+        "capital": "Juneau",
+        "language": "English",
+        "currency": "USD",
+        "largestCities": ["Anchorage", "Fairbanks", "Juneau"]
+      },
+      "aperoInfo": {
+        "time": "16:30",
+        "drinks": [
+          "Alaskan Amber Ale",
+          "Smoked Salmon Vodka",
+          "Birch Sap Wine",
+          "Wild Berry Cocktails"
+        ],
+        "snacks": ["Salmon Dip", "Reindeer Sausage", "Fry Bread"],
+        "toast": ["Cheers!", "To the Last Frontier!", "Salut!"],
+        "tradition": "Raise your glass, say \"Cheers!\". It's about celebrating together."
+      }
+    },
+
     "Anguilla": {},
     "Antigua": {},
     "Araguaina": {},
+
     "Argentina": {
-      "Buenos_Aires": {},
+      "Buenos_Aires": {
+        "timeZone": "America/Argentina/Buenos_Aires",
+        "countryInfo": {
+          "name": "Argentina",
+          "capital": "Buenos Aires",
+          "language": "Spanish",
+          "currency": "ARS",
+          "majorCities": ["Córdoba", "Rosario", "Mendoza"]
+        },
+        "aperoInfo": {
+          "time": "20:30",
+          "drinks": [
+            "Malbec Wine",
+            "Fernet with Coca-Cola",
+            "Mate",
+            "Café con Leche"
+          ],
+          "snacks": ["Empanadas", "Choripán", "Papas Bravas"],
+          "brands": [
+            "Bodegas Catena Zapata",
+            "Fernet Branca",
+            "Yerba Mate Taragüí"
+          ],
+          "toast": ["¡Salud!", "¡Por la amistad!", "¡A la vida!"],
+          "tradition": "Raise your glass and say \"¡Salud!\" or \"¡Por la amistad!\" while making eye contact with those around you. It's a warm and friendly Argentine toast."
+        }
+      },
+
       "Catamarca": {},
       "Cordoba": {},
       "Jujuy": {},
@@ -83,57 +508,26 @@
     "Belize": {},
     "Blanc-Sablon": {},
     "Boa_Vista": {},
+
     "Bogota": {
       "timeZone": "America/Bogota",
-      "utcTimeZones": ["UTC-5"],
       "countryInfo": {
         "name": "Colombia",
-        "capital": "Bogota",
-        "language": "spanish",
-        "demonym": "Colombian",
-        "population": "52M",
-        "currency": "$ (Colombian peso)"
+        "capital": "Bogotá",
+        "language": "Spanish",
+        "currency": "COP",
+        "majorCities": ["Medellín", "Cali", "Barranquilla"]
       },
       "aperoInfo": {
-        "time": "18:00",
-        "specialDrinks": [
-          "Aguardiente",
-          "Rum (e.g., Ron Medellín)",
-          "Canelazo",
-          "Chicha"
-        ],
-        "snacks": ["Empanadas", "Arepa de Queso", "Patacones"],
-        "rituals": "Enjoying drinks and snacks with lively conversation.",
-        "venues": "Bars, pubs, and outdoor plazas",
-        "aperoGlass": "Old Fashioned glass",
-        "music": "Vallenato, Cumbia, Salsa",
-        "famousBrands": [
-          "Aguardiente Antioqueño",
-          "Ron Medellín",
-          "Club Colombia"
-        ],
-        "etiquette": "It's common to offer a toast with 'Salud!' (health).",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Bogotá",
-          "utcTimeZone": "UTC-5",
-          "population": "7.4 million"
-        },
-        {
-          "name": "Medellín",
-          "utcTimeZone": "UTC-5",
-          "population": "2.5 million"
-        },
-        {
-          "name": "Cali",
-          "utcTimeZone": "UTC-5",
-          "population": "2.2 million"
-        }
-      ]
+        "time": "19:00",
+        "drinks": ["Aguardiente", "Canelazo", "Colombian Coffee", "Chicha"],
+        "snacks": ["Arepas", "Empanadas", "Patacones"],
+        "brands": ["Aguardiente Antioqueño", "Café Devoción", "Postobón"],
+        "toast": ["Salud!", "¡A tu salud!", "¡Por la amistad!"],
+        "tradition": "Raise your glass and say \"Salud!\" or \"¡A tu salud!\" while making eye contact with those around you. It's a warm and friendly Colombian toast."
+      }
     },
+
     "Boise": {},
     "Cambridge_Bay": {},
     "Campo_Grande": {},
@@ -141,7 +535,35 @@
     "Caracas": {},
     "Cayenne": {},
     "Cayman": {},
-    "Chicago": {},
+
+    "Chicago": {
+      "timeZone": "America/Chicago",
+      "countryInfo": {
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "language": "English",
+        "currency": "USD",
+        "majorCities": ["New York City", "Los Angeles", "Houston"]
+      },
+      "aperoInfo": {
+        "time": "17:00",
+        "drinks": [
+          "Craft Beer",
+          "Chicago-Style Cocktail (e.g., Chicago Fizz)",
+          "Old Fashioned",
+          "Deep-Dish Pizza Ale"
+        ],
+        "snacks": ["Deep-Dish Pizza", "Chicago Hot Dog", "Popcorn"],
+        "brands": [
+          "Goose Island",
+          "Jeppson's Malört",
+          "Malnati Chicago Classic"
+        ],
+        "toast": ["Cheers!", "To your health!", "Bottoms up!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"To your health!\" or \"Bottoms up!\".f"
+      }
+    },
+
     "Chihuahua": {},
     "Costa_Rica": {},
     "Creston": {},
@@ -150,8 +572,63 @@
     "Danmarkshavn": {},
     "Dawson": {},
     "Dawson_Creek": {},
-    "Denver": {},
-    "Detroit": {},
+
+    "Denver": {
+      "timeZone": "America/Denver",
+      "countryInfo": {
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "language": "English",
+        "currency": "USD",
+        "majorCities": ["New York City", "Los Angeles", "Chicago"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Craft Beer",
+          "Colorado Wine",
+          "Rocky Mountain Highball",
+          "Denver Mint Julep"
+        ],
+        "snacks": ["Green Chile", "Bison Sliders", "Pretzels"],
+        "brands": [
+          "Great Divide Brewing Co.",
+          "Colorado Cellars Winery",
+          "Denver Distillery"
+        ],
+        "toast": ["Cheers!", "To good times!", "Here's to Denver!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"To good times!\" or \"Here's to Denver!\"."
+      }
+    },
+
+    "Detroit": {
+      "timeZone": "America/Detroit",
+      "countryInfo": {
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "language": "English",
+        "currency": "USD",
+        "majorCities": ["New York City", "Los Angeles", "Chicago"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Craft Beer",
+          "Michigan Wine",
+          "Detroit Punch",
+          "Motor City Mule"
+        ],
+        "snacks": ["Coney Dogs", "Faygo Pop", "Vernors Ginger Ale"],
+        "brands": [
+          "Founders Brewing Co.",
+          "Chateau Grand Traverse Winery",
+          "Faygo Beverages"
+        ],
+        "toast": ["Cheers!", "To Detroit!", "Drink up!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"To Detroit!\" or \"Drink up!\"."
+      }
+    },
+
     "Dominica": {},
     "Edmonton": {},
     "Eirunepe": {},
@@ -162,7 +639,35 @@
     "Goose_Bay": {},
     "Grand_Turk": {},
     "Grenada": {},
-    "Guadeloupe": {},
+
+    "Guadeloupe": {
+      "timeZone": "America/Guadeloupe",
+      "countryInfo": {
+        "name": "Guadeloupe",
+        "capital": "Basse-Terre",
+        "language": "French, Creole",
+        "currency": "EUR",
+        "majorCities": ["Pointe-à-Pitre", "Les Abymes", "Le Gosier"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Ti' Punch",
+          "Rhum Bologne",
+          "Planteur",
+          "Local Fruit Juices"
+        ],
+        "snacks": [
+          "Accras de Morue (Cod Fritters)",
+          "Bokit Sandwiches",
+          "Douceur de Banane (Banana Dessert)"
+        ],
+        "brands": ["Rhum Bologne", "Longueteau", "Bellevue"],
+        "toast": ["À la vôtre!", "Santé!", "Cheers!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\" or \"Santé!\"."
+      }
+    },
+
     "Guatemala": {},
     "Guayaquil": {},
     "Guyana": {},
@@ -170,7 +675,34 @@
     "Havana": {},
     "Hermosillo": {},
     "Indiana": {
-      "Indianapolis": {},
+      "Indianapolis": {
+        "timeZone": "America/Indiana/Indianapolis",
+        "countryInfo": {
+          "name": "United States",
+          "capital": "Washington, D.C.",
+          "language": "English",
+          "currency": "United States Dollar (USD)",
+          "majorCities": ["New York City", "Los Angeles", "Chicago"]
+        },
+        "aperoInfo": {
+          "time": "17:30",
+          "drinks": [
+            "Craft Beer",
+            "Indiana Wine",
+            "Hoosier Highball",
+            "Indy Iced Tea"
+          ],
+          "snacks": ["Tenderloin Sandwich", "Sugar Cream Pie", "Popcorn"],
+          "brands": [
+            "Sun King Brewery",
+            "Oliver Winery",
+            "Huber's Orchard & Winery"
+          ],
+          "toast": ["Cheers!", "To Indy!", "Let's raise a glass!"],
+          "tradition": "Raise your glass, say \"Cheers!\", \"To Indy!\" or \"Let's raise a glass!\"."
+        }
+      },
+
       "Knox": {},
       "Marengo": {},
       "Petersburg": {},
@@ -181,81 +713,189 @@
     },
     "Inuvik": {},
     "Iqaluit": {},
-    "Jamaica": {},
+
+    "Jamaica": {
+      "timeZone": "America/Jamaica",
+      "countryInfo": {
+        "name": "Jamaica",
+        "capital": "Kingston",
+        "language": "English",
+        "currency": "JMD",
+        "majorCities": ["Montego Bay", "Spanish Town", "Portmore"]
+      },
+      "aperoInfo": {
+        "time": "18:00",
+        "drinks": [
+          "Jamaican Rum Punch",
+          "Red Stripe Beer",
+          "Sorrel Drink",
+          "Blue Mountain Coffee"
+        ],
+        "snacks": ["Jerk Chicken", "Bammy", "Festival"],
+        "brands": [
+          "Appleton Estate Rum",
+          "Red Stripe",
+          "Coffee Traders Blue Mountain Coffee"
+        ],
+        "toast": ["Cheers!", "To Jamaica!", "One love!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"To Jamaica!\" or \"One love!\"."
+      }
+    },
+
     "Juneau": {},
     "Kentucky": {
       "Louisville": {},
       "Monticello": {}
     },
     "Kralendijk": {},
-    "La_Paz": {},
-    "Lima": {},
-    "Los_Angeles": {},
+
+    "La_Paz": {
+      "timeZone": "America/La_Paz",
+      "countryInfo": {
+        "name": "Bolivia",
+        "capital": "La Paz",
+        "language": "Spanish, Quechua, Aymara",
+        "currency": "BOB",
+        "majorCities": ["Santa Cruz de la Sierra", "Cochabamba", "Sucre"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Singani (National Liquor)",
+          "Chicha (Fermented Corn Drink)",
+          "Paceña Beer",
+          "Coca Tea"
+        ],
+        "snacks": [
+          "Salteñas (Empanadas)",
+          "Anticuchos (Grilled Skewers)",
+          "Tucumanas (Stuffed Pastries)"
+        ],
+        "brands": ["Singani Los Parrales", "Paceña", "Del Valle"],
+        "toast": ["Salud!", "Arriba Bolivia!", "Viva La Paz!"],
+        "tradition": "Raise your glass, say \"Salud!\", \"Arriba Bolivia!\" or \"Viva La Paz!\"."
+      }
+    },
+
+    "Lima": {
+      "timeZone": "America/Lima",
+      "countryInfo": {
+        "name": "Peru",
+        "capital": "Lima",
+        "language": "Spanish, Quechua, Aymara",
+        "currency": "PEN",
+        "majorCities": ["Arequipa", "Cusco", "Trujillo"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": ["Pisco Sour", "Chicha Morada", "Cusqueña Beer", "Inca Kola"],
+        "snacks": [
+          "Ceviche",
+          "Anticuchos (Grilled Skewers)",
+          "Papa a la Huancaina (Potatoes in Spicy Cheese Sauce)"
+        ],
+        "brands": ["Pisco Portón", "Cusqueña", "Inca Kola"],
+        "toast": ["Salud!", "Arriba Peru!", "Viva Lima!"],
+        "tradition": "Raise your glass, say \"Salud!\", \"Arriba Peru!\" or \"Viva Lima!\"."
+      }
+    },
+
+    "Los_Angeles": {
+      "timeZone": "America/Los_Angeles",
+      "countryInfo": {
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "language": "English",
+        "currency": "USD",
+        "majorCities": ["New York City", "Chicago", "Houston"]
+      },
+      "aperoInfo": {
+        "time": "17:00",
+        "drinks": [
+          "California Wine",
+          "Craft Beer",
+          "Los Angeles Lemonade",
+          "Iced Coffee"
+        ],
+        "snacks": ["Tacos", "Sushi Rolls", "Guacamole and Chips"],
+        "brands": [
+          "Napa Valley Vineyards",
+          "Stone Brewing Co.",
+          "Pink's Hot Dogs"
+        ],
+        "toast": ["Cheers!", "To LA!", "Let's raise a glass!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"To LA!\" or \"Let's raise a glass!\"."
+      }
+    },
+
     "Lower_Princes": {},
     "Maceio": {},
     "Managua": {},
     "Manaus": {},
     "Marigot": {},
+
     "Martinique": {},
+
     "Matamoros": {},
     "Mazatlan": {},
     "Menominee": {},
     "Merida": {},
     "Metlakatla": {},
+
     "Mexico_City": {
       "timeZone": "America/Mexico_City",
-      "utcTimeZones": ["UTC-6", "UTC-5 (DST)"],
       "countryInfo": {
         "name": "Mexico",
         "capital": "Mexico City",
-        "language": "spanish",
-        "demonym": "Mexican",
-        "population": "128M",
-        "currency": "$ (Mexican peso)"
+        "language": "Spanish",
+        "currency": "MXN",
+        "majorCities": ["Guadalajara", "Monterrey", "Puebla"]
       },
       "aperoInfo": {
-        "time": "18:00",
-        "specialDrinks": [
-          "Margarita",
-          "Paloma",
-          "Michelada",
-          "Tequila Sunrise"
-        ],
-        "snacks": ["Guacamole", "Salsa", "Tacos"],
-        "rituals": "Enjoying drinks and snacks with lively conversation.",
-        "venues": "Cantinas and outdoor terraces",
-        "aperoGlass": "Margarita glass",
-        "music": "Mariachi music",
-        "famousBrands": ["Patrón", "Sauza", "Jose Cuervo"],
-        "etiquette": "It's common to say 'Salud' (health) when toasting.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Mexico City",
-          "utcTimeZone": "UTC-6",
-          "population": "8.9M"
-        },
-        {
-          "name": "Guadalajara",
-          "utcTimeZone": "UTC-6",
-          "population": "1.5M"
-        },
-        {
-          "name": "Monterrey",
-          "utcTimeZone": "UTC-6",
-          "population": "1.1M"
-        }
-      ]
+        "time": "19:00",
+        "drinks": ["Tequila", "Margarita", "Michelada", "Mezcal"],
+        "snacks": ["Guacamole", "Salsa and Chips", "Tacos"],
+        "brands": ["Jose Cuervo", "Patrón", "Sol Beer"],
+        "toast": ["Salud!", "¡A tu salud!", "¡Viva México!"],
+        "tradition": "Raise your glass, say \"Salud!\", \"¡A tu salud!\" or \"¡Viva México!\"."
+      }
     },
+
     "Miquelon": {},
     "Moncton": {},
     "Monterrey": {},
     "Montevideo": {},
     "Montserrat": {},
     "Nassau": {},
-    "New_York": {},
+
+    "New_York": {
+      "timeZone": "America/New_York",
+      "countryInfo": {
+        "name": "United States",
+        "capital": "Washington, D.C.",
+        "language": "English",
+        "currency": "USD",
+        "majorCities": ["Los Angeles", "Chicago", "Houston"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Craft Beer",
+          "New York Wine",
+          "Manhattan Cocktail",
+          "Iced Coffee"
+        ],
+        "snacks": ["Pretzels", "Pizza", "Hot Dogs"],
+        "brands": [
+          "Brooklyn Brewery",
+          "Finger Lakes Wineries",
+          "Manhattan Distillery"
+        ],
+        "toast": ["Cheers!", "To the Big Apple!", "Drink up!"],
+        "tradition": "Raise your glass, say \"Cheers!\", \"To the Big Apple!\" or \"Drink up!\"."
+      }
+    },
+
     "Nipigon": {},
     "Nome": {},
     "Noronha": {},
@@ -273,7 +913,31 @@
     "Port-au-Prince": {},
     "Port_of_Spain": {},
     "Porto_Velho": {},
-    "Puerto_Rico": {},
+
+    "Puerto_Rico": {
+      "timeZone": "America/Puerto_Rico",
+      "countryInfo": {
+        "name": "Puerto Rico",
+        "capital": "San Juan",
+        "language": "Spanish, English",
+        "currency": "USD",
+        "majorCities": ["Ponce", "Mayagüez", "Caguas"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Piña Colada",
+          "Rum Punch",
+          "Medalla Light Beer",
+          "Café Colao"
+        ],
+        "snacks": ["Tostones", "Mofongo", "Alcapurrias"],
+        "brands": ["Bacardi", "Medalla", "Café Yaucono"],
+        "toast": ["Salud!", "¡Por Puerto Rico!", "Brindemos!"],
+        "tradition": "Raise your glass, say \"Salud!\", \"¡Por Puerto Rico!\" or \"Brindemos!\", and follow it with a heartfelt smile and warm eye contact. It's a gesture of celebration and unity."
+      }
+    },
+
     "Punta_Arenas": {},
     "Rainy_River": {},
     "Rankin_Inlet": {},
@@ -284,53 +948,26 @@
     "Santarem": {},
     "Santiago": {},
     "Santo_Domingo": {},
+
     "Sao_Paulo": {
       "timeZone": "America/Sao_Paulo",
-      "utcTimeZones": ["UTC-3", "UTC-2 (DST)"],
       "countryInfo": {
         "name": "Brazil",
-        "capital": "Brasilia",
-        "language": "portuguese",
-        "demonym": "Brazilian",
-        "population": "216M",
-        "currency": "R$ (Real)"
+        "capital": "Brasília",
+        "language": "Portuguese",
+        "currency": "BRL",
+        "majorCities": ["Rio de Janeiro", "Salvador", "Brasília"]
       },
       "aperoInfo": {
-        "time": "18:00",
-        "specialDrinks": [
-          "Caipirinha",
-          "Batida",
-          "Quentão",
-          "Chopp (draft beer)"
-        ],
+        "time": "18:30",
+        "drinks": ["Caipirinha", "Cachaça", "Brazilian Beer", "Coffee"],
         "snacks": ["Pastel", "Coxinha", "Pão de Queijo"],
-        "rituals": "Enjoying drinks and snacks at botecos (bars) with friends.",
-        "venues": "Botecos, beach kiosks, and restaurants",
-        "aperoGlass": "Tumbler glass for Caipirinha",
-        "music": "Samba and Bossa Nova",
-        "famousBrands": ["Cachaça 51", "Leblon Cachaça", "Velho Barreiro"],
-        "etiquette": "It's common to offer a toast with 'Saúde!' (Health!).",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "São Paulo",
-          "utcTimezone": "UTC-3",
-          "population": "12.3 million"
-        },
-        {
-          "name": "Rio de Janeiro",
-          "utcTimezone": "UTC-3",
-          "population": "6.7 million"
-        },
-        {
-          "name": "Salvador",
-          "utcTimezone": "UTC-3",
-          "population": "2.9 million"
-        }
-      ]
+        "brands": ["Ypióca", "Brahma", "Café do Brasil"],
+        "toast": ["Saúde!", "À São Paulo!", "Vamos brindar!"],
+        "tradition": "When raising your glass for a toast, it's customary to say \"Saúde!\", \"À São Paulo!\" or \"Vamos brindar!\" with enthusiasm."
+      }
     },
+
     "Scoresbysund": {},
     "Sitka": {},
     "St_Barthelemy": {},
@@ -344,60 +981,67 @@
     "Thule": {},
     "Thunder_Bay": {},
     "Tijuana": {},
+
     "Toronto": {
       "timeZone": "America/Toronto",
-      "utcTimeZones": ["UTC-5", "UTC-6", "UTC-7", "UTC-8"],
       "countryInfo": {
         "name": "Canada",
         "capital": "Ottawa",
-        "language": "english/french",
-        "demonym": "Canadian",
-        "population": "40M",
-        "currency": "$ (Canadian dollar)"
+        "language": "English, French",
+        "currency": "CAD",
+        "majorCities": ["Vancouver", "Montreal", "Calgary"]
       },
       "aperoInfo": {
-        "time": "17:00",
-        "specialDrinks": [
-          "Caesar",
-          "Ice Wine",
+        "time": "17:30",
+        "drinks": [
           "Canadian Whisky",
-          "Craft Beer"
+          "Ice Wine",
+          "Craft Beer",
+          "Double-Double Coffee"
         ],
-        "snacks": ["Poutine", "Nanaimo Bars", "Bannock"],
-        "rituals": "Enjoying drinks and snacks with friends and family.",
-        "venues": "Pubs, breweries, and patios",
-        "aperoGlass": "Pint glass",
-        "music": "A mix of genres including rock, pop, and folk",
-        "famousBrands": ["Crown Royal", "Molson", "Sleeman"],
-        "etiquette": "Casual and friendly atmosphere.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Toronto",
-          "utcTimeZone": "UTC-5",
-          "population": "2.93 million"
-        },
-        {
-          "name": "Montreal",
-          "utcTimeZone": "UTC-5",
-          "population": "1.78 million"
-        },
-        {
-          "name": "Vancouver",
-          "utcTimeZone": "UTC-7",
-          "population": "631,486"
-        }
-      ]
+        "snacks": ["Poutine", "Butter Tarts", "BeaverTails"],
+        "brands": ["Crown Royal", "Inniskillin", "Molson Canadian"],
+        "toast": ["Cheers!", "To Toronto!", "Let's raise a glass!"],
+        "tradition": "When making a toast, simply say \"Cheers!\", \"To Toronto!\" or \"Let's raise a glass!\" with a friendly smile."
+      }
     },
+
     "Tortola": {},
-    "Vancouver": {},
+
+    "Vancouver": {
+      "timeZone": "America/Vancouver",
+      "countryInfo": {
+        "name": "Canada",
+        "capital": "Ottawa",
+        "language": "English, French",
+        "currency": "CAD",
+        "majorCities": ["Toronto", "Montreal", "Calgary"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "British Columbia Wine",
+          "Craft Beer",
+          "Whisky Sour",
+          "Iced Coffee"
+        ],
+        "snacks": ["Sushi", "Salmon Candy", "Bannock"],
+        "brands": [
+          "Okanagan Wineries",
+          "Granville Island Brewing",
+          "Crown Royal"
+        ],
+        "toast": ["Cheers!", "To Vancouver!", "Raise your glass!"],
+        "tradition": "When making a toast, it's common to say \"Cheers!\", \"To Vancouver!\" or \"Raise your glass!\" with a friendly nod."
+      }
+    },
+
     "Whitehorse": {},
     "Winnipeg": {},
     "Yakutat": {},
     "Yellowknife": {}
   },
+
   "Antarctica": {
     "Casey": {},
     "Davis": {},
@@ -411,9 +1055,11 @@
     "Troll": {},
     "Vostok": {}
   },
+
   "Arctic": {
     "Longyearbyen": {}
   },
+
   "Asia": {
     "Aden": {},
     "Almaty": {},
@@ -424,11 +1070,95 @@
     "Ashgabat": {},
     "Atyrau": {},
     "Baghdad": {},
-    "Bahrain": {},
-    "Baku": {},
-    "Bangkok": {},
+
+    "Bahrain": {
+      "timeZone": "Asia/Bahrain",
+      "countryInfo": {
+        "name": "Bahrain",
+        "capital": "Manama",
+        "language": "Arabic",
+        "currency": "BHD",
+        "majorCities": ["Muharraq", "Riffa", "Isa Town"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Arak",
+          "Bahraini Date Juice",
+          "Gahwa (Arabic Coffee)",
+          "Mint Lemonade"
+        ],
+        "snacks": ["Kebab", "Falafel", "Shawarma"],
+        "brands": ["Yateem Arak", "Delmon Date Juice", "Gahwa Coffee Roasters"],
+        "toast": ["في صحتك", "لبحرين", "لنرفع أكوابنا"],
+        "tradition": "In Bahrain, when making a toast, say \"في صحتك\", \"لبحرين\" or \"لنرفع أكوابنا \". It's a gesture of hospitality and camaraderie."
+      }
+    },
+
+    "Baku": {
+      "timeZone": "Asia/Baku",
+      "countryInfo": {
+        "name": "Azerbaijan",
+        "capital": "Baku",
+        "language": "Azerbaijani",
+        "currency": "AZN",
+        "majorCities": ["Ganja", "Sumgait", "Lankaran"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": ["Azerbaijani Tea", "Ayran", "Sherbet", "Pomegranate Juice"],
+        "snacks": ["Plov", "Dolma", "Baklava"],
+        "brands": ["Azercay", "Narsharab", "Goychay Pomegranate Juice"],
+        "toast": ["Sağlığınıza!", "Azərbaycana!", "Şərab atın!"],
+        "tradition": "In Baku, when making a toast, say \"Sağlığınıza!\", \"Azərbaycana!\" or \"Şərab atın!\". It's a gesture of warmth and hospitality."
+      }
+    },
+
+    "Bangkok": {
+      "timeZone": "Asia/Bangkok",
+      "countryInfo": {
+        "name": "Thailand",
+        "capital": "Bangkok",
+        "language": "Thai",
+        "currency": "THB",
+        "majorCities": ["Chiang Mai", "Phuket", "Pattaya"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Thai Iced Tea",
+          "Singha Beer",
+          "Mai Tai",
+          "Fresh Coconut Water"
+        ],
+        "snacks": ["Pad Thai", "Som Tum (Papaya Salad)", "Satay"],
+        "brands": ["ChaTraMue Thai Tea", "Boon Rawd Brewery", "Bacardi"],
+        "toast": ["ชาวโลกสวย", "ไปที่กรุงเทพฯ", "ขอให้โชคดี"],
+        "tradition": "In Bangkok, when making a toast, you can say \"ชาวโลกสวย\", \"ไปที่กรุงเทพฯ\" or \"ขอให้โชคดี\". It's a gesture of goodwill and friendship."
+      }
+    },
+
     "Barnaul": {},
-    "Beirut": {},
+
+    "Beirut": {
+      "timeZone": "Asia/Beirut",
+      "countryInfo": {
+        "name": "Lebanon",
+        "capital": "Beirut",
+        "language": "Arabic, French",
+        "currency": "LBP",
+        "majorCities": ["Tripoli", "Sidon", "Tyre"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": ["Arak", "Lebanese Wine", "Stout Beer", "Mint Lemonade"],
+        "snacks": ["Hummus", "Tabbouleh", "Kebbeh"],
+        "brands": ["Château Ksara", "Almaza", "El Massaya Arak"],
+        "toast": ["صحتين", "لبيروت", "نرفع أكوابنا"],
+        "tradition": "In Beirut, when making a toast, say \"صحتين\", \"لبيروت \" or \"نرفع أكوابنا \". It's a gesture of hospitality and celebration."
+      }
+    },
+
     "Bishkek": {},
     "Brunei": {},
     "Chita": {},
@@ -437,28 +1167,229 @@
     "Damascus": {},
     "Dhaka": {},
     "Dili": {},
-    "Dubai": {},
+
+    "Dubai": {
+      "timeZone": "Asia/Dubai",
+      "countryInfo": {
+        "name": "United Arab Emirates",
+        "capital": "Abu Dhabi",
+        "language": "Arabic",
+        "currency": "AED",
+        "majorCities": ["Abu Dhabi", "Sharjah", "Al Ain"]
+      },
+      "aperoInfo": {
+        "time": "20:30",
+        "drinks": ["Arabic Coffee", "Dates Shake", "Mint Lemonade", "Falooda"],
+        "snacks": ["Hummus", "Shawarma", "Moutabel"],
+        "brands": [
+          "Emirati Coffee",
+          "Al Ain Dairy",
+          "National Food Products Company"
+        ],
+        "toast": ["صحتين", "لدبي ", "نرفع أكوابنا "],
+        "tradition": "When making a toast, say \"صحتين \", \"لدبي \" or \"نرفع أكوابنا \". It's a gesture of warm hospitality and togetherness."
+      }
+    },
+
     "Dushanbe": {},
     "Famagusta": {},
-    "Gaza": {},
+
+    "Gaza": {
+      "timeZone": "Asia/Gaza",
+      "countryInfo": {
+        "name": "Palestine",
+        "capital": "East Jerusalem",
+        "language": "Arabic",
+        "currency": "ILS",
+        "majorCities": ["Ramallah", "Hebron", "Nablus"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": ["Qamar al-Din", "Mint Tea", "Arabic Coffee", "Lemonade"],
+        "snacks": ["Hummus", "Falafel", "Mutabbal"],
+        "brands": ["Tamara Juice", "Sinokrot Global Group", "Al-Arz Tahini"],
+        "toast": ["صحتين ", "لغزة ", "فلنرفع أكوابنا "],
+        "tradition": "When making a toast, say \"صحتين \", \"لغزة \" or \"فلنرفع أكوابنا \". It's a gesture of hospitality and unity, often accompanied by warm smiles."
+      }
+    },
+
     "Hebron": {},
     "Ho_Chi_Minh": {},
-    "Hong_Kong": {},
+
+    "Hong_Kong": {
+      "timeZone": "Asia/Hong_Kong",
+      "countryInfo": {
+        "name": "Hong Kong",
+        "capital": "Hong Kong",
+        "language": "Cantonese, English",
+        "currency": "HKD",
+        "majorCities": ["Kowloon", "Tsuen Wan", "Yuen Long"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Dim Sum Tea",
+          "Tsingtao Beer",
+          "Hong Kong Milk Tea",
+          "Lychee Martini"
+        ],
+        "snacks": ["Dim Sum", "Egg Tarts", "Pineapple Bun"],
+        "brands": [
+          "Luk Yu Tea House",
+          "Tsingtao Brewery",
+          "Tai Hing Restaurant"
+        ],
+        "toast": ["乾杯", "香港加油", "讓我們乾杯"],
+        "tradition": "When making a toast, say \"乾杯\", \"香港加油\" or \"讓我們乾杯\". It's a gesture of enthusiasm and unity."
+      }
+    },
+
     "Hovd": {},
     "Irkutsk": {},
-    "Jakarta": {},
+
+    "Jakarta": {
+      "timeZone": "Asia/Jakarta",
+      "countryInfo": {
+        "name": "Indonesia",
+        "capital": "Jakarta",
+        "language": "Indonesian",
+        "currency": "IDR",
+        "majorCities": ["Surabaya", "Bandung", "Medan"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": ["Teh Botol", "Bali Coffee", "Bintang Beer", "Es Cendol"],
+        "snacks": ["Nasi Goreng", "Satay", "Kerak Telor"],
+        "brands": ["Sosro", "Kopi Bali", "PT Multi Bintang Indonesia Tbk"],
+        "toast": ["Selamat!", "Untuk Jakarta!", "Mari kita angkat gelas!"],
+        "tradition": "In Jakarta, when making a toast, say \"Selamat!\", \"Untuk Jakarta!\" or \"Mari kita angkat gelas!\". It's a gesture of warm hospitality and togetherness, often accompanied by laughter."
+      }
+    },
+
     "Jayapura": {},
-    "Jerusalem": {},
-    "Kabul": {},
+
+    "Jerusalem": {
+      "timeZone": "Asia/Jerusalem",
+      "countryInfo": {
+        "name": "Israel",
+        "capital": "Jerusalem",
+        "language": "Hebrew, Arabic",
+        "currency": "ILS",
+        "majorCities": ["Tel Aviv", "Haifa", "Beersheba"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": [
+          "Israeli Wine",
+          "Arak",
+          "Turkish Coffee",
+          "Pomegranate Juice"
+        ],
+        "snacks": ["Hummus", "Falafel", "Sambusak"],
+        "brands": ["Carmel Winery", "El Namleh Arak", "Ja'far Coffee"],
+        "toast": ["לחיים ", "לירושלים ", "ברוך הבא "],
+        "tradition": "When making a toast, say \"לחיים \", \"לירושלים \" or \"ברוך הבא \". It's a gesture of celebration and unity."
+      }
+    },
+
+    "Kabul": {
+      "timeZone": "Asia/Kabul",
+      "countryInfo": {
+        "name": "Afghanistan",
+        "capital": "Kabul",
+        "language": "Pashto, Dari",
+        "currency": "AFN",
+        "majorCities": ["Kandahar", "Herat", "Mazar-i-Sharif"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Green Tea",
+          "Doogh",
+          "Qandahar Black Tea",
+          "Pomegranate Juice"
+        ],
+        "snacks": ["Mantoo", "Kebab", "Bolani"],
+        "brands": [
+          "Qandahar Tea Company",
+          "Afghan Yogurt",
+          "Shah Mola Pomegranate Juice"
+        ],
+        "toast": ["صحت ", "برای کابل ", "به صحرا "],
+        "tradition": "When making a toast, say \"صحت \", \"برای کابل \" or \"به صحرا \". It's a gesture of hospitality and camaraderie."
+      }
+    },
+
     "Kamchatka": {},
     "Karachi": {},
-    "Kathmandu": {},
+
+    "Kathmandu": {
+      "timeZone": "Asia/Kathmandu",
+      "countryInfo": {
+        "name": "Nepal",
+        "capital": "Kathmandu",
+        "language": "Nepali",
+        "currency": "NPR",
+        "majorCities": ["Pokhara", "Lalitpur", "Bharatpur"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": ["Masala Chai", "Raksi", "Chyang", "Nepali Tea"],
+        "snacks": ["Momos", "Sel Roti", "Gundruk"],
+        "brands": [
+          "Nepal Tea",
+          "Nepal Distilleries Pvt. Ltd.",
+          "Gorkha Brewery"
+        ],
+        "toast": ["चियर्स", "काठमाडौंको लागि", "हाम्रो साथ"],
+        "tradition": "Wen making a toast, say \"चियर्स\", \"काठमाडौंको लागि\" or \"हाम्रो साथ\". It's a gesture of warmth and togetherness, often accompanied by a friendly smile."
+      }
+    },
+
     "Khandyga": {},
     "Kolkata": {},
     "Krasnoyarsk": {},
-    "Kuala_Lumpur": {},
+
+    "Kuala_Lumpur": {
+      "timeZone": "Asia/Kuala_Lumpur",
+      "countryInfo": {
+        "name": "Malaysia",
+        "capital": "Kuala Lumpur",
+        "language": "Malay",
+        "currency": "MYR",
+        "majorCities": ["George Town", "Johor Bahru", "Kuching"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": ["Teh Tarik", "Tiger Beer", "Durian Shake", "Sirap Bandung"],
+        "snacks": ["Nasi Lemak", "Satay", "Rojak"],
+        "brands": ["BOH Tea", "Heineken Malaysia", "Durian King TTDI"],
+        "toast": ["Sihat!", "Untuk Kuala Lumpur!", "Mari kita angkat gelas!"],
+        "tradition": "In Kuala Lumpur, when making a toast, say \"Sihat!\", \"Untuk Kuala Lumpur!\" or \"Mari kita angkat gelas!\". It's a gesture of warmth and friendship, often accompanied by laughter."
+      }
+    },
+
     "Kuching": {},
-    "Kuwait": {},
+
+    "Kuwait": {
+      "timeZone": "Asia/Kuwait",
+      "countryInfo": {
+        "name": "Kuwait",
+        "capital": "Kuwait City",
+        "language": "Arabic",
+        "currency": "KWD",
+        "majorCities": ["Hawalli", "Salmiya", "Jahra"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": ["Arabic Coffee", "Jallab", "Tamarind Juice", "Laban Ayran"],
+        "snacks": ["Machboos", "Kebab", "Mutabbaq"],
+        "brands": ["Café Najjar", "Al Waha Dairy", "Jallab Al-Arabia"],
+        "toast": ["في صحتك ", "للكويت ", "لنرفع أكوابنا "],
+        "tradition": "When making a toast, say \"في صحتك \", \"للكويت \" or \"لنرفع أكوابنا \". It's a gesture of hospitality and unity, often accompanied by a warm smile."
+      }
+    },
+
     "Macau": {},
     "Magadan": {},
     "Makassar": {},
@@ -472,160 +1403,166 @@
     "Phnom_Penh": {},
     "Pontianak": {},
     "Pyongyang": {},
-    "Qatar": {},
+
+    "Qatar": {
+      "timeZone": "Asia/Qatar",
+      "countryInfo": {
+        "name": "Qatar",
+        "capital": "Doha",
+        "language": "Arabic",
+        "currency": "QAR",
+        "majorCities": ["Al Rayyan", "Al Wakrah", "Al Khor"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": [
+          "Qatari Coffee",
+          "Jallab",
+          "Saffron Tea",
+          "Lemon Mint Cooler"
+        ],
+        "snacks": ["Machboos", "Falafel", "Moutabel"],
+        "brands": ["Al-Maha Dairy", "Al-Jasra", "Doha Tea Company"],
+        "toast": ["في صحتك ", "للدوحة ", "لنرفع أكوابنا "],
+        "tradition": "When making a toast, say \"في صحتك \", \"للدوحة \" or \"لنرفع أكوابنا \". It's a gesture of hospitality and unity, often accompanied by a warm greeting."
+      }
+    },
+
     "Qostanay": {},
     "Qyzylorda": {},
     "Riyadh": {},
     "Sakhalin": {},
     "Samarkand": {},
+
     "Seoul": {
       "timeZone": "Asia/Seoul",
-      "utcTimeZones": ["UTC+9"],
       "countryInfo": {
         "name": "South Korea",
         "capital": "Seoul",
-        "language": "korean",
-        "demonym": "Korean",
-        "population": "51M",
-        "currency": "₩ (Won)"
+        "language": "Korean",
+        "currency": "KRW",
+        "majorCities": ["Busan", "Incheon", "Daegu"]
       },
       "aperoInfo": {
-        "time": "17:00",
-        "specialDrinks": ["Soju", "Makgeolli", "Hwachae", "Sikhye"],
-        "snacks": [
-          "Pajeon (Green Onion Pancake)",
-          "Tteokbokki (Spicy Rice Cakes)",
-          "Kimbap",
-          "Dried Squid"
-        ],
-        "rituals": "Enjoying drinks and snacks with colleagues and friends after work.",
-        "venues": "Izakayas and Korean-style pubs (hofs)",
-        "aperoGlass": "Soju shot glass",
-        "music": "K-Pop and popular Korean hits",
-        "famousBrands": ["Chamisul", "Chum-Churum", "Jinro"],
-        "etiquette": "Pour drinks for others as a sign of respect, and use both hands when receiving a drink.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Seoul",
-          "utcTimeZone": "UTC+9",
-          "population": "9.7 million"
-        },
-        {
-          "name": "Busan",
-          "utcTimeZone": "UTC+9",
-          "population": "3.4 million"
-        },
-        {
-          "name": "Incheon",
-          "utcTimeZone": "UTC+9",
-          "population": "2.9 million"
-        }
-      ]
+        "time": "19:30",
+        "drinks": ["Soju", "Makgeolli", "Green Tea", "Korean Plum Wine"],
+        "snacks": ["Kimchi", "Tteokbokki", "Kimbap"],
+        "brands": ["Jinro Soju", "Makgeolli Healdong", "O'Sulloc Green Tea"],
+        "toast": ["건배", "서울을 위하여", "잔을 높여요"],
+        "tradition": "When making a toast, say \"건배\", \"서울을 위하여\" or \"잔을 높여요\". It's a gesture of camaraderie and celebration, often followed by lively conversations."
+      }
     },
+
     "Shanghai": {
       "timeZone": "Asia/Shanghai",
-      "utcTimeZones": ["UTC+8"],
       "countryInfo": {
         "name": "China",
         "capital": "Beijing",
-        "language": "chinese",
-        "demonym": "Chinese",
-        "population": "1.4B",
-        "currency": "¥ (Yuan)"
+        "language": "Mandarin",
+        "currency": "CNY",
+        "majorCities": ["Beijing", "Guangzhou", "Shenzhen"]
       },
       "aperoInfo": {
-        "time": "",
-        "specialDrinks": [
-          "Baijiu",
-          "Chinese wine (e.g., Maotai)",
-          "Tsingtao Beer",
-          "Green Tea"
-        ],
-        "snacks": ["Dim Sum", "Spring Rolls", "Sichuan Peanuts"],
-        "rituals": "Gathering with friends or family for tea or drinks and small bites.",
-        "venues": "Teahouses, local bars, and restaurants",
-        "aperoGlass": "Teacup or small liquor glass",
-        "music": "Traditional Chinese music or contemporary pop",
-        "famousBrands": ["Maotai", "Wuliangye", "Tsingtao"],
-        "etiquette": "Toasting and clinking glasses is a common gesture of goodwill.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Beijing",
-          "utcTimeZone": "UTC+8",
-          "population": "21.5M"
-        },
-        {
-          "name": "Shanghai",
-          "utcTimeZone": "UTC+8",
-          "population": "27.1M"
-        },
-        {
-          "name": "Guangzhou",
-          "utcTimeZone": "UTC+8",
-          "population": "14.5M"
-        }
-      ]
+        "time": "20:00",
+        "drinks": ["Chinese Tea", "Baijiu", "Soy Milk", "Lychee Martini"],
+        "snacks": ["Xiaolongbao", "Shengjianbao", "Congyou Bing"],
+        "brands": ["Tenfu Tea", "Moutai", "Yili Soy Milk"],
+        "toast": ["干杯 ", "为上海", "让我们举杯"],
+        "tradition": "When making a toast, say \"干杯\", \"为上海\" or \"让我们举杯\". It's a gesture of camaraderie and celebration, often accompanied by laughter."
+      }
     },
-    "Singapore": {},
+
+    "Singapore": {
+      "timeZone": "Asia/Singapore",
+      "countryInfo": {
+        "name": "Singapore",
+        "capital": "Singapore",
+        "language": "English, Malay, Mandarin, Tamil",
+        "currency": "SGD",
+        "majorCities": ["Jurong East", "Woodlands", "Tampines"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": ["Singapore Sling", "Teh Tarik", "Kopi", "Calamansi Juice"],
+        "snacks": ["Hainanese Chicken Rice", "Satay", "Kaya Toast"],
+        "brands": ["Raffles Hotel", "Teh Tarik Place", "Kopi-O"],
+        "toast": ["Cheers!", "To Singapore!", "Let's raise our glasses!"],
+        "tradition": "When making a toast, say \"Cheers!\" for \"Cheers!\", \"To Singapore!\" or \"Let's raise our glasses!\". It's a gesture of multicultural unity, often accompanied by a friendly atmosphere."
+      }
+    },
+
     "Srednekolymsk": {},
-    "Taipei": {},
+
+    "Taipei": {
+      "timeZone": "Asia/Taipei",
+      "countryInfo": {
+        "name": "Taiwan",
+        "capital": "Taipei",
+        "language": "Mandarin",
+        "currency": "TWD",
+        "majorCities": ["Kaohsiung", "Taichung", "Tainan"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": ["Bubble Tea", "Taiwan Beer", "Oolong Tea", "Lychee Martini"],
+        "snacks": ["Gua Bao", "Stinky Tofu", "Braised Pork Rice"],
+        "brands": [
+          "Chun Shui Tang",
+          "Taiwan Tobacco and Liquor Corporation",
+          "Ten Ren Tea"
+        ],
+        "toast": ["乾杯", "為台北", "讓我們舉杯"],
+        "tradition": "When making a toast, say \"乾杯\", \"為台北\" or \"讓我們舉杯\". It's a gesture of celebration and unity, often accompanied by a friendly atmosphere."
+      }
+    },
+
     "Tashkent": {},
     "Tbilisi": {},
-    "Tehran": {},
+
+    "Tehran": {
+      "timeZone": "Asia/Tehran",
+      "countryInfo": {
+        "name": "Iran",
+        "capital": "Tehran",
+        "language": "Persian",
+        "currency": "IRR",
+        "majorCities": ["Mashhad", "Isfahan", "Shiraz"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": ["Doogh", "Sahlab", "Persian Tea", "Sharbat"],
+        "snacks": ["Kebab", "Tahdig", "Ghormeh Sabzi"],
+        "brands": ["Doogh Abali", "Golchin Tea", "Lavashak Shirin"],
+        "toast": [
+          "به سلامتی ",
+          "برای تهران ",
+          "بیایید لیوانمان را بالا ببریم "
+        ],
+        "tradition": "When making a toast, say \"به سلامتی \", \"برای تهران \" or \"بیایید لیوانمان را بالا ببریم \". It's a gesture of warmth and hospitality, often accompanied by a smile."
+      }
+    },
+
     "Thimphu": {},
+
     "Tokyo": {
       "timeZone": "Asia/Tokyo",
-      "utcTimeZones": ["UTC+9"],
       "countryInfo": {
         "name": "Japan",
         "capital": "Tokyo",
-        "language": "japanese",
-        "demonym": "Japanese",
-        "population": "123M",
-        "currency": "¥ (Yen)"
+        "language": "Japanese",
+        "currency": "JPY",
+        "majorCities": ["Yokohama", "Osaka", "Nagoya"]
       },
       "aperoInfo": {
-        "time": "17:00",
-        "specialDrinks": [
-          "Sake",
-          "Shochu",
-          "Umeshu (Plum Wine)",
-          "Highball (Whiskey and Soda)"
-        ],
-        "snacks": ["Edamame", "Sushi", "Yakitori"],
-        "rituals": "Enjoying drinks and small dishes at izakayas (Japanese pubs).",
-        "venues": "Izakayas and rooftop bars",
-        "aperoGlass": "Sake cup (ochoko)",
-        "music": "Background Japanese music or J-pop",
-        "famousBrands": ["Gekkeikan", "Choya", "Suntory"],
-        "etiquette": "It's polite to pour drinks for others and use both hands when receiving a drink.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Tokyo",
-          "utcTimeZone": "UTC+9",
-          "population": "14M"
-        },
-        {
-          "name": "Osaka",
-          "utcTimeZone": "UTC+9",
-          "population": "2.7M"
-        },
-        {
-          "name": "Kyoto",
-          "utcTimeZone": "UTC+9",
-          "population": "1.5M"
-        }
-      ]
+        "time": "19:00",
+        "drinks": ["Sake", "Green Tea", "Shochu", "Japanese Whisky"],
+        "snacks": ["Sushi", "Tempura", "Edamame"],
+        "brands": ["Gekkeikan Sake", "Ito En", "Hakutake Shochu"],
+        "toast": ["乾杯", "東京に乾杯", "さあ、杯を上げましょう"],
+        "tradition": "When making a toast, say \"乾杯\", \"東京に乾杯\" or \"さあ、杯を上げましょう\". It's a gesture of camaraderie and appreciation for good company, often accompanied by a smile."
+      }
     },
+
     "Tomsk": {},
     "Ulaanbaatar": {},
     "Urumqi": {},
@@ -637,31 +1574,254 @@
     "Yekaterinburg": {},
     "Yerevan": {}
   },
+
   "Atlantic": {
-    "Azores": {},
-    "Bermuda": {},
-    "Canary": {},
-    "Cape_Verde": {},
+    "Azores": {
+      "timeZone": "Atlantic/Azores",
+      "countryInfo": {
+        "name": "Portugal",
+        "capital": "Lisbon",
+        "language": "Portuguese",
+        "currency": "EUR",
+        "majorCities": ["Ponta Delgada", "Angra do Heroísmo", "Horta"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Portuguese Wine",
+          "Liqueur from Terceira",
+          "Azorean Craft Beer",
+          "Gin and Tonic"
+        ],
+        "snacks": ["Queijo São Jorge", "Lapas Grelhadas", "Bolo Lêvedo"],
+        "brands": [
+          "Adega Cooperativa de São Roque do Pico",
+          "Açoreana Gin",
+          "Bica de Pico Craft Beer"
+        ],
+        "toast": ["Saúde!", "Às Azores!", "Vamos brindar!"],
+        "tradition": "When making a toast, say \"Saúde!\", \"Às Azores!\" or \"Vamos brindar!\". It's a gesture of warmth and camaraderie, often accompanied by a friendly atmosphere."
+      }
+    },
+
+    "Bermuda": {
+      "timeZone": "Atlantic/Bermuda",
+      "countryInfo": {
+        "name": "Bermuda",
+        "capital": "Hamilton",
+        "language": "English",
+        "currency": "BMD",
+        "majorCities": ["St. George's", "Somerset Village", "Smith's"]
+      },
+      "aperoInfo": {
+        "time": "18:00",
+        "drinks": [
+          "Rum Swizzle",
+          "Dark 'n' Stormy",
+          "Gosling's Black Seal Rum",
+          "Bermuda Rum Punch"
+        ],
+        "snacks": ["Fish Chowder", "Bermuda Fish Sandwich", "Hoppin' John"],
+        "brands": [
+          "Gosling's Rum",
+          "Bermuda Rum Cake Company",
+          "Outerbridge's Sherry Peppers"
+        ],
+        "toast": ["Cheers!", "To Bermuda!", "Let's raise our glasses!"],
+        "tradition": "When making a toast, say \"Cheers!\", \"To Bermuda!\" or \"Let's raise our glasses!\". It's a gesture of celebration and unity."
+      }
+    },
+
+    "Canary": {
+      "timeZone": "Atlantic/Canary",
+      "countryInfo": {
+        "name": "Spain",
+        "capital": "Madrid",
+        "language": "Spanish",
+        "currency": "EUR",
+        "majorCities": [
+          "Las Palmas de Gran Canaria",
+          "Santa Cruz de Tenerife",
+          "San Cristóbal de La Laguna"
+        ]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Ron miel",
+          "Malvasia Wine",
+          "Canarian Beer",
+          "Tropical Fruit Juices"
+        ],
+        "snacks": ["Papas arrugadas", "Mojo sauce", "Queso Majorero"],
+        "brands": [
+          "Arehucas Distillery",
+          "Bodega Los Berrazales",
+          "Dorada Beer"
+        ],
+        "toast": ["¡Salud!", "¡A las Islas Canarias!", "¡Brindemos!"],
+        "tradition": "When making a toast, say \"¡Salud!\", \"¡A las Islas Canarias!\" or \"¡Brindemos!\". It's a gesture of warmth and celebration."
+      }
+    },
+
+    "Cape_Verde": {
+      "timeZone": "Atlantic/Cape_Verde",
+      "countryInfo": {
+        "name": "Cape Verde",
+        "capital": "Praia",
+        "language": "Portuguese, Cape Verdean Creole",
+        "currency": "CVE",
+        "majorCities": ["Mindelo", "Assomada", "Santa Maria"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": ["Grogue", "Ponche", "Caipirinha", "Cape Verdean Beer"],
+        "snacks": ["Cachupa", "Pastel", "Lagosta Grelhada"],
+        "brands": ["Santiago Grogue", "Cabo Verde Airlines", "Cuca Beer"],
+        "toast": ["Saúde!", "À Cabo Verde!", "Vamos brindar!"],
+        "tradition": "When making a toast, say \"Saúde!\", \"À Cabo Verde!\" or \"Vamos brindar!\". It's a gesture of celebration and unity."
+      }
+    },
+
     "Faroe": {},
     "Madeira": {},
-    "Reykjavik": {},
+
+    "Reykjavik": {
+      "timeZone": "Atlantic/Reykjavik",
+      "countryInfo": {
+        "name": "Iceland",
+        "capital": "Reykjavik",
+        "language": "Icelandic",
+        "currency": "ISK",
+        "majorCities": ["Akureyri", "Kópavogur", "Hafnarfjörður"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Brennivín",
+          "Icelandic Beer",
+          "Malt Extract",
+          "Icelandic Schnapps"
+        ],
+        "snacks": ["Hangikjöt", "Hákarl", "Flatkaka"],
+        "brands": ["Ísafold Brennivín", "Einstök Beer", "Opal"],
+        "toast": ["Skál!", "Á Íslandi!", "Höfum á!"],
+        "tradition": "When making a toast, say \"Skál!\", \"Á Íslandi!\" or \"Höfum á!\". It's a gesture of warmth and celebration."
+      }
+    },
+
     "South_Georgia": {},
     "St_Helena": {},
     "Stanley": {}
   },
+
   "Australia": {
-    "Adelaide": {},
-    "Brisbane": {},
+    "Adelaide": {
+      "timeZone": "Australia/Adelaide",
+      "countryInfo": {
+        "name": "Australia",
+        "capital": "Canberra",
+        "language": "English",
+        "currency": "AUD",
+        "majorCities": ["Sydney", "Melbourne", "Brisbane"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Australian Wine",
+          "Bundaberg Ginger Beer",
+          "Flat White Coffee",
+          "Aussie Cocktails"
+        ],
+        "snacks": ["Vegemite on Toast", "Pavlova", "Anzac Biscuits"],
+        "brands": ["Penfolds", "Bundaberg Brewed Drinks", "Tim Tam"],
+        "toast": ["Cheers!", "To Adelaide!", "Let's raise our glasses!"],
+        "tradition": "When making a toast, say \"Cheers!\", \"To Adelaide!\" or \"Let's raise our glasses!\". It's a gesture of camaraderie and celebration, often accompanied by a friendly atmosphere."
+      }
+    },
+
+    "Brisbane": {
+      "timeZone": "Australia/Brisbane",
+      "countryInfo": {
+        "name": "Australia",
+        "capital": "Canberra",
+        "language": "English",
+        "currency": "AUD",
+        "majorCities": ["Sydney", "Melbourne", "Adelaide"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Australian Wine",
+          "Bundaberg Ginger Beer",
+          "Flat White Coffee",
+          "Aussie Cocktails"
+        ],
+        "snacks": ["Vegemite on Toast", "Pavlova", "Anzac Biscuits"],
+        "brands": ["Penfolds", "Bundaberg Brewed Drinks", "Tim Tam"],
+        "toast": ["Cheers!", "To Brisbane!", "Let's raise our glasses!"],
+        "tradition": "When making a toast, say \"Cheers!\", \"To Brisbane!\" or \"Let's raise our glasses!\". It's a gesture of camaraderie and celebration, often accompanied by a friendly atmosphere."
+      }
+    },
+
     "Broken_Hill": {},
     "Darwin": {},
     "Eucla": {},
     "Hobart": {},
     "Lindeman": {},
     "Lord_Howe": {},
-    "Melbourne": {},
+
+    "Melbourne": {
+      "timeZone": "Australia/Melbourne",
+      "countryInfo": {
+        "name": "Australia",
+        "capital": "Canberra",
+        "language": "English",
+        "currency": "AUD",
+        "majorCities": ["Sydney", "Brisbane", "Adelaide"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Australian Wine",
+          "Bundaberg Ginger Beer",
+          "Flat White Coffee",
+          "Aussie Cocktails"
+        ],
+        "snacks": ["Vegemite on Toast", "Pavlova", "Anzac Biscuits"],
+        "brands": ["Penfolds", "Bundaberg Brewed Drinks", "Tim Tam"],
+        "toast": ["Cheers!", "To Melbourne!", "Let's raise our glasses!"],
+        "tradition": "When making a toast, say \"Cheers!\", \"To Melbourne!\" or \"Let's raise our glasses!\". It's a gesture of camaraderie and celebration, often accompanied by a friendly atmosphere."
+      }
+    },
+
     "Perth": {},
-    "Sydney": {}
+
+    "Sydney": {
+      "timeZone": "Australia/Sydney",
+      "countryInfo": {
+        "name": "Australia",
+        "capital": "Canberra",
+        "language": "English",
+        "currency": "AUD",
+        "majorCities": ["Melbourne", "Brisbane", "Perth"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Australian Wine",
+          "Bundaberg Ginger Beer",
+          "Flat White Coffee",
+          "Aussie Cocktails"
+        ],
+        "snacks": ["Vegemite on Toast", "Pavlova", "Anzac Biscuits"],
+        "brands": ["Penfolds", "Bundaberg Brewed Drinks", "Tim Tam"],
+        "toast": ["Cheers!", "To Sydney!", "Let's raise our glasses!"],
+        "tradition": "When making a toast, say \"Cheers!\", \"To Sydney!\" or \"Let's raise our glasses!\". It's a gesture of camaraderie and celebration, often accompanied by a friendly atmosphere."
+      }
+    }
   },
+
   "Canada": {
     "Atlantic": {},
     "Central": {},
@@ -670,377 +1830,770 @@
     "Newfoundland": {},
     "Pacific": {}
   },
+
   "Europe": {
-    "Amsterdam": {},
+    "Amsterdam": {
+      "timeZone": "Europe/Amsterdam",
+      "countryInfo": {
+        "name": "Netherlands",
+        "capital": "Amsterdam",
+        "language": "Dutch",
+        "currency": "EUR",
+        "majorCities": ["Rotterdam", "The Hague", "Utrecht"]
+      },
+      "aperoInfo": {
+        "time": "18:00",
+        "drinks": [
+          "Dutch Gin (Jenever)",
+          "Heineken Beer",
+          "Dutch Liqueurs",
+          "Koffie Verkeerd (Coffee with Milk)"
+        ],
+        "snacks": ["Bitterballen", "Stroopwafels", "Poffertjes"],
+        "brands": ["Bols", "Heineken", "De Kuyper"],
+        "toast": ["Proost!", "Op Amsterdam!", "Laten we proosten!"],
+        "tradition": "When making a toast, say \"Proost!\", \"Op Amsterdam!\" or \"Laten we proosten!\". It's a gesture of conviviality and celebration, often accompanied by a lively atmosphere."
+      }
+    },
+
     "Andorra": {},
     "Astrakhan": {},
+
     "Athens": {
       "timeZone": "Europe/Athens",
-      "utcTimeZones": ["UTC+2", "UTC+3 (DST)"],
       "countryInfo": {
         "name": "Greece",
         "capital": "Athens",
-        "language": "greek",
-        "demonym": "Greek",
-        "population": "10M",
-        "currency": "€ (Euro)"
+        "language": "Greek",
+        "currency": "EUR",
+        "majorCities": ["Thessaloniki", "Heraklion", "Patras"]
       },
       "aperoInfo": {
         "time": "20:00",
-        "specialDrinks": ["Ouzo", "Retsina", "Tsipouro", "Metaxa"],
-        "snacks": ["Olives", "Feta cheese", "Tzatziki"],
-        "rituals": "Enjoying meze (small dishes) with drinks and lively conversations.",
-        "venues": "Tavernas and ouzerias",
-        "aperoGlass": "Ouzo glass",
-        "music": "Traditional Greek music",
-        "famousBrands": ["Ouzo Plomari", "Retsina Kourtaki", "Metaxa"],
-        "etiquette": "Offer a 'yamas' (cheers) before taking a sip.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Athens",
-          "utcTimeZone": "UTC+2",
-          "population": "3.2M"
-        },
-        {
-          "name": "Thessaloniki",
-          "utcTimeZone": "UTC+2",
-          "population": "1.1M"
-        },
-        {
-          "name": "Patras",
-          "utcTimeZone": "UTC+2",
-          "population": "213,984"
-        }
-      ]
+        "drinks": [
+          "Ouzo",
+          "Retsina (Greek Resin Wine)",
+          "Tsipouro",
+          "Greek Coffee"
+        ],
+        "snacks": ["Tzatziki", "Kalamata Olives", "Spanakopita (Spinach Pie)"],
+        "brands": ["Ouzo Barbayanni", "Santo Wines", "Loukoumades"],
+        "toast": ["Στην υγειά σας!", "Γειά μας!", "Καλή απόλαυση!"],
+        "tradition": "Raise your glass, say \"Στην υγειά σας!\", and make eye contact with those you are toasting with. It's a warm and heartfelt wish for good health and happiness."
+      }
     },
-    "Belgrade": {},
-    "Berlin": {},
-    "Bratislava": {},
-    "Brussels": {},
-    "Bucharest": {},
-    "Budapest": {},
-    "Busingen": {},
-    "Chisinau": {},
-    "Copenhagen": {},
-    "Dublin": {},
-    "Gibraltar": {},
-    "Guernsey": {},
-    "Helsinki": {},
-    "Isle_of_Man": {},
-    "Istanbul": {},
-    "Jersey": {},
-    "Kaliningrad": {},
-    "Kiev": {
-      "timeZone": "Europe/Kiev",
-      "utcTimeZones": ["UTC+2"],
+
+    "Belgrade": {
+      "timeZone": "Europe/Belgrade",
       "countryInfo": {
-        "name": "Ukraine",
-        "capital": "Kiev",
-        "language": "ukrainian",
-        "demonym": "Ukrainian",
-        "population": "36M",
-        "currency": "₴ (Hryvnia)"
+        "name": "Serbia",
+        "capital": "Belgrade",
+        "language": "Serbian",
+        "currency": "RSD",
+        "majorCities": ["Novi Sad", "Niš", "Kragujevac"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": ["Rakija", "Serbian Wine", "Jelen Pivo (Beer)", "Šljivovica"],
+        "snacks": ["Ćevapi", "Sarma", "Ajvar"],
+        "brands": ["Vinarija Aleksandrović", "Nectar Winery", "Jelen Beer"],
+        "toast": ["Živeli!", "Na zdravlje!", "Podignimo čaše!"],
+        "tradition": "When making a toast, say \"Živeli!\", \"Na zdravlje!\" or \"Podignimo čaše!\". The tradition often involves heartfelt toasts and a strong sense of camaraderie."
+      }
+    },
+
+    "Berlin": {
+      "timeZone": "Europe/Berlin",
+      "countryInfo": {
+        "name": "Germany",
+        "capital": "Berlin",
+        "language": "German",
+        "currency": "EUR",
+        "majorCities": ["Munich", "Hamburg", "Cologne"]
       },
       "aperoInfo": {
         "time": "18:00",
-        "specialDrinks": [
-          "Horilka (vodka)",
-          "Nalyvka (fruit liqueurs)",
-          "Uzvar (dried fruit compote)",
-          "Medovukha (honey-based alcoholic beverage)"
+        "drinks": [
+          "Beer (e.g., Pilsner, Weizenbier)",
+          "Sekt (German sparkling wine)",
+          "Gin and Tonic",
+          "Apfelwein (Apple Wine)"
         ],
-        "snacks": ["Salo (salted pork fat)", "Pickles", "Herring"],
-        "rituals": "Enjoying drinks and snacks with friends or family.",
-        "venues": "Cafes, bars, and home gatherings",
-        "aperoGlass": "Shot glass",
-        "music": "Folk music and contemporary pop",
-        "famousBrands": ["Nemiroff", "Khlibny Dar", "Lvivske"],
-        "etiquette": "It's common to offer a toast before taking a sip.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Kyiv",
-          "utcTimeZone": "UTC+2",
-          "population": "2.8M"
-        },
-        {
-          "name": "Kharkiv",
-          "utcTimeZone": "UTC+2",
-          "population": "1.4M"
-        },
-        {
-          "name": "Lviv",
-          "utcTimeZone": "UTC+2",
-          "population": "724,314"
-        }
-      ]
+        "snacks": ["Pretzels", "Bratwurst", "Sauerkraut"],
+        "brands": ["Beck's", "Jägermeister", "Sekt brands"],
+        "toast": ["Prost!", "Zum Wohl!", "Ein Prosit!"],
+        "tradition": "Raise your glass, make eye contact, and say \"Prost!\". It's common to make a firm, audible clink when toasting."
+      }
     },
-    "Kirov": {},
-    "Lisbon": {},
-    "Ljubljana": {},
-    "London": {
-      "timeZone": "Europe/London",
-      "utcTimeZones": ["UTC+0", "UTC+1 (DST)"],
+
+    "Bratislava": {
+      "timeZone": "Europe/Bratislava",
       "countryInfo": {
-        "name": "England",
-        "capital": "London",
-        "language": "english",
-        "demonym": "English",
-        "population": "56M",
-        "currency": "£ (Pound)"
+        "name": "Slovakia",
+        "capital": "Bratislava",
+        "language": "Slovak",
+        "currency": "EUR",
+        "majorCities": ["Košice", "Prešov", "Nitra"]
       },
       "aperoInfo": {
-        "time": "17:00",
-        "specialDrinks": [
-          "Gin and Tonic",
-          "Pimm's",
-          "Bitter Ale",
-          "English Sparkling Wine"
+        "time": "18:30",
+        "drinks": ["Slovak Wine", "Slivovica", "Tatratea", "Slovak Beer"],
+        "snacks": ["Bryndzové halušky", "Pirohy", "Klobása"],
+        "brands": [
+          "Vinárske Závody Topoľčianky",
+          "Tatratea Distillery",
+          "Zlatý Bažant Beer"
         ],
-        "snacks": ["Crisps", "Pork Scratchings", "Scotch Eggs"],
-        "rituals": "Enjoying drinks at a local pub or during afternoon tea.",
-        "venues": "Pubs and tearooms",
-        "aperoGlass": "Highball glass",
-        "music": "Traditional British folk music",
-        "famousBrands": ["Gordon's Gin", "Tanqueray", "Pimm's"],
-        "etiquette": "Order drinks at the bar and wait to be served.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "London",
-          "utcTimeZone": "UTC+0",
-          "population": "8.9M"
-        },
-        {
-          "name": "Birmingham",
-          "utcTimeZone": "UTC+0",
-          "population": "1.1M"
-        },
-        {
-          "name": "Manchester",
-          "utcTimeZone": "UTC+0",
-          "population": "547,627"
-        }
-      ]
+        "toast": ["Na zdravie!", "Za Bratislavu!", "Dvihajme poháre!"],
+        "tradition": "When making a toast, say \"Na zdravie!\", \"Za Bratislavu!\" or \"Dvihajme poháre!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
     },
-    "Luxembourg": {},
-    "Madrid": {
-      "timeZone": "Europe/Madrid",
-      "utcTimeZones": ["UTC+1", "UTC+2 (DST)"],
+
+    "Brussels": {
+      "timeZone": "Europe/Brussels",
       "countryInfo": {
-        "name": "Spain",
-        "capital": "Madrid",
-        "language": "spanish",
-        "demonym": "Spanish",
-        "population": "47M",
-        "currency": "€ (Euro)"
+        "name": "Belgium",
+        "capital": "Brussels",
+        "language": "Dutch, French, German",
+        "currency": "EUR",
+        "majorCities": ["Antwerp", "Ghent", "Bruges"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Belgian Beer (e.g., Trappist, Witbier)",
+          "Aperol Spritz",
+          "Kir Royale",
+          "Geneva (Juniper-flavored spirit)"
+        ],
+        "snacks": ["Mussels with fries", "Bitterballen", "Cheese Croquettes"],
+        "brands": ["Duvel", "Stella Artois", "Aperol"],
+        "toast": ["Santé!", "Proost!", "À votre santé!"],
+        "tradition": "Raise your glass, say \"Santé!\" or \"Proost!\", and make eye contact with fellow revelers. It's a gesture of camaraderie."
+      }
+    },
+
+    "Bucharest": {
+      "timeZone": "Europe/Bucharest",
+      "countryInfo": {
+        "name": "Romania",
+        "capital": "Bucharest",
+        "language": "Romanian",
+        "currency": "RON",
+        "majorCities": ["Cluj-Napoca", "Timișoara", "Iași"]
       },
       "aperoInfo": {
         "time": "19:00",
-        "specialDrinks": ["Sangria", "Tinto de Verano", "Cava", "Vermouth"],
-        "snacks": ["Tapas", "Olives", "Jamon Iberico"],
-        "rituals": "Sharing small plates and socializing with friends.",
-        "venues": "Tapas bars and terraces",
-        "aperoGlass": "Copa de Balón (Balloon glass)",
-        "music": "Flamenco and Spanish guitar",
-        "famousBrands": ["Martini", "Lustau", "Yzaguirre"],
-        "etiquette": "Sharing is common, and it's polite to order something for the group.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Madrid",
-          "utcTimeZone": "UTC+1",
-          "population": "3.2M"
-        },
-        {
-          "name": "Barcelona",
-          "utcTimeZone": "UTC+1",
-          "population": "1.6M"
-        },
-        {
-          "name": "Seville",
-          "utcTimeZone": "UTC+1",
-          "population": "689,434"
-        }
-      ]
+        "drinks": ["Țuică", "Romanian Wine", "Ursus Beer", "Palincă"],
+        "snacks": ["Mămăligă", "Sarmale", "Mici"],
+        "brands": ["Vincon Vrancea", "Ursus Breweries", "Poloneț"],
+        "toast": ["Noroc!", "Pentru București!", "Să ridicăm paharele!"],
+        "tradition": "When making a toast, say \"Noroc!\", \"Pentru București!\" or \"Să ridicăm paharele!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
     },
-    "Malta": {},
-    "Mariehamn": {},
-    "Minsk": {},
-    "Monaco": {},
-    "Moscow": {
-      "timeZone": "Europe/Moscow",
-      "utcTimeZones": ["UTC+2 to UTC+12"],
+
+    "Budapest": {
+      "timeZone": "Europe/Budapest",
       "countryInfo": {
-        "name": "Russia",
-        "capital": "Moscow",
-        "language": "russian",
-        "demonym": "Russian",
-        "population": "144M",
-        "currency": "₽ (Russian Ruble)"
+        "name": "Hungary",
+        "capital": "Budapest",
+        "language": "Hungarian",
+        "currency": "HUF",
+        "majorCities": ["Debrecen", "Szeged", "Miskolc"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Hungarian Wine (e.g., Tokaji)",
+          "Unicum",
+          "Pálinka",
+          "Sör (Beer)"
+        ],
+        "snacks": ["Gulyásleves", "Lángos", "Túrós Csusza"],
+        "brands": ["Tokaj-Hétszölö", "Zwack Unicum", "Pálinka Kereskedőház"],
+        "toast": ["Egészségére!", "Budapestért!", "Emeljük a poharakat!"],
+        "tradition": "When making a toast, say \"Egészségére!\", \"Budapestért!\" or \"Emeljük a poharakat!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Busingen": {},
+    "Chisinau": {},
+
+    "Copenhagen": {
+      "timeZone": "Europe/Copenhagen",
+      "countryInfo": {
+        "name": "Denmark",
+        "capital": "Copenhagen",
+        "language": "Danish",
+        "currency": "DKK",
+        "majorCities": ["Aarhus", "Odense", "Aalborg"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": ["Akvavit", "Carlsberg Beer", "Gammel Dansk", "Danish Wine"],
+        "snacks": ["Smørrebrød", "Frikadeller", "Æbleskiver"],
+        "brands": [
+          "Aalborg Akvavit",
+          "Carlsberg Brewery",
+          "Gammel Dansk Bitter Dram"
+        ],
+        "toast": ["Skål!", "For København!", "Lad os hæve vores glas!"],
+        "tradition": "When making a toast, say \"Skål!\", \"For København!\" or \"Lad os hæve vores glas!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Dublin": {
+      "timeZone": "Europe/Dublin",
+      "countryInfo": {
+        "name": "Ireland",
+        "capital": "Dublin",
+        "language": "English, Irish",
+        "currency": "EUR",
+        "majorCities": ["Cork", "Galway", "Limerick"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Guinness",
+          "Irish Whiskey",
+          "Baileys Irish Cream",
+          "Irish Coffee"
+        ],
+        "snacks": ["Irish Soda Bread", "Potato Crisps", "Smoked Salmon"],
+        "brands": ["Guinness", "Jameson", "Baileys"],
+        "toast": ["Sláinte!", "Cheers!", "To your health!"],
+        "tradition": "Raise your glass, look each person in the eye, and say \"Sláinte!\". Maintain eye contact during the toast."
+      }
+    },
+
+    "Gibraltar": {},
+    "Guernsey": {},
+
+    "Helsinki": {
+      "timeZone": "Europe/Helsinki",
+      "countryInfo": {
+        "name": "Finland",
+        "capital": "Helsinki",
+        "language": "Finnish",
+        "currency": "EUR",
+        "majorCities": ["Espoo", "Tampere", "Vantaa"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Finnish Vodka",
+          "Lonkero",
+          "Karhu Beer",
+          "Cloudberry Liqueur"
+        ],
+        "snacks": ["Karjalanpiirakka", "Salmiakki", "Rye Crisps"],
+        "brands": [
+          "Koskenkorva Vodka",
+          "Hartwall Original Long Drink",
+          "Karhu Brewery"
+        ],
+        "toast": ["Kippis!", "Helsingille!", "Nostetaan maljat!"],
+        "tradition": "When making a toast, say \"Kippis!\", \"Helsingille!\" or \"Nostetaan maljat!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Isle_of_Man": {},
+
+    "Istanbul": {
+      "timeZone": "Europe/Istanbul",
+      "countryInfo": {
+        "name": "Turkey",
+        "capital": "Ankara",
+        "language": "Turkish",
+        "currency": "TRY",
+        "majorCities": ["Izmir", "Bursa", "Antalya"]
+      },
+      "aperoInfo": {
+        "time": "20:30",
+        "drinks": ["Raki", "Turkish Tea", "Turkish Coffee", "Ayran"],
+        "snacks": ["Meze", "Turkish Delight", "Simit"],
+        "brands": ["Yeni Raki", "Çaykur", "Kurukahveci Mehmet Efendi"],
+        "toast": ["Şerefe!", "İstanbul için!", "Kadehlerimizi kaldıralım!"],
+        "tradition": "When making a toast, say \"Şerefe!\", \"İstanbul için!\" or \"Kadehlerimizi kaldıralım!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Jersey": {},
+    "Kaliningrad": {},
+
+    "Kiev": {
+      "timeZone": "Europe/Kiev",
+      "countryInfo": {
+        "name": "Ukraine",
+        "capital": "Kiev",
+        "language": "Ukrainian",
+        "currency": "UAH",
+        "majorCities": ["Kharkiv", "Lviv", "Odessa"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Horilka (Ukrainian vodka)",
+          "Kvas",
+          "Medovukha (Honey-based spirit)",
+          "Ukrainian Wine"
+        ],
+        "snacks": [
+          "Salo (Salted pork fat)",
+          "Borscht",
+          "Pampushky (Garlic bread)"
+        ],
+        "brands": ["Nemiroff", "Obolon", "Crimean Wine"],
+        "toast": ["Za zdorov'ya!", "Na zdorov'ya!", "Bud'mo!"],
+        "tradition": "Raise your glass, say \"Za zdorov'ya!\", and maintain eye contact with fellow drinkers to show respect and sincerity."
+      }
+    },
+
+    "Kirov": {},
+
+    "Lisbon": {
+      "timeZone": "Europe/Lisbon",
+      "countryInfo": {
+        "name": "Portugal",
+        "capital": "Lisbon",
+        "language": "Portuguese",
+        "currency": "EUR",
+        "majorCities": ["Porto", "Vila Nova de Gaia", "Amadora"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": ["Port Wine", "Sagres Beer", "Ginjinha", "Vinho Verde"],
+        "snacks": ["Bacalhau à Brás", "Pastéis de Nata", "Chouriço Assado"],
+        "brands": [
+          "Taylor's Port",
+          "Centralcer - Cervejarias Unidas",
+          "Ginjinha Sem Rival"
+        ],
+        "toast": ["Saúde!", "Por Lisboa!", "Levantemos os copos!"],
+        "tradition": "When making a toast, say 'Saúde!', 'Por Lisboa!' or 'Levantemos os copos!'. The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Ljubljana": {},
+
+    "London": {
+      "timeZone": "Europe/London",
+      "countryInfo": {
+        "name": "United Kingdom",
+        "capital": "London",
+        "language": "English",
+        "currency": "GBP",
+        "majorCities": ["Birmingham", "Manchester", "Glasgow"]
       },
       "aperoInfo": {
         "time": "17:00",
-        "specialDrinks": ["Vodka", "Kvass", "Mors", "Russian Sparkling Wine"],
-        "snacks": ["Pickled cucumbers", "Herring", "Piroshki"],
-        "rituals": "Enjoying drinks and zakuski (appetizers) before a meal.",
-        "venues": "Bars, restaurants, and homes",
-        "aperoGlass": "Shot glass for vodka",
-        "music": "Russian folk music",
-        "famousBrands": ["Stolichnaya", "Russian Standard", "Beluga"],
-        "etiquette": "Toasting is common, and it's customary to make eye contact during toasts.",
-        "commonToast": [],
-        "toastGesture": ""
-      },
-      "majorCities": [
-        {
-          "name": "Moscow",
-          "utcTimeZone": "UTC+3",
-          "population": "12.5M"
-        },
-        {
-          "name": "Saint Petersburg",
-          "utcTimeZone": "UTC+3",
-          "population": "5.4M"
-        },
-        {
-          "name": "Novosibirsk",
-          "utcTimeZone": "UTC+7",
-          "population": "1.6M"
-        }
-      ]
+        "drinks": ["Gin and Tonic", "Pimm's", "Scotch Whisky", "British Ale"],
+        "snacks": ["Fish and Chips", "Crisps", "Pork Pie"],
+        "brands": ["Beefeater Gin", "Pimm's", "Johnnie Walker"],
+        "toast": ["Cheers!", "To your health!", "Here's to you!"],
+        "tradition": "Raise your glass and say \"Cheers!\" while making eye contact with those around you. It's a friendly and informal way to toast."
+      }
     },
-    "Oslo": {},
+
+    "Luxembourg": {
+      "timeZone": "Europe/Luxembourg",
+      "countryInfo": {
+        "name": "Luxembourg",
+        "capital": "Luxembourg City",
+        "language": "Luxembourgish, French, German",
+        "currency": "EUR",
+        "majorCities": ["Esch-sur-Alzette", "Differdange", "Dudelange"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Luxembourgish Wine",
+          "Luxembourgish Beer",
+          "Crémant",
+          "Moselle Wine"
+        ],
+        "snacks": ["Rieslingspaschtéit", "Gromperekichelcher", "Kachkéis"],
+        "brands": [
+          "Domaines Vinsmoselle",
+          "Brasserie de Luxembourg",
+          "Bernard-Massard"
+        ],
+        "toast": ["Zum Wohl!", "Fir Lëtzebuerg!", "Looss eis Glässer heben!"],
+        "tradition": "When making a toast, say \"Zum Wohl!\", \"Fir Lëtzebuerg!\" or \"Looss eis Glässer heben!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Madrid": {
+      "timeZone": "Europe/Madrid",
+      "countryInfo": {
+        "name": "Spain",
+        "capital": "Madrid",
+        "language": "Spanish",
+        "currency": "EUR",
+        "majorCities": ["Barcelona", "Valencia", "Seville"]
+      },
+      "aperoInfo": {
+        "time": "20:00",
+        "drinks": ["Sangria", "Tinto de Verano", "Cava", "Vermouth"],
+        "snacks": ["Tapas", "Jamón ibérico", "Gazpacho"],
+        "brands": ["Martini", "Freixenet", "Campari"],
+        "toast": ["Salud!", "¡Por tu salud!", "¡Brindemos!"],
+        "tradition": "Raise your glass, say \"Salud!\", and make eye contact with others as you share your toast. It's a warm and friendly tradition."
+      }
+    },
+
+    "Malta": {},
+    "Mariehamn": {},
+    "Minsk": {},
+
+    "Monaco": {
+      "timeZone": "Europe/Monaco",
+      "countryInfo": {
+        "name": "Monaco",
+        "capital": "Monaco",
+        "language": "French",
+        "currency": "EUR",
+        "majorCities": ["Monte Carlo", "La Condamine", "Fontvieille"]
+      },
+      "aperoInfo": {
+        "time": "19:30",
+        "drinks": ["Monaco Cocktail", "French Wine", "Champagne", "Pastis"],
+        "snacks": ["French Cheese", "Baguette", "Pissaladière"],
+        "brands": ["Heineken", "Nicolas Feuillatte", "Ricard"],
+        "toast": ["Santé!", "Pour Monaco!", "Levons nos verres!"],
+        "tradition": "When making a toast, say \"Santé!\", \"Pour Monaco!\" or \"Levons nos verres!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Moscow": {
+      "timeZone": "Europe/Moscow",
+      "countryInfo": {
+        "name": "Russia",
+        "capital": "Moscow",
+        "language": "Russian",
+        "currency": "RUB",
+        "majorCities": ["Saint Petersburg", "Novosibirsk", "Yekaterinburg"]
+      },
+      "aperoInfo": {
+        "time": "17:00",
+        "drinks": ["Vodka", "Kvass", "Russian Champagne", "Mors"],
+        "snacks": ["Pickled cucumbers", "Blini with caviar", "Salo"],
+        "brands": ["Stolichnaya", "Russian Standard", "Baltika"],
+        "toast": ["За здоровье!", "На здоровье!", "За встречу!"],
+        "tradition": "Raise your glass, say \"За здоровье!\", and ensure that you maintain eye contact for a proper and heartfelt toast."
+      }
+    },
+
+    "Oslo": {
+      "timeZone": "Europe/Oslo",
+      "countryInfo": {
+        "name": "Norway",
+        "capital": "Oslo",
+        "language": "Norwegian",
+        "currency": "NOK",
+        "majorCities": ["Bergen", "Trondheim", "Stavanger"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": ["Aquavit", "Norwegian Beer", "Cloudberry Liqueur", "Glogg"],
+        "snacks": ["Smoked Salmon", "Brunost", "Knekkebrød"],
+        "brands": [
+          "Lysholm Linie Aquavit",
+          "Ringnes Brewery",
+          "Lerum Cloudberry Liqueur"
+        ],
+        "toast": ["Skål!", "For Oslo!", "Løft glassene!"],
+        "tradition": "When making a toast, say \"Skål!\", \"For Oslo!\" or \"Løft glassene!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
     "Paris": {
       "timeZone": "Europe/Paris",
-      "utcTimeZones": ["UTC+1", "UTC+2 (DST)"],
       "countryInfo": {
         "name": "France",
         "capital": "Paris",
-        "language": "french",
-        "demonym": "French",
-        "population": "64M",
-        "currency": "€ (Euro)"
+        "language": "French",
+        "currency": "EUR",
+        "majorCities": ["Marseille", "Lyon", "Rennes"]
       },
       "aperoInfo": {
         "time": "18:00",
-        "specialDrinks": [
+        "drinks": [
           "Wine (e.g., Bordeaux, Champagne)",
           "Pastis",
           "Kir",
           "Champagne Cocktail"
         ],
         "snacks": ["Cheese", "Baguette", "Pâté"],
-        "rituals": "Savoring wine and conversation with friends.",
-        "venues": "Cafés and brasseries",
-        "aperoGlass": "Wine glass",
-        "music": "Chanson française",
-        "famousBrands": ["Lillet", "Suze", "Byrrh"],
-        "etiquette": "It's customary to greet with 'à votre santé' (to your health).",
-        "commonToast": ["Santé !", "Tchin tchin", "À votre santé !"],
-        "toastGesture": "Raise your glass and make eye contact. In formal settings, clink glasses gently."
-      },
-      "majorCities": [
-        {
-          "name": "Paris",
-          "utcTimeZone": "UTC+1",
-          "population": "2.1M"
-        },
-        {
-          "name": "Marseille",
-          "utcTimeZone": "UTC+1",
-          "population": "861k"
-        },
-        {
-          "name": "Lyon",
-          "utcTimeZone": "UTC+1",
-          "population": "515k"
-        }
-      ]
+        "brands": ["Lillet", "Suze", "Byrrh"],
+        "toast": ["Santé !", "Tchin tchin", "À votre santé !"],
+        "tradition": "Make eye contact while raising your glass and saying \"Santé !\". In formal settings, glasses are gently clinked together."
+      }
     },
+
     "Podgorica": {},
-    "Prague": {},
-    "Riga": {},
+
+    "Prague": {
+      "timeZone": "Europe/Prague",
+      "countryInfo": {
+        "name": "Czech Republic",
+        "capital": "Prague",
+        "language": "Czech",
+        "currency": "CZK",
+        "majorCities": ["Brno", "Ostrava", "Plzeň"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Pilsner Urquell (Czech Lager)",
+          "Becherovka",
+          "Slivovice (Plum Brandy)",
+          "Czech Coffee"
+        ],
+        "snacks": [
+          "Trdelník (Czech Chimney Cake)",
+          "Knedlíky (Dumplings)",
+          "Smažený sýr (Fried Cheese)"
+        ],
+        "brands": ["Pilsner Urquell", "Becherovka", "Slivovice"],
+        "toast": ["Na zdraví!", "Přípitek!", "Na zdraví vám!"],
+        "tradition": "Raise your glass, say \"Na zdraví!\", and enjoy the traditional Czech aperitif experience. It's about good health and enjoyment."
+      }
+    },
+
+    "Riga": {
+      "timeZone": "Europe/Riga",
+      "countryInfo": {
+        "name": "Latvia",
+        "capital": "Riga",
+        "language": "Latvian",
+        "currency": "EUR",
+        "majorCities": ["Daugavpils", "Liepāja", "Jelgava"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": [
+          "Riga Black Balsam",
+          "Latvian Beer",
+          "Riga Sprats",
+          "Latvian Vodka"
+        ],
+        "snacks": ["Rye Bread", "Grey Peas", "Latvian Cheese"],
+        "brands": ["Latvijas Balzams", "Aldaris Brewery", "Stolichnaya Vodka"],
+        "toast": ["Priekā!", "Par Rīgu!", "Celšim glāzes!"],
+        "tradition": "When making a toast, say \"Priekā!\", \"Par Rīgu!\" or \"Celšim glāzes!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
     "Rome": {
       "timeZone": "Europe/Rome",
-      "utcTimeZones": ["UTC+1", "UTC+2 (DST)"],
       "countryInfo": {
         "name": "Italy",
         "capital": "Rome",
-        "language": "italian",
-        "demonym": "Italian",
-        "population": "58M",
-        "currency": "Euro (€)"
+        "language": "Italian",
+        "currency": "EUR",
+        "majorCities": ["Milan", "Naples", "Venice"]
       },
       "aperoInfo": {
-        "time": "18:00",
-        "specialDrinks": [
-          "Aperol Spritz",
-          "Negroni",
-          "Prosecco",
-          "Campari and Soda"
-        ],
-        "snacks": ["Bruschetta", "Olives", "Crostini"],
-        "rituals": "Enjoying drinks and appetizers with friends and family.",
-        "venues": "Outdoor cafes and bars",
-        "aperoGlass": "Wine glass or highball glass",
-        "music": "Italian jazz and pop",
-        "famousBrands": ["Aperol", "Campari", "Martini"],
-        "etiquette": "It's common to say 'Salute!' (Cheers!) when toasting.",
-        "commonToast": ["Salute!"],
-        "toastGesture": "Raise your glass while making eye contact, and clink glasses with everyone at the table."
-      },
-      "majorCities": [
-        {
-          "name": "Rome",
-          "utcTimeZone": "UTC+1",
-          "population": "2.8M"
-        },
-        {
-          "name": "Milan",
-          "utcTimeZone": "UTC+1",
-          "population": "1.4M"
-        },
-        {
-          "name": "Naples",
-          "utcTimeZone": "UTC+1",
-          "population": "967,069"
-        }
-      ]
+        "time": "19:00",
+        "drinks": ["Prosecco", "Negroni", "Aperol Spritz", "Campari"],
+        "snacks": ["Olives", "Bruschetta", "Crostini"],
+        "brands": ["Aperol", "Campari", "Martini"],
+        "toast": ["Salute!", "Cin cin!", "Alla tua salute!"],
+        "tradition": "Raise your glass, say \"Salute!\", and look into the eyes of the people you're toasting with. It's a sign of sincerity and goodwill."
+      }
     },
+
     "Samara": {},
     "San_Marino": {},
     "Sarajevo": {},
     "Saratov": {},
     "Simferopol": {},
     "Skopje": {},
-    "Sofia": {},
-    "Stockholm": {},
+
+    "Sofia": {
+      "timeZone": "Europe/Sofia",
+      "countryInfo": {
+        "name": "Bulgaria",
+        "capital": "Sofia",
+        "language": "Bulgarian",
+        "currency": "BGN",
+        "majorCities": ["Plovdiv", "Varna", "Burgas"]
+      },
+      "aperoInfo": {
+        "time": "19:00",
+        "drinks": ["Rakia", "Bulgarian Wine", "Kamenitza Beer", "Menta"],
+        "snacks": ["Bulgarian Banitsa", "Kavarma", "Kyufte"],
+        "brands": ["Vinprom Peshtera", "Kamenitza Brewery", "Peshterska Rakia"],
+        "toast": ["На здраве!", "За София!", "Да издигнем чашите!"],
+        "tradition": "When making a toast, say \"На здраве!\", \"За София!\" or \"Да издигнем чашите!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Stockholm": {
+      "timeZone": "Europe/Stockholm",
+      "countryInfo": {
+        "name": "Sweden",
+        "capital": "Stockholm",
+        "language": "Swedish",
+        "currency": "SEK",
+        "majorCities": ["Gothenburg", "Malmö", "Uppsala"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": ["Swedish Aquavit", "Swedish Beer", "Glogg", "Snaps"],
+        "snacks": ["Gravlax", "Swedish Meatballs", "Herring"],
+        "brands": ["O.P. Anderson", "Nils Oscar Brewery", "Renat Brännvin"],
+        "toast": ["Skål!", "För Stockholm!", "Höj glasen!"],
+        "tradition": "When making a toast, say \"Skål!\", \"För Stockholm!\" or \"Höj glasen!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
     "Tallinn": {},
     "Tirane": {},
     "Ulyanovsk": {},
     "Uzhgorod": {},
     "Vaduz": {},
     "Vatican": {},
-    "Vienna": {},
+
+    "Vienna": {
+      "timeZone": "Europe/Vienna",
+      "countryInfo": {
+        "name": "Austria",
+        "capital": "Vienna",
+        "language": "German",
+        "currency": "EUR",
+        "majorCities": ["Graz", "Linz", "Salzburg"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Wiener Gemischter Satz (Viennese Field Blend Wine)",
+          "Sturm (Young Wine)",
+          "Vienna Lager",
+          "Melange (Coffee with Milk)"
+        ],
+        "snacks": [
+          "Sachertorte",
+          "Käsekrainer (Cheese Sausage)",
+          "Brettljause (Cold Plate)"
+        ],
+        "brands": [
+          "Ottakringer",
+          "Melange Coffee House",
+          "Sachertorte Original"
+        ],
+        "toast": ["Prost!", "Zum Wohl!", "Auf Ihr Wohl!"],
+        "tradition": "Raise your glass, say \"Prost!\" or \"Zum Wohl!\". It's a friendly and celebratory gesture."
+      }
+    },
+
     "Vilnius": {},
     "Volgograd": {},
-    "Warsaw": {},
-    "Zagreb": {},
+
+    "Warsaw": {
+      "timeZone": "Europe/Warsaw",
+      "countryInfo": {
+        "name": "Poland",
+        "capital": "Warsaw",
+        "language": "Polish",
+        "currency": "PLN",
+        "majorCities": ["Krakow", "Łódź", "Wrocław"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": ["Polish Vodka", "Polish Beer", "Żubrówka", "Polish Wine"],
+        "snacks": ["Pierogi", "Kielbasa", "Oscypek"],
+        "brands": ["Wyborowa", "Tyskie Brewery", "Żubrówka Vodka"],
+        "toast": ["Na zdrowie!", "Za Warszawę!", "Podnieśmy kieliszki!"],
+        "tradition": "When making a toast, say \"Na zdrowie!\", \"Za Warszawę!\" or \"Podnieśmy kieliszki!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
+    "Zagreb": {
+      "timeZone": "Europe/Zagreb",
+      "countryInfo": {
+        "name": "Croatia",
+        "capital": "Zagreb",
+        "language": "Croatian",
+        "currency": "HRK",
+        "majorCities": ["Split", "Rijeka", "Osijek"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Croatian Wine (e.g., Plavac Mali)",
+          "Rakija",
+          "Ožujsko Beer",
+          "Maraschino Liqueur"
+        ],
+        "snacks": ["Peka", "Octopus Salad", "Croatian Cheese"],
+        "brands": ["Korčula Winery", "Badel 1862", "Ožujsko Brewery"],
+        "toast": ["Živjeli!", "Za Zagreb!", "Dignimo čaše!"],
+        "tradition": "When making a toast, say \"Živjeli!\", \"Za Zagreb!\" or \"Dignimo čaše!\". The tradition often involves heartfelt toasts and a warm sense of camaraderie."
+      }
+    },
+
     "Zaporozhye": {},
-    "Zurich": {}
+
+    "Zurich": {
+      "timeZone": "Europe/Zurich",
+      "countryInfo": {
+        "name": "Switzerland",
+        "capital": "Bern",
+        "language": "German",
+        "currency": "CHF",
+        "majorCities": ["Geneva", "Zurich", "Lucerne"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Swiss White Wine (e.g., Chasselas)",
+          "Absinthe",
+          "Appenzeller Beer",
+          "Swiss Coffee"
+        ],
+        "snacks": [
+          "Fondue",
+          "Rösti",
+          "Zürcher Geschnetzeltes (Zurich-Style Veal)"
+        ],
+        "brands": ["Appenzeller", "Kirsch", "Nespresso"],
+        "toast": ["Prost!", "Zum Wohl!", "Santé!"],
+        "tradition": "Raise your glass, say \"Prost!\" or \"Zum Wohl!\". It's a gesture of appreciation."
+      }
+    }
   },
+
   "Indian": {
-    "Antananarivo": {},
+    "Antananarivo": {
+      "timeZone": "Indian/Antananarivo",
+      "countryInfo": {
+        "name": "Madagascar",
+        "capital": "Antananarivo",
+        "language": "Malagasy, French",
+        "currency": "MGA",
+        "majorCities": ["Toamasina", "Fianarantsoa", "Mahajanga"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Three Horses Beer",
+          "Rum (e.g., Dzama)",
+          "Ranovola (Traditional Rice Wine)",
+          "Sambavanilla (Vanilla Liqueur)"
+        ],
+        "snacks": [
+          "Koba (Peanut and Rice Cake)",
+          "Brochettes (Skewered Meat)",
+          "Mofo Akondro (Banana Fritters)"
+        ],
+        "brands": ["Three Horses Beer", "Dzama Rum", "Sambavanilla Liqueur"],
+        "toast": ["Santé!", "Misaotra!", "Mirary soa!"],
+        "tradition": "Raise your glass, say \"Santé!\" or \"Misaotra!\". It's a gesture of good wishes."
+      }
+    },
+
     "Chagos": {},
     "Christmas": {},
     "Cocos": {},
@@ -1050,8 +2603,32 @@
     "Maldives": {},
     "Mauritius": {},
     "Mayotte": {},
-    "Reunion": {}
+
+    "Reunion": {
+      "timeZone": "Indian/Reunion",
+      "countryInfo": {
+        "name": "Réunion",
+        "capital": "Saint-Denis",
+        "language": "French",
+        "currency": "EUR",
+        "majorCities": ["Saint-Paul", "Le Port", "Saint-Pierre"]
+      },
+      "aperoInfo": {
+        "time": "18:00",
+        "drinks": [
+          "Rum (e.g., Rhum Charrette)",
+          "Dodo Beer",
+          "Ti' Punch",
+          "Bourbon Coffee"
+        ],
+        "snacks": ["Samoussas", "Bouchons", "Gratin Chouchou (Chayote Gratin)"],
+        "brands": ["Rhum Charrette", "Dodo Beer", "Bourbon Coffee Roasters"],
+        "toast": ["Santé!", "À la vôtre!", "Tchin-tchin!"],
+        "tradition": "Raise your glass, say \"Santé!\" or \"À la vôtre!\". It's about well-being and celebration."
+      }
+    }
   },
+
   "Pacific": {
     "Apia": {},
     "Auckland": {},
@@ -1067,7 +2644,31 @@
     "Gambier": {},
     "Guadalcanal": {},
     "Guam": {},
-    "Honolulu": {},
+
+    "Honolulu": {
+      "timeZone": "Pacific/Honolulu",
+      "countryInfo": {
+        "name": "United States",
+        "state": "Hawaii",
+        "capital": "Honolulu",
+        "language": "English, Hawaiian",
+        "currency": "USD",
+        "majorIslands": ["Oahu", "Maui", "Hawaii Island"]
+      },
+      "aperoInfo": {
+        "time": "17:30",
+        "drinks": [
+          "Mai Tai",
+          "Pina Colada",
+          "Kona Coffee",
+          "Tropical Fruit Punch"
+        ],
+        "snacks": ["Poke", "Kalua Pig", "Coconut Shrimp"],
+        "toast": ["Cheers!", "To the aloha spirit!", "Mahalo!"],
+        "tradition": "Raise your glass, say \"Cheers!\" or \"To the aloha spirit!\". It's about sharing joy and goodwill."
+      }
+    },
+
     "Kanton": {},
     "Kiritimati": {},
     "Kosrae": {},
@@ -1078,7 +2679,35 @@
     "Nauru": {},
     "Niue": {},
     "Norfolk": {},
-    "Noumea": {},
+
+    "Noumea": {
+      "timeZone": "Pacific/Noumea",
+      "countryInfo": {
+        "name": "New Caledonia",
+        "capital": "Nouméa",
+        "language": "French",
+        "currency": "XPF",
+        "majorIslands": ["Grande Terre", "Lifou", "Maré"]
+      },
+      "aperoInfo": {
+        "time": "18:30",
+        "drinks": [
+          "Kava",
+          "Tontouta Beer",
+          "Pineapple Punch",
+          "Coconut Cocktails"
+        ],
+        "snacks": [
+          "Poisson Cru (Raw Fish Salad)",
+          "Bougna (Traditional Dish)",
+          "Cassava Chips"
+        ],
+        "brands": ["Tontouta Beer", "Eau de Source", "Kava Producers"],
+        "toast": ["À votre santé!", "Ia Orana!", "Manuia!"],
+        "tradition": "Raise your glass, say \"À votre santé!\" or \"Ia Orana!\". It's about well-being and enjoyment."
+      }
+    },
+
     "Pago_Pago": {},
     "Palau": {},
     "Pitcairn": {},
@@ -1086,12 +2715,41 @@
     "Port_Moresby": {},
     "Rarotonga": {},
     "Saipan": {},
-    "Tahiti": {},
+
+    "Tahiti": {
+      "timeZone": "Pacific/Tahiti",
+      "countryInfo": {
+        "name": "French Polynesia",
+        "capital": "Papeete",
+        "language": "French, Tahitian",
+        "currency": "CFP Franc (XPF)",
+        "majorIslands": ["Tahiti", "Bora Bora", "Moorea"]
+      },
+      "aperoInfo": {
+        "time": "17:00",
+        "drinks": [
+          "Tahitian Rum",
+          "Mai Tai",
+          "Hinano Beer",
+          "Tahitian Vanilla-infused Cocktails"
+        ],
+        "snacks": [
+          "Poisson Cru (Tahitian Raw Fish)",
+          "Firi Firi (Tahitian Doughnuts)",
+          "Pua'a Roti (Roast Pork)"
+        ],
+        "brands": ["Tahiti Drink", "Hinano", "Tahiti Nui"],
+        "toast": ["À la vôtre!", "Manuia!", "Ia Orana!"],
+        "tradition": "Raise your glass, say \"À la vôtre!\" or \"Manuia!\". It's about well-being and enjoyment."
+      }
+    },
+
     "Tarawa": {},
     "Tongatapu": {},
     "Wake": {},
     "Wallis": {}
   },
+
   "US": {
     "Alaska": {},
     "Arizona": {},
