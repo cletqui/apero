@@ -14,7 +14,9 @@ You don't know when it's time for apéro? It's always apéro time! (at least som
   - [Website URLs](#website-urls)
   - [Features](#features)
   - [Roadmap](#roadmap)
+  - [Disclaimer](#disclaimer)
   - [Contributing](#contributing)
+  - [Data schema](#data-schema)
   - [Inspiration](#inspiration)
   - [License](#license)
   - [Project Status](#project-status)
@@ -41,11 +43,18 @@ Feel free to visit and explore the website!
 - [x] Build static webpage.
 - [x] Implement dark/light mode.
 - [x] Organise all buttons with emojis in a dropdown hidden header (minimalistic).
+- [x] Improve the timezone field and detect apéro time efficiently, handle all cases.
 - [ ] Complete `data/apero.json` with every countries and more fields.
 - [ ] Add non-alcoholic drinks (juices, mocktails).
-- [ ] Improve the timezone field and detect apéro time efficiently, handle all cases.
-- [ ] Handle errors.
 - [ ] Add animations in GUI.
+- [ ] Add links to GitHub repo in error handling.
+- [ ] Display country/apéro information in GUI.
+- [ ] Handle mobile and non standard display through css.
+- [ ] Add 04:20 easter egg ;).
+
+## Disclaimer
+
+The content of `data/apero.json` should represent the traditions of countries around the world, especially regarding drinking and eating specialities. Most of the content was created by a language model, I therefore apologize if the information in this file is offensive or erroneous. Feel free to participate in this project to correct or complete this data.
 
 ## Contributing
 
@@ -55,9 +64,49 @@ We're raising our glasses to welcome contributions that make Apéro Time even mo
 
 2. **Feature Requests:** Got a brilliant idea for a new feature or a quirky improvement? Don't keep it to yourself—share it with us by [opening an issue](https://github.com/cletqui/apero/issues).
 
-3. **Data Contributions:** Apéro Time is all about the world's aperitif traditions, and it starts with the data in `data/apero.json` Pour in your knowledge, correct inaccuracies, or add missing info about countries. To do that, [fork this repository](https://github.com/cletqui/apero/fork), make your updates to the JSON file, and raise a toast with a pull request.
+3. **Data Contributions:** Apéro Time is all about the world's aperitif traditions, and it starts with the data in `data/apero.json` Pour in your knowledge, correct inaccuracies, or add missing info about countries. To do that, [fork this repository](https://github.com/cletqui/apero/fork), make your updates to the JSON file following the [data schema](#data-schema), and raise a toast with a pull request.
 
 Let's make Apéro Time the life of the global party together! 🌟
+
+## Data schema
+
+The apéro data in `data/apero.json` is stored following this schema:
+
+```json
+{
+  "Europe": {
+    // Continent part of the time zone
+    "Paris": {
+      // City part of the time zone
+      "timeZone": "Europe/Paris", // Time zone
+      "countryInfo": {
+        // Country information
+        "name": "France", // Country name
+        "capital": "Paris", // Country capital
+        "language": "French", // Country language
+        "currency": "EUR", // Country currency
+        "majorCities": ["Marseille", "Lyon", "Rennes"] // Country major cities
+      },
+      "aperoInfo": {
+        // Apero information
+        "time": "18:00", // Apero time
+        "drinks": [
+          "Wine (e.g., Bordeaux, Champagne)",
+          "Pastis",
+          "Kir",
+          "Champagne Cocktail"
+        ], // Typical drinks
+        "snacks": ["Cheese", "Baguette", "Pâté"], // Typical snacks
+        "brands": ["Lillet", "Suze", "Byrrh"], // Typical drink brands
+        "toast": ["Santé !", "Tchin tchin", "À votre santé !"], // Typical cheers
+        "tradition": "Make eye contact while raising your glass and saying \"Santé !\". In formal settings, glasses are gently clinked together." // Traditional way to cheer
+      }
+    }
+  }
+}
+```
+
+Make sure you follow the same schema when adding new data.
 
 ## Inspiration
 
