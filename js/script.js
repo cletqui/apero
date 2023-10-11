@@ -3,7 +3,8 @@
 let showSeconds = true; // Boolean flag to determine whether to show seconds on the clock
 let isDarkMode = true; // Boolean flag to determine whether the webpage is in dark mode
 let languageFormat = "fr-FR"; // A string representing the preferred language format (e.g., "fr-FR" for French)
-let apero = {}; // An empty object that will store Apero data in JSON format
+let apero = {}; // An empty object that will store apéro data in JSON format
+let tootltip = {};
 
 // An object defining options for formatting the time on the clock
 let timeOptions = {
@@ -240,13 +241,29 @@ const updateClock = () => {
 };
 
 /**
- * Fetch Apero data from the specified JSON file.
+ * Check if the current time is 4:20 AM or 4:20 PM.
  *
- * @returns {Promise<object>} - A Promise that resolves to the Apero data object.
+ * @returns {boolean} True if it's an Easter egg time, false otherwise.
+ */
+const isEasterEgg = () => {
+  // Get the current date and time
+  const now = new Date();
+  // Get the current hours and minutes
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+
+  // Return true if it's 4:20 AM or 4:20 PM
+  return (hours === 4 || hours === 16) && minutes === 20;
+};
+
+/**
+ * Fetch apéro data from the specified JSON file "./data/apero.json".
+ *
+ * @returns {Promise<object>} - A Promise that resolves to the apero data object.
  */
 const fetchApero = async () => {
   try {
-    const response = await fetch("./data/apero.json"); // Attempt to fetch Apero data from the specified JSON file
+    const response = await fetch("./data/apero.json"); // Attempt to fetch apéro data from the specified JSON file
     const data = await response.json(); // Parse the response as JSON
     apero = data; // Assign the fetched data to the global 'apero' variable
     return data; // Return the fetched data
@@ -263,60 +280,60 @@ const fetchApero = async () => {
 };
 
 /**
- * Get Apero data for a specific time zone.
+ * Get apéro data for a specific time zone.
  *
  * @param {string} timeZone - The desired time zone in the "continent/city" format (e.g., 'America/New_York').
  * @returns {object|undefined} - Apero data object if available; otherwise, undefined.
  */
-const getApero = (timeZone) => {
+const getTimeZoneInfo = (timeZone) => {
   try {
     // Validate the provided time zone and split it into continent and city
     const [continent, city] = timeZone.split("/");
 
-    // Check if the provided time zone exists in the Apero data
+    // Check if the provided time zone exists in the apéro data
     if (
       apero.hasOwnProperty(continent) &&
       apero[continent].hasOwnProperty(city)
     ) {
-      return apero[continent][city]; // Return the Apero data associated with the provided time zone
+      return apero[continent][city]; // Return the apéro data associated with the provided time zone
     } else {
       console.error(`No time zone ${timeZone} found in apéro data: ${error}`);
       throw new Error(
-        `No time zone (${timeZone}) found in apero.json. To add this new time zone, follow: https://github.com/cletqui/apero/#contributing.`
+        `No time zone (${timeZone}) found in apero.json. To add this new time zone, follow:&nbsp;<a href=https://github.com/cletqui/apero/#contributing>GitHub</a>.`
       );
     }
   } catch (error) {
     console.error(`Invalid user time zone: ${timeZone}: ${error}`);
     throw new Error(
-      `Your time zone appears to be invalid. You can report this issue at https://github.com/cletqui/apero/issues.`
+      `Your time zone appears to be invalid. You can report this issue to&nbsp;<a href="https://github.com/cletqui/apero/issues">GitHub</a>.`
     );
   }
 };
 
 /**
- * Get Apero information for a specific time zone.
+ * Get apéro information for a specific time zone.
  *
  * @param {string} timeZone - The desired time zone (e.g., 'America/New_York').
- * @returns {Object|string|undefined} - Apero information object if available; otherwise, an error message.
+ * @returns {Object|string|undefined} - Apéro information object if available; otherwise, an error message.
  */
 const getAperoInfo = (timeZone) => {
   try {
     // Attempt to retrieve Apero data for the provided time zone
-    const aperoTimeZone = getApero(timeZone);
+    const timeZoneInfo = getTimeZoneInfo(timeZone);
 
-    // Check if the retrieved Apero data contains the 'aperoInfo' field
-    if (aperoTimeZone && aperoTimeZone.aperoInfo) {
-      return aperoTimeZone.aperoInfo; // Return the Apero information if it exists
+    // Check if the retrieved apéro data contains the 'aperoInfo' field
+    if (timeZoneInfo && timeZoneInfo.aperoInfo) {
+      return timeZoneInfo.aperoInfo; // Return the apéro information if it exists
     } else {
       console.error(
         `Apéro info not found for ${timeZone} in apéro data: ${error}`
       );
       throw new Error(
-        `Apéro info not found for ${timeZone}. To contribute, follow: https://github.com/cletqui/apero/#contributing.`
+        `Apéro info not found for ${timeZone}. To contribute, follow:&nbsp;<a href=https://github.com/cletqui/apero/#contributing>GitHub</a>.`
       );
     }
   } catch (error) {
-    throw error; // Return the error thrown by getApero function
+    throw error; // Return the error thrown by getTimeZoneInfo function
   }
 };
 
@@ -344,11 +361,11 @@ const getTimezoneTime = (timeZone) => {
 };
 
 /**
- * Determine if it's Apero time in a specific time zone.
+ * Determine if it's apéro time in a specific time zone.
  *
- * @param {string} aperoTime - The Apero time in "HH:mm" format (e.g., '18:30').
+ * @param {string} aperoTime - The apéro time in "HH:mm" format (e.g., '18:30').
  * @param {string} timeZone - The desired time zone (e.g., 'America/New_York').
- * @returns {number} - A positive value if Apero time is in the future, 0 if it's now, or a negative value if it's in the past.
+ * @returns {number} - A positive value if apéro time is in the future, 0 if it's now, or a negative value if it's in the past.
  */
 const isAperoTime = (aperoTime, timeZone) => {
   try {
@@ -362,8 +379,54 @@ const isAperoTime = (aperoTime, timeZone) => {
   }
 };
 
+const aperoTooltip = (timeZone) => {
+  const tooltipText = aperoTooltipText(timeZone);
+  return `<div class="tooltip" onClick="showMoreTooltip()">${timeZone}<span id="tooltip-text" class="tooltip-text">${tooltipText}</span></div>`;
+};
+
+const aperoTooltipText = (timeZone) => {
+  const timeZoneInfo = getTimeZoneInfo(timeZone);
+  const {
+    countryInfo: { name: countryName },
+    aperoInfo: { time: aperoTime, drinks, snacks, tradition },
+  } = timeZoneInfo;
+
+  return `Apéro in ${countryName} takes place at ${aperoTime}...<div class="tooltip-text-hidden"><br><br>You can enjoy typical drinks from ${countryName} like ${drinks.join(
+    ", "
+  )}.<br>Additionally you can enjoy typical apéro snacks like ${snacks.join(
+    ", "
+  )}...<br><br>${tradition}</div>`;
+};
+
+const showMoreTooltip = () => {
+  const tooltipText = document.getElementById("tooltip-text").innerHTML;
+  const firstOccurrence = tooltipText.indexOf("...");
+  const stop = '<div class="tooltip-text-hidden">';
+  let moreTooltip = tooltipText;
+
+  if (firstOccurrence !== -1) {
+    // Split the text into two parts at the first occurrence of "..."
+    const visible = tooltipText.substring(0, firstOccurrence + 1); // Include "." instead of "..."
+    const hidden = tooltipText.substring(firstOccurrence + 3);
+    if (hidden.startsWith(stop)) {
+      const secondOccurrence = hidden.indexOf("...");
+      if (secondOccurrence !== -1) {
+        const newVisible = hidden.substring(stop.length, secondOccurrence + 1);
+        const newHidden = hidden.substring(secondOccurrence + 3);
+        console.log(visible);
+        console.log(newVisible);
+        console.log(newHidden);
+        moreTooltip = `${visible}${newVisible}${stop}${newHidden}`;
+        console.log(moreTooltip);
+      }
+    }
+  }
+
+  document.getElementById("tooltip-text").innerHTML = moreTooltip;
+};
+
 /**
- * Update Apero information for the local time zone and display it on the page.
+ * Update apéro information for the local time zone and display it on the page.
  */
 const updateAperoLocal = () => {
   let message = "Unknown error.";
@@ -373,33 +436,41 @@ const updateAperoLocal = () => {
     // Get the user's time zone
     const { timeZone: userTimeZone } = Intl.DateTimeFormat().resolvedOptions();
 
-    // Get Apero information for the user's time zone
-    const aperoInfo = getAperoInfo(userTimeZone);
+    // Get apéro information for the user's time zone
+    const { time: aperoTime } = getAperoInfo(userTimeZone);
 
-    // Calculate the time difference between Apero time and current time
-    const isAperoNow = isAperoTime(aperoInfo.time, userTimeZone);
+    // Calculate the time difference between apéro time and current time
+    const isAperoNow = isAperoTime(aperoTime, userTimeZone);
 
-    // Set message and icon based on the Apero status
+    const tooltip = aperoTooltip(userTimeZone);
+
+    // Set message and icon based on the apéro status
     if (isAperoNow > 1) {
-      message = `It's not yet time for apéro in ${userTimeZone}, you need to be patient until ${aperoInfo.time}!`;
+      message = `It's not yet time for apéro in&nbsp;${tooltip}, you need to be patient until ${aperoTime}!`;
       icon = "./icons/hourglass-start.svg";
     } else if (isAperoNow === 1) {
-      message = `Apéro is coming soon in ${userTimeZone}, it will be time at ${aperoInfo.time}!`;
+      message = `Apéro is coming soon in&nbsp;${tooltip}, it will be time at ${aperoTime}!`;
       icon = "./icons/hourglass-end.svg";
     } else if (isAperoNow === 0) {
-      message = `It's time for apéro in ${userTimeZone}! Cheers!`;
+      message = `It's time for apéro in&nbsp;${tooltip}! Cheers!`;
       icon = "./icons/glass-cheers.svg";
     } else {
-      message = `Apéro has already happened in ${userTimeZone} at ${aperoInfo.time}, wait until tomorrow at that time!`;
+      message = `Apéro has already happened in&nbsp;${tooltip} at ${aperoTime}. Cheer up and wait until tomorrow at that time!`;
       icon = "./icons/time-twenty-four.svg";
+    }
+
+    if (isEasterEgg()) {
+      message =
+        "It might not be apéro time yet, but it's a special time too. It's time to relax!";
+      icon = "./icons/easter-egg.svg";
     }
   } catch (error) {
     console.error(`Error updating apéro: ${error}`);
     message = error.message;
     icon = "./icons/exclamation.svg";
   } finally {
-    // Update the page elements with the Apero information
-    document.getElementById("apero-local").textContent = message;
+    // Update the page elements with the apéro information
+    document.getElementById("apero-local").innerHTML = `<div>${message}</div>`;
     document.getElementById("apero-button").src = icon;
   }
 };
@@ -503,7 +574,7 @@ const getContinentIcon = (timeZone) => {
 };
 
 /**
- * Updates the Apero information for the world view.
+ * Updates the apéro information for the world view.
  * This function displays information about apéro time or errors on the world view.
  */
 const updateAperoWorld = () => {
@@ -542,7 +613,7 @@ const updateAperoWorld = () => {
     icon = "./icons/exclamation.svg";
   } finally {
     // Update the DOM elements with the message and icon
-    document.getElementById("apero-world").textContent = message;
+    document.getElementById("apero-world").innerHTML = `<div>${message}</div>`;
     document.getElementById("world-button").src = icon;
   }
 };
@@ -555,7 +626,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   initiateTheme(); // Initiate default system theme
   await fetchApero(); // Fetch apéro info on ./data/apero.json
   updateAperoLocal(); // Update apéro local info
-  setInterval(updateAperoLocal, 1000); // Setup automatic refresh of apero local info every seconds
+  setInterval(updateAperoLocal, 1000); // Setup automatic refresh of apéro local info every seconds
   updateAperoWorld(); // Update apéro world info
-  setInterval(updateAperoWorld, 60000); // Setup automatic refresh of apero world info every minutes
+  setInterval(updateAperoWorld, 60000); // Setup automatic refresh of apéro world info every minutes
 });

@@ -151,15 +151,19 @@ main .time {
   display: inline;
   color: #f4f4f4;
   color: var(--text-color);
+  margin-top: 0%;
   margin-bottom: 4vmin;
 }
 
 main .date {
   font-size: 1vmax;
+  margin-top: 0%;
+  margin-bottom: 1vmin;
 }
 
 main .time-zone {
   font-size: 1vmax;
+  margin-top: 0%;
   margin-bottom: 4vmin;
 }
 
@@ -268,6 +272,35 @@ button:hover {
   background-color: var(--text-color);
   color: #1a1a1a;
   color: var(--background-color);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 32vmax;
+  background-color: #000000;
+  background-color: var(--header-background-color);
+  color: #f4f4f4;
+  color: var(--text-color);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-style: normal;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+.tooltip .tooltip-text-hidden {
+  display: none;
 }
 
 /* for SVG color, use: https://codepen.io/sosuke/pen/Pjoqqp */

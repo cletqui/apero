@@ -42,15 +42,14 @@ Feel free to visit and explore the website!
 
 - [x] Build static webpage.
 - [x] Implement dark/light mode.
-- [x] Organise all buttons with emojis in a dropdown hidden header (minimalistic).
-- [x] Improve the timezone field and detect apéro time efficiently, handle all cases.
-- [ ] Complete `data/apero.json` with every countries and more fields.
-- [ ] Add non-alcoholic drinks (juices, mocktails).
-- [ ] Add animations in GUI.
+- [x] Organise all buttons with emojis/icons in a dropdown hidden header (minimalistic).
+- [x] Improve the time zone field and detect apéro time efficiently, handle all cases.
+- [x] Handle mobile and non standard display through css.
 - [ ] Add links to GitHub repo in error handling.
 - [ ] Display country/apéro information in GUI.
-- [ ] Handle mobile and non standard display through css.
-- [ ] Add 04:20 easter egg ;).
+- [ ] Complete `data/apero.json` with every countries ([flags](https://iconbuddy.app/circle-flags)?) and more fields.
+- [ ] Add non-alcoholic drinks (juices, mocktails).
+- [ ] Add animations in GUI.
 
 ## Disclaimer
 
