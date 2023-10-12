@@ -214,7 +214,7 @@ const toggleApero = (children) => {
 
   if (targetApero.className === "apero-info-hidden") {
     // Refresh apéro information for zone 'local' or 'world'
-    updateApero();
+    updateApero(zone);
 
     // If currently hidden, hide other apéro information and show apéro information
     hideApero(otherZone);
