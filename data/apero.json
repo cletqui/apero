@@ -437,7 +437,7 @@
         "capital": "Juneau",
         "language": "English",
         "currency": "USD",
-        "largestCities": ["Anchorage", "Fairbanks", "Juneau"]
+        "majorCities": ["Anchorage", "Fairbanks", "Juneau"]
       },
       "aperoInfo": {
         "time": "16:30",
@@ -2653,7 +2653,7 @@
         "capital": "Honolulu",
         "language": "English, Hawaiian",
         "currency": "USD",
-        "majorIslands": ["Oahu", "Maui", "Hawaii Island"]
+        "majorCities": ["Oahu", "Maui", "Hawaii Island"]
       },
       "aperoInfo": {
         "time": "17:30",
@@ -2687,7 +2687,7 @@
         "capital": "Nouméa",
         "language": "French",
         "currency": "XPF",
-        "majorIslands": ["Grande Terre", "Lifou", "Maré"]
+        "majorCities": ["Grande Terre", "Lifou", "Maré"]
       },
       "aperoInfo": {
         "time": "18:30",
@@ -2723,7 +2723,7 @@
         "capital": "Papeete",
         "language": "French, Tahitian",
         "currency": "CFP Franc (XPF)",
-        "majorIslands": ["Tahiti", "Bora Bora", "Moorea"]
+        "majorCities": ["Tahiti", "Bora Bora", "Moorea"]
       },
       "aperoInfo": {
         "time": "17:00",
