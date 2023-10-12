@@ -8,7 +8,7 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>"
     />
     <title>Apéro Time</title>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
@@ -19,29 +19,41 @@
   <body>
     <header id="header" class="menu-hidden">
       <div id="menu" class="menu">
-        <button type="button" onClick="toggleTheme()">
-          <img id="theme" class="icon" src="./icons/moon.svg" alt="theme" />
-        </button>
-        <button type="button" onclick="toggleSeconds()">
+        <button type="button" id="theme-button">
           <img
-            id="seconds-minutes"
+            id="theme-icon"
+            class="icon"
+            src="./icons/moon.svg"
+            alt="theme"
+          />
+        </button>
+        <button type="button" id="seconds-button">
+          <img
+            id="seconds-icon"
             class="icon"
             src="./icons/stopwatch.svg"
             alt="seconds-minutes"
           />
         </button>
-        <button type="button" onclick="toggleLanguage()">
+        <button type="button" id="time-format-button">
+          <img
+            id="time-format-icon"
+            class="icon"
+            src="./icons/time-twenty-four.svg"
+            alt="time-format"
+          />
+        </button>
+        <button type="button" id="language-button">
           <img class="icon" src="./icons/translate.svg" alt="language" />
         </button>
       </div>
 
-      <div class="menu-button">
+      <div class="menu-button" id="menu-button">
         <img
-          id="menu-button"
+          id="menu-icon"
           class="icon"
           src="./icons/menu-burger.svg"
           alt="menu"
-          onclick="showMenu()"
         />
       </div>
     </header>
@@ -54,21 +66,21 @@
       </div>
 
       <div class="apero-button">
-        <button type="button" onclick="toggleAperoLocal()">
+        <button type="button" id="local-button">
           <img
-            id="apero-button"
+            id="local-icon"
             class="icon"
             src="./icons/interrogation.svg"
-            alt="apero-button"
+            alt="local-apero"
           />
         </button>
 
-        <button type="button" onclick="toggleAperoWorld()">
+        <button type="button" id="world-button">
           <img
-            id="world-button"
+            id="world-icon"
             class="icon"
             src="./icons/planet-ringed.svg"
-            alt="world-button"
+            alt="world-apero"
           />
         </button>
       </div>

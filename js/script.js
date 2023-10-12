@@ -1,10 +1,37 @@
-// TODO: allow to browse time zones to find apero places, refactor code, add more entries in JSON
+/* Global Constants */
 
-let showSeconds = true; // Boolean flag to determine whether to show seconds on the clock
+const APERO_DATA_URL = "./data/apero.json";
+
+const icons = {
+  BURGER: "./icons/menu-burger.svg",
+  CROSS: "./icons/cross.svg",
+  MOON: "./icons/moon.svg",
+  SUN: "./icons/sun.svg",
+  CLOCK: "icons/clock-five.svg",
+  STOPWATCH: "icons/stopwatch.svg",
+  HOURGLASS_START: "./icons/hourglass-start.svg",
+  HOURGLASS_END: "./icons/hourglass-end.svg",
+  GLASS_CHEERS: "./icons/glass-cheers.svg",
+  CALENDAR_CLOCK: "./icons/calendar-clock.svg",
+  INTERROGATION: "./icons/interrogation.svg",
+  EXCLAMATION: "./icons/exclamation.svg",
+  EASTER_EGG: "./icons/easter-egg.svg",
+  EUROPA: "./icons/earth-europa.svg",
+  AFRICA: "./icons/earth-africa.svg",
+  AMERICAS: "./icons/earth-americas.svg",
+  ASIA: "./icons/earth-asia.svg",
+  PLANET: "./icons/planet-ringed.svg",
+};
+
+const SECONDS_INTERVAL = 1000;
+const MINUTES_INTERVAL = 60000;
+
+/* Global Variables */
+
 let isDarkMode = true; // Boolean flag to determine whether the webpage is in dark mode
-let languageFormat = "fr-FR"; // A string representing the preferred language format (e.g., "fr-FR" for French)
+let languageFormat = "en-US"; // A string representing the preferred language format (e.g., "fr-FR" for French)
 let apero = {}; // An empty object that will store apéro data in JSON format
-let tootltip = {};
+let tooltipText = "Clique..."; // The default tooltip text to display over the time zones
 
 // An object defining options for formatting the time on the clock
 let timeOptions = {
@@ -30,15 +57,13 @@ let dateTimeOptions = {
 const showMenu = () => {
   // Get references to the header and menu button elements
   const header = document.getElementById("header");
-  const menuButton = document.getElementById("menu-button");
+  const menuButton = document.getElementById("menu-icon");
 
   // Determine the new class name and icon source based on the current state of the menu
   const headerClassName =
     header.className === "menu-hidden" ? "menu-visible" : "menu-hidden";
   const menuButtonIconSrc =
-    header.className === "menu-hidden"
-      ? "./icons/cross.svg"
-      : "./icons/menu-burger.svg";
+    header.className === "menu-hidden" ? icons.CROSS : icons.BURGER;
 
   // Update the class name of the header to show/hide the menu
   header.className = headerClassName;
@@ -54,8 +79,11 @@ const initiateTheme = () => {
   // Get the user's system default theme preference
   const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+  // Update the isDarkMode global flag
+  isDarkMode = defaultTheme.matches;
+
   // Determine the 'data-theme' attribute value based on 'defaultTheme.matches'
-  const themeAttribute = `${defaultTheme.matches ? "dark" : "light"}-theme`;
+  const themeAttribute = `${isDarkMode ? "dark" : "light"}-theme`;
 
   // Get a reference to the <html> element and set its 'data-theme' attribute
   document.querySelector("html").dataset.theme = themeAttribute;
@@ -69,11 +97,11 @@ const toggleTheme = () => {
   isDarkMode = !isDarkMode;
 
   // Determine the icon source and theme attribute value based on 'isDarkMode'
-  const iconSrc = isDarkMode ? "./icons/moon.svg" : "./icons/sun.svg";
+  const iconSrc = isDarkMode ? icons.MOON : icons.SUN;
   const themeAttribute = `${isDarkMode ? "dark" : "light"}-theme`;
 
   // Get the element for the theme icon and update its source
-  document.getElementById("theme").src = iconSrc;
+  document.getElementById("theme-icon").src = iconSrc;
 
   // Update the 'data-theme' attribute of the <html> element based on 'isDarkMode'
   document.querySelector("html").dataset.theme = themeAttribute;
@@ -83,17 +111,31 @@ const toggleTheme = () => {
  * Toggle the display of seconds on a clock and update the clock icon accordingly.
  */
 const toggleSeconds = () => {
-  showSeconds = !showSeconds; // Toggle the 'showSeconds' variable between true and false
+  // Determine whether to show seconds based on the clock icon's source
+  const showSeconds = document
+    .getElementById("seconds-icon")
+    .src.endsWith(icons.CLOCK);
 
   // Update the timeOptions to include or exclude seconds based on 'showSeconds'
   timeOptions.second = showSeconds ? "2-digit" : undefined;
 
-  // Update the icon based on 'showSeconds'
-  document.getElementById("seconds-minutes").src = showSeconds
-    ? "./icons/stopwatch.svg"
-    : "./icons/clock-five.svg";
+  // Update the clock icon based on 'showSeconds'
+  document.getElementById("seconds-icon").src = showSeconds
+    ? icons.STOPWATCH
+    : icons.CLOCK;
 
   // Update the clock to apply the change immediately
+  updateClock();
+};
+
+/**
+ * Toggle the time format between 12-hour and 24-hour and update the clock display accordingly.
+ */
+const toggleTimeFormat = () => {
+  // Toggle between 12-hour and 24-hour time format
+  timeOptions.hour12 = !timeOptions.hour12;
+
+  // Update the clock display to apply the format change immediately
   updateClock();
 };
 
@@ -101,118 +143,86 @@ const toggleSeconds = () => {
  * Toggle between English (en-US) and French (fr-FR) language formats for displaying time on the clock.
  */
 const toggleLanguage = () => {
-  // TODO: implement language switching for every line printed
-
   // Toggle the current language format between English and French
   languageFormat = languageFormat === "en-US" ? "fr-FR" : "en-US";
 
-  // Use 24-hour format for French and 12-hour format for English
-  timeOptions.hour12 = !(languageFormat === "fr-FR");
-
-  // Update the clock to apply the language change immediately
+  // Update the clock and apéro displayed to apply the language change immediately
   updateClock();
+  updateApero();
 };
 
 /**
- * Toggle the visibility of Apero local (user time zone) information and refresh it if necessary.
+ * Show the apéro information for the specified zone and add the "unselected" class to the other apéro button.
+ *
+ * @param {string} zone - The apéro zone to show ('local' or 'world').
  */
-const toggleAperoLocal = () => {
-  // Get the apéro world element
-  const aperoLocal = document.getElementById("apero-local");
+const showApero = (zone) => {
+  // Get the apéro info element
+  const aperoInfo = document.getElementById(`apero-${zone}`);
 
-  // Toggle the display style of apéro information
-  if (aperoLocal.className === "apero-info-hidden") {
-    // Refresh Apero information in case it needs updating
-    updateAperoLocal();
+  // Determine the other apéro zone
+  const otherZone = zone === "local" ? "world" : "local";
 
-    // If currently hidden, hide apéro world information and show apéro local information
-    hideAperoWorld();
-    showAperoLocal();
+  // Get the other apéro icon element
+  const otherAperoIcon = document.getElementById(`${otherZone}-icon`);
+
+  // Show the apéro information by updating the class
+  aperoInfo.classList.remove("apero-info-hidden");
+
+  // Add the "unselected" class to the other apéro icon
+  otherAperoIcon.classList.add("unselected");
+};
+
+/**
+ * Hide the apéro information for the specified zone and remove the "unselected" class from the other apéro button.
+ *
+ * @param {string} zone - The apéro zone to hide ('local' or 'world').
+ */
+const hideApero = (zone) => {
+  // Get the apéro info element
+  const aperoInfo = document.getElementById(`apero-${zone}`);
+
+  // Determine the other apéro zone
+  const otherZone = zone === "local" ? "world" : "local";
+
+  // Get the other apéro icon element
+  const otherAperoIcon = document.getElementById(`${otherZone}-icon`);
+
+  // Hide the apéro information by updating the class
+  aperoInfo.classList.add("apero-info-hidden");
+
+  // Remove the "unselected" class from the other apéro icon
+  otherAperoIcon.classList.remove("unselected");
+};
+
+/**
+ * Toggle the visibility of apéro information, reset the tooltip text and update the apéro information.
+ *
+ * @param {Element[]} children - An array of child elements.
+ */
+const toggleApero = (children) => {
+  // Extract the button ID to determine the zone (local or world)
+  const button = children[0].id;
+  const [zone] = button.split("-");
+  const targetApero = document.getElementById(`apero-${zone}`);
+
+  // Determine the other apéro zone
+  const otherZone = zone === "local" ? "world" : "local";
+
+  // Reset the tooltip text to its default value
+  resetTooltipText();
+
+  if (targetApero.className === "apero-info-hidden") {
+    // Refresh apéro information for zone 'local' or 'world'
+    updateApero();
+
+    // If currently hidden, hide other apéro information and show apéro information
+    hideApero(otherZone);
+    showApero(zone);
   } else {
-    // If currently visible, hide apéro local information
-    hideAperoLocal();
+    // If currently visible, hide apéro information
+    hideApero(zone);
   }
-};
-
-/**
- * Show the apéro local information in the apéro local element and add "unselect" class for world button.
- */
-const showAperoLocal = () => {
-  // Get apéro local info element
-  const aperoLocal = document.getElementById("apero-local");
-  // Get apéro world button element
-  const worldButton = document.getElementById("world-button");
-
-  // Update the class to show apéro local information
-  aperoLocal.className = "apero-info";
-  // Update the class to add "unselected" color to world button
-  worldButton.classList.add("unselected");
-};
-
-/**
- * Hide the apéro local information in the apéro local element and remove "unselect" class for world button.
- */
-const hideAperoLocal = () => {
-  // Get apéro local info element
-  const aperoLocal = document.getElementById("apero-local");
-  // Get apéro world button element
-  const worldButton = document.getElementById("world-button");
-
-  // Update the class to hide apéro local information
-  aperoLocal.className = "apero-info-hidden";
-  // Update the class to remove "unselected" color to apéro button
-  worldButton.classList.remove("unselected");
-};
-
-/**
- * Toggle the visibility of apéro world information and trigger a search for apéro around the world.
- */
-const toggleAperoWorld = () => {
-  // Get the apéro world element
-  const aperoWorld = document.getElementById("apero-world");
-
-  // Toggle the display style of apéro information
-  if (aperoWorld.className === "apero-info-hidden") {
-    // Refresh apéro around the world information
-    updateAperoWorld();
-
-    // If currently hidden, hide apéro local information and show apéro world information
-    hideAperoLocal();
-    showAperoWorld();
-  } else {
-    // If currently visible, hide apéro world information
-    hideAperoWorld();
-  }
-};
-
-/**
- * Show the apéro world information in the apéro world element and add "unselect" class for apero button.
- */
-const showAperoWorld = () => {
-  // Get apéro world info element
-  const aperoWorld = document.getElementById("apero-world");
-  // Get apéro local button element
-  const aperoButton = document.getElementById("apero-button");
-
-  // Update the class to show apéro world information
-  aperoWorld.className = "apero-info";
-  // Update the class to add "unselected" color to apéro button
-  aperoButton.classList.add("unselected");
-};
-
-/**
- * Hide the apéro world information in the apéro world and remove "unselect" class for apero button.
- */
-const hideAperoWorld = () => {
-  // Get apéro world info element
-  const aperoWorld = document.getElementById("apero-world");
-  // Get apéro local button element
-  const aperoButton = document.getElementById("apero-button");
-
-  // Update the class to hide apéro world information
-  aperoWorld.className = "apero-info-hidden";
-  // Update the class to remove "unselected" color to apéro button
-  aperoButton.classList.remove("unselected");
 };
 
 /* Operating Functions */
@@ -231,12 +241,19 @@ const updateClock = () => {
     document.getElementById(elementId).textContent = value;
   };
 
+  // Helper function to capitalize the first letter of a string
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   // Update elements with formatted current time, date, and user time zone
   updateElement("time", now.toLocaleTimeString(languageFormat, timeOptions));
   updateElement(
     "date",
-    now.toLocaleDateString(languageFormat, dateTimeOptions)
-  );
+    capitalizeFirstLetter(
+      now.toLocaleDateString(languageFormat, dateTimeOptions)
+    )
+  ); // Date in french starts with a small letter
   updateElement("time-zone", `(${userTimezone})`);
 };
 
@@ -257,13 +274,25 @@ const isEasterEgg = () => {
 };
 
 /**
+ * Generate an HTML link element with the specified link and site name.
+ *
+ * @param {string} link - The URL to link to.
+ * @param {string} name - The name or label for the link.
+ * @returns {string} A string representing an HTML link element.
+ */
+const getLink = (link, name) => {
+  // Create an HTML link element with the specified link and site name
+  return `<a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>`;
+};
+
+/**
  * Fetch apéro data from the specified JSON file "./data/apero.json".
  *
  * @returns {Promise<object>} - A Promise that resolves to the apero data object.
  */
 const fetchApero = async () => {
   try {
-    const response = await fetch("./data/apero.json"); // Attempt to fetch apéro data from the specified JSON file
+    const response = await fetch(APERO_DATA_URL); // Attempt to fetch apéro data from the specified JSON file
     const data = await response.json(); // Parse the response as JSON
     apero = data; // Assign the fetched data to the global 'apero' variable
     return data; // Return the fetched data
@@ -274,7 +303,9 @@ const fetchApero = async () => {
     const aperoLocalElement = document.getElementById("apero-local");
     if (aperoLocalElement) {
       aperoLocalElement.textContent =
-        "Apéro information not available at the moment.";
+        languageFormat === "fr-FR"
+          ? "Les informations pour l'apéro ne sont pas disponibles pour le moment."
+          : "Apéro information not available at the moment.";
     }
   }
 };
@@ -298,14 +329,23 @@ const getTimeZoneInfo = (timeZone) => {
       return apero[continent][city]; // Return the apéro data associated with the provided time zone
     } else {
       console.error(`No time zone ${timeZone} found in apéro data: ${error}`);
+      const link = getLink(
+        "https://github.com/cletqui/apero/#contributing",
+        "GitHub"
+      );
       throw new Error(
-        `No time zone (${timeZone}) found in apero.json. To add this new time zone, follow:&nbsp;<a href=https://github.com/cletqui/apero/#contributing>GitHub</a>.`
+        languageFormat === "fr-FR"
+          ? `Aucun fuseau horaire ${timeZone} n'a été trouvé dans apero.json. Pour y ajouter ce fuseau horaire, proposez-la sur ${link}.`
+          : `No time zone ${timeZone} found in apero.json. To add this time zone, submit it on ${link}`
       );
     }
   } catch (error) {
     console.error(`Invalid user time zone: ${timeZone}: ${error}`);
+    const link = getLink("https://github.com/cletqui/apero/issues", "GitHub");
     throw new Error(
-      `Your time zone appears to be invalid. You can report this issue to&nbsp;<a href="https://github.com/cletqui/apero/issues">GitHub</a>.`
+      languageFormat === "fr-FR"
+        ? `Votre fuseau horaire semble invalide. Vous pouvez signaler ce problème sur ${link}.`
+        : `Your time zone appears to be invalid. You can report this issue to ${link}.`
     );
   }
 };
@@ -328,8 +368,14 @@ const getAperoInfo = (timeZone) => {
       console.error(
         `Apéro info not found for ${timeZone} in apéro data: ${error}`
       );
+      const link = getLink(
+        "https://github.com/cletqui/apero/#contributing",
+        "GitHub"
+      );
       throw new Error(
-        `Apéro info not found for ${timeZone}. To contribute, follow:&nbsp;<a href=https://github.com/cletqui/apero/#contributing>GitHub</a>.`
+        languageFormat === "fr-FR"
+          ? `Aucune information sur l'apéro à ${timeZone}. Vous pouvez contribuer au projet et ajouter ce fuseau horaire sur ${link}.`
+          : `Apéro info not found for ${timeZone}. You can contribute to the project and add this time zone on ${link}>.`
       );
     }
   } catch (error) {
@@ -356,7 +402,11 @@ const getTimezoneTime = (timeZone) => {
     return new Date().toLocaleTimeString(undefined, timeZoneOptions);
   } catch (error) {
     console.error(`Error getting time in ${timeZone}: ${error}`);
-    throw new Error(`Error getting time in ${timeZone}. Please try again.`);
+    throw new Error(
+      languageFormat === "fr-FR"
+        ? `Impossible d'obtenir l'heure à ${timeZone}, réessayez plus tard.`
+        : `Error getting time in ${timeZone}. Please try again.`
+    );
   }
 };
 
@@ -375,62 +425,139 @@ const isAperoTime = (aperoTime, timeZone) => {
     return aperoHour - timeZoneHour;
   } catch (error) {
     console.error(`Error calculating apéro time: ${error}`);
-    throw new Error(`Error calculating apéro time. Please try again.`);
+    throw new Error(
+      languageFormat === "fr-FR"
+        ? `Erreur lors du calcul de l'heure, réessayez plus tard.`
+        : `Error calculating apéro time. Please try again.`
+    );
   }
 };
 
+/**
+ * Generate an apéro tooltip HTML element based on the provided timeZone.
+ *
+ * @param {string} timeZone - The time zone for which the tooltip should be generated.
+ * @returns {string} A string representing an HTML tooltip element.
+ */
 const aperoTooltip = (timeZone) => {
-  const tooltipText = aperoTooltipText(timeZone);
-  return `<div class="tooltip" onClick="showMoreTooltip()">${timeZone}<span id="tooltip-text" class="tooltip-text">${tooltipText}</span></div>`;
+  // Create an HTML tooltip element with a click event to shuffle the tooltip text
+  return `<div class="tooltip" onClick="shuffleTooltipText(this.childNodes)">${timeZone}<span id="tooltip-text" class="tooltip-text">${tooltipText}</span></div>`;
 };
 
-const aperoTooltipText = (timeZone) => {
+/**
+ * Generate an apéro tooltip text HTML element.
+ *
+ * @returns {string} A string representing an HTML tooltip text element.
+ */
+
+/**
+ * Generate a new apéro tooltip text and update the tooltip text in the HTML document.
+ *
+ * @param {string} timeZone - The time zone for which the tooltip should be generated.
+ */
+const shuffleTooltipText = (childNodes) => {
+  const timeZone = childNodes[0].data;
+
+  // Generate a new apéro tooltip text based on the provided timeZone
+  tooltipText = randomAperoTooltipText(timeZone);
+
+  // Update the tooltip text in the HTML document
+  childNodes[1].textContent = tooltipText;
+};
+
+/**
+ * Resets the tooltip text to its initial value, "Click on me!".
+ */
+const resetTooltipText = () => {
+  // Reset the tooltipText to the initial value
+  tooltipText = languageFormat === "fr-FR" ? `Clique...` : "Click on me...";
+};
+
+/**
+ * Generate a random apéro tooltip text based on the provided timeZone.
+ *
+ * @param {string} timeZone - The time zone for which the tooltip should be generated.
+ * @returns {string} A randomly selected tooltip text.
+ */
+const randomAperoTooltipText = (timeZone) => {
+  // Retrieve time zone information
   const timeZoneInfo = getTimeZoneInfo(timeZone);
+
+  // Destructure relevant information from timeZoneInfo
   const {
-    countryInfo: { name: countryName },
-    aperoInfo: { time: aperoTime, drinks, snacks, tradition },
+    countryInfo: { name: countryName, capital, majorCities },
+    aperoInfo: { time: aperoTime, drinks, snacks, brands, toast, tradition },
   } = timeZoneInfo;
 
-  return `Apéro in ${countryName} takes place at ${aperoTime}...<div class="tooltip-text-hidden"><br><br>You can enjoy typical drinks from ${countryName} like ${drinks.join(
-    ", "
-  )}.<br>Additionally you can enjoy typical apéro snacks like ${snacks.join(
-    ", "
-  )}...<br><br>${tradition}</div>`;
-};
+  // Generate informative text snippets
+  const textCountry =
+    languageFormat === "fr-FR"
+      ? `La capitale de ${countryName} est ${capital}, mais vous pouvez profiter de l'apéro dans d'autres grandes villes comme ${majorCities.join(
+          ", "
+        )}.`
+      : `The capital of ${countryName} is ${capital}, but you can enjoy apéro in other big cities like ${majorCities.join(
+          ", "
+        )}.`;
+  const textAperoTime =
+    languageFormat === "fr-FR"
+      ? `L'apéro en ${countryName} a lieu à ${aperoTime}.`
+      : `Apéro in ${countryName} takes place at ${aperoTime}.`;
+  const textDrinks =
+    languageFormat === "fr-FR"
+      ? `Pendant l'apéro en ${countryName}, vous pouvez profiter de boissons typiques comme ${drinks.join(
+          ", "
+        )}.`
+      : `During apéro in ${countryName}, you can enjoy typical drinks like ${drinks.join(
+          ", "
+        )}.`;
+  const textSnacks =
+    languageFormat === "fr-FR"
+      ? `Pendant l'apéro en ${countryName}, vous pouvez profiter d'en-cas typiques comme ${drinks.join(
+          ", "
+        )}.`
+      : `During apéro in ${countryName}, you can enjoy typical apéro snacks like ${snacks.join(
+          ", "
+        )}.`;
+  const textBrands =
+    languageFormat === "fr-FR"
+      ? `Les marques de boisson connues en ${countryName} son ${brands.join(
+          ", "
+        )}.`
+      : `Typical drink brands in ${countryName} include ${brands.join(", ")}.`;
+  const textToast =
+    languageFormat === "fr-FR"
+      ? `Pour trinquer en ${countryName}, vous pouvez dire ${toast.join(", ")}.`
+      : `To raise a toast in ${countryName}, you can say ${toast.join(", ")}.`;
+  const textTradition = tradition; // TODO translate tradition in other languages automatically
 
-const showMoreTooltip = () => {
-  const tooltipText = document.getElementById("tooltip-text").innerHTML;
-  const firstOccurrence = tooltipText.indexOf("...");
-  const stop = '<div class="tooltip-text-hidden">';
-  let moreTooltip = tooltipText;
+  // Create an array of possible tooltip texts
+  const texts = [
+    textCountry,
+    textAperoTime,
+    textDrinks,
+    textSnacks,
+    textBrands,
+    textToast,
+    textTradition,
+  ];
 
-  if (firstOccurrence !== -1) {
-    // Split the text into two parts at the first occurrence of "..."
-    const visible = tooltipText.substring(0, firstOccurrence + 1); // Include "." instead of "..."
-    const hidden = tooltipText.substring(firstOccurrence + 3);
-    if (hidden.startsWith(stop)) {
-      const secondOccurrence = hidden.indexOf("...");
-      if (secondOccurrence !== -1) {
-        const newVisible = hidden.substring(stop.length, secondOccurrence + 1);
-        const newHidden = hidden.substring(secondOccurrence + 3);
-        console.log(visible);
-        console.log(newVisible);
-        console.log(newHidden);
-        moreTooltip = `${visible}${newVisible}${stop}${newHidden}`;
-        console.log(moreTooltip);
-      }
-    }
-  }
+  let randomText;
 
-  document.getElementById("tooltip-text").innerHTML = moreTooltip;
+  // Ensure the randomly selected text is not equal to the previously displayed tooltipText
+  do {
+    randomText = pickRandom(texts);
+  } while (randomText === tooltipText);
+
+  return randomText;
 };
 
 /**
  * Update apéro information for the local time zone and display it on the page.
  */
 const updateAperoLocal = () => {
-  let message = "Unknown error.";
-  let icon = "./icons/interrogation.svg";
+  let message =
+    languageFormat === "fr-FR" ? "Erreur inconnue" : "Unknown error.";
+  let icon = icons.INTERROGATION;
 
   try {
     // Get the user's time zone
@@ -442,41 +569,55 @@ const updateAperoLocal = () => {
     // Calculate the time difference between apéro time and current time
     const isAperoNow = isAperoTime(aperoTime, userTimeZone);
 
-    const tooltip = aperoTooltip(userTimeZone);
+    const tooltip = aperoTooltip(userTimeZone); // The tooltip to display with the time zone
 
     // Set message and icon based on the apéro status
     if (isAperoNow > 1) {
-      message = `It's not yet time for apéro in&nbsp;${tooltip}, you need to be patient until ${aperoTime}!`;
-      icon = "./icons/hourglass-start.svg";
+      message =
+        languageFormat === "fr-FR"
+          ? `Ce n'est pas encore l'heure de l'apéro à ${tooltip}, il faudra être patient jusqu'à ${aperoTime} !`
+          : `It's not yet time for apéro in ${tooltip}, you need to be patient until ${aperoTime}!`;
+      icon = icons.HOURGLASS_START;
     } else if (isAperoNow === 1) {
-      message = `Apéro is coming soon in&nbsp;${tooltip}, it will be time at ${aperoTime}!`;
-      icon = "./icons/hourglass-end.svg";
+      message =
+        languageFormat === "fr-FR"
+          ? `C'est bientôt l'apéro à ${tooltip}, ce sera l'heure à ${aperoTime} !`
+          : `Apéro is coming soon in ${tooltip}, it will be time at ${aperoTime}!`;
+      icon = icons.HOURGLASS_END;
     } else if (isAperoNow === 0) {
-      message = `It's time for apéro in&nbsp;${tooltip}! Cheers!`;
-      icon = "./icons/glass-cheers.svg";
+      message =
+        languageFormat === "fr-FR"
+          ? `It's time for apéro in ${tooltip}! Santé!`
+          : `It's time for apéro in ${tooltip}! Cheers!`;
+      icon = icons.GLASS_CHEERS;
     } else {
-      message = `Apéro has already happened in&nbsp;${tooltip} at ${aperoTime}. Cheer up and wait until tomorrow at that time!`;
-      icon = "./icons/time-twenty-four.svg";
+      message =
+        languageFormat === "fr-FR"
+          ? `L'Apéro a déjà eu lieu à ${tooltip} à ${aperoTime}. Rassurez-vous et rendez-vous demain à cette heure-là !`
+          : `Apéro has already happened in ${tooltip} at ${aperoTime}. Cheer up and wait until tomorrow at that time!`;
+      icon = icons.CALENDAR_CLOCK;
     }
 
     if (isEasterEgg()) {
       message =
-        "It might not be apéro time yet, but it's a special time too. It's time to relax!";
-      icon = "./icons/easter-egg.svg";
+        languageFormat === "fr-FR"
+          ? "Ce n'est peut-être pas encore l'heure de l'apéro, mais c'est aussi un moment spécial. Il est temps de se détendre !"
+          : "It might not be apéro time yet, but it's a special time too. It's time to relax!";
+      icon = icons.EASTER_EGG;
     }
   } catch (error) {
     console.error(`Error updating apéro: ${error}`);
     message = error.message;
-    icon = "./icons/exclamation.svg";
+    icon = icons.EXCLAMATION;
   } finally {
     // Update the page elements with the apéro information
     document.getElementById("apero-local").innerHTML = `<div>${message}</div>`;
-    document.getElementById("apero-button").src = icon;
+    document.getElementById("local-icon").src = icon;
   }
 };
 
 /**
- * Searches for apéro times across the world and categorizes them.
+ * Search for apéro times across the world and categorizes them.
  * @returns {Array[]} - An array containing two arrays: aperoWorld and almostAperoWorld.
  *                      aperoWorld contains time zones where it's currently apéro time,
  *                      almostAperoWorld contains time zones where it's almost apéro time.
@@ -513,16 +654,16 @@ const searchAperoWorld = () => {
 };
 
 /**
- * Picks a random time zone from the given array of time zones.
- * @param {Array} aperoWorld - An array of time zones to choose from.
- * @returns {string} - A randomly selected time zone.
+ * Pick a random value from the given array.
+ * @param {Array} array - An array to choose from.
+ * @returns {string} - A randomly selected value.
  */
-const pickRandomTimeZone = (aperoWorld) => {
+const pickRandom = (array) => {
   // Generate a random index within the range of the array length
-  const randomIndex = Math.floor(Math.random() * aperoWorld.length);
+  const randomIndex = Math.floor(Math.random() * array.length);
 
   // Return the time zone at the randomly selected index
-  return aperoWorld[randomIndex];
+  return array[randomIndex];
 };
 
 /**
@@ -530,6 +671,7 @@ const pickRandomTimeZone = (aperoWorld) => {
  * @param {string} timeZone - The time zone in "continent/city" format.
  * @returns {string} - The URL of the continent-specific icon.
  */
+
 const getContinentIcon = (timeZone) => {
   let icon;
 
@@ -542,45 +684,50 @@ const getContinentIcon = (timeZone) => {
       case "Antarctica":
       case "Arctic":
       case "Europe":
-        icon = "./icons/earth-europa.svg";
+        icon = icons.EUROPA;
         break;
       case "Atlantic":
       case "Africa":
-        icon = "./icons/earth-africa.svg";
+        icon = icons.AFRICA;
         break;
       case "America":
       case "Canada":
       case "US":
-        icon = "./icons/earth-americas.svg";
+        icon = icons.AMERICAS;
         break;
       case "Asia":
       case "Australia":
       case "Indian":
       case "Pacific":
-        icon = "./icons/earth-asia.svg";
+        icon = icons.ASIA;
         break;
       default:
-        icon = "./icons/planet-ringed.svg";
+        icon = icons.PLANET;
     }
 
     return icon;
   } catch (error) {
     // Handle invalid time zone input
     console.error(`Invalid user time zone: ${timeZone}: ${error}`);
+    const link = getLink("https://github.com/cletqui/apero/issues", "GitHub");
     throw new Error(
-      `Your time zone appears to be invalid. You can report this issue at https://github.com/cletqui/apero/issues.`
+      languageFormat === "fr-FR"
+        ? `Votre fuseau horaire semble être invalide. Vous pouvez signaler ce problème sur ${link}.`
+        : `Your time zone appears to be invalid. You can report this issue on ${link}.`
     );
   }
 };
 
 /**
- * Updates the apéro information for the world view.
+ * Update the apéro information for the world view.
  * This function displays information about apéro time or errors on the world view.
  */
 const updateAperoWorld = () => {
+  // TODO display time zone time inside brackets
   // Default message and icon in case of errors or no data
-  let message = "Unknown error.";
-  let icon = "./icons/interrogation.svg";
+  let message =
+    languageFormat === "fr-FR" ? "Erreur inconnue" : "Unknown error.";
+  let icon = icons.INTERROGATION;
 
   try {
     // Variables to store the results of searchAperoWorld()
@@ -588,45 +735,110 @@ const updateAperoWorld = () => {
 
     // Check if there are apéro locations
     if (aperoWorld.length > 0) {
-      const {
-        timeZone,
-        aperoInfo: { time: aperoTime },
-      } = pickRandomTimeZone(aperoWorld);
-      message = `It's apéro time in ${timeZone} (${aperoTime}).`;
+      const { timeZone } = pickRandom(aperoWorld); // Picks a random time zone from the given array of time zones.
+
+      const tooltip = aperoTooltip(timeZone);
+
+      message =
+        languageFormat === "fr-FR"
+          ? `C'est l'heure de l'apéro à ${tooltip}!`
+          : `It's apéro time in ${tooltip}!`;
       icon = getContinentIcon(timeZone);
     } else if (almostAperoWorld.length > 0) {
-      const {
-        timeZone,
-        aperoInfo: { time: aperoTime },
-      } = pickRandomTimeZone(almostAperoWorld);
-      message = `It's almost apéro time in ${timeZone} (${aperoTime}).`;
+      const { timeZone } = pickRandom(almostAperoWorld); // Picks a random time zone from the given array of time zones.
+
+      const tooltip = aperoTooltip(timeZone); // The tooltip to display with the time zone
+
+      message =
+        languageFormat === "fr-FR"
+          ? `C'est presque l'heure de l'apéro à ${tooltip}!`
+          : `It's almost apéro time in ${tooltip}!`;
       icon = getContinentIcon(timeZone);
     } else {
       // No apéro locations found
-      message = "No apéro found across the globe, try even further!";
-      icon = "./icons/planet-ringed.svg";
+      message =
+        languageFormat === "fr-FR"
+          ? "Aucun apéro trouvé dans le monde, essayez encore plus loin !"
+          : "No apéro found across the globe, try even further!";
+      icon = icons.PLANET;
     }
   } catch (error) {
     // Handle errors and log them
     console.error(`Error updating world apéro: ${error}`);
     message = error.message;
-    icon = "./icons/exclamation.svg";
+    icon = icons.EXCLAMATION;
   } finally {
     // Update the DOM elements with the message and icon
     document.getElementById("apero-world").innerHTML = `<div>${message}</div>`;
-    document.getElementById("world-button").src = icon;
+    document.getElementById("world-icon").src = icon;
+  }
+};
+
+/**
+ * Update apéro information based on the specified zone (local or world). Update both if no zone is specified.
+ *
+ * @param {string} zone - The apéro zone to update ('local' or 'world').
+ */
+const updateApero = (zone) => {
+  // Determine whether to update apéro local or apéro world information
+  if (zone === "local") {
+    updateAperoLocal();
+  } else if (zone === "world") {
+    updateAperoWorld();
+  } else {
+    updateAperoLocal();
+    updateAperoWorld();
   }
 };
 
 /* Startup Function */
 
+/**
+ * Adds event listeners to various buttons in the HTML document.
+ */
+const addEventListeners = () => {
+  // Menu Button
+  document.getElementById("menu-button").addEventListener("click", showMenu);
+  // Theme Button
+  document
+    .getElementById("theme-button")
+    .addEventListener("click", toggleTheme);
+  // Seconds Button
+  document
+    .getElementById("seconds-button")
+    .addEventListener("click", toggleSeconds);
+  // Time Format Button
+  document
+    .getElementById("time-format-button")
+    .addEventListener("click", toggleTimeFormat);
+  // Language Button
+  document
+    .getElementById("language-button")
+    .addEventListener("click", toggleLanguage);
+  // Local Button
+  document
+    .getElementById("local-button")
+    .addEventListener("click", function () {
+      // Toggle the "apero" element children
+      toggleApero(this.children);
+    });
+  // World Button
+  document
+    .getElementById("world-button")
+    .addEventListener("click", function () {
+      // Toggle the "apero" element children
+      toggleApero(this.children);
+    });
+};
+
 document.addEventListener("DOMContentLoaded", async function () {
+  addEventListeners(); // Add event listeners to buttons
   updateClock(); // Start by updating the clock
-  setInterval(updateClock, 1000); // Setup automatic refresh of clock every seconds
+  setInterval(updateClock, SECONDS_INTERVAL); // Setup automatic refresh of clock every seconds
   initiateTheme(); // Initiate default system theme
   await fetchApero(); // Fetch apéro info on ./data/apero.json
   updateAperoLocal(); // Update apéro local info
-  setInterval(updateAperoLocal, 1000); // Setup automatic refresh of apéro local info every seconds
+  setInterval(updateAperoLocal, SECONDS_INTERVAL); // Setup automatic refresh of apéro local info every seconds
   updateAperoWorld(); // Update apéro world info
-  setInterval(updateAperoWorld, 60000); // Setup automatic refresh of apéro world info every minutes
+  setInterval(updateAperoWorld, MINUTES_INTERVAL); // Setup automatic refresh of apéro world info every minutes
 });

@@ -283,7 +283,6 @@ button:hover {
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  width: 32vmax;
   background-color: #000000;
   background-color: var(--header-background-color);
   color: #f4f4f4;
@@ -294,10 +293,25 @@ button:hover {
   font-style: normal;
   position: absolute;
   z-index: 1;
+  width: 32vmax;
+  top: 100%;
+  left: 50%;
+  margin-left: -16vmax; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
 .tooltip:hover .tooltip-text {
   visibility: visible;
+}
+
+.tooltip .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
 }
 
 /* for SVG color, use: https://codepen.io/sosuke/pen/Pjoqqp */
