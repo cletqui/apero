@@ -87,8 +87,8 @@ The apéro data in `data/apero.json` is stored following this schema:
         "majorCities": ["Marseille", "Lyon", "Rennes"] // Country major cities
       },
       "aperoInfo": {
-        // Apero information
-        "time": "18:00", // Apero time
+        // Apéro information
+        "time": "18:00", // Apéro time
         "drinks": [
           "Wine (e.g., Bordeaux, Champagne)",
           "Pastis",
