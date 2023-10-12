@@ -299,8 +299,5 @@ button:hover {
 .tooltip:hover .tooltip-text {
   visibility: visible;
 }
-.tooltip .tooltip-text-hidden {
-  display: none;
-}
 
 /* for SVG color, use: https://codepen.io/sosuke/pen/Pjoqqp */
