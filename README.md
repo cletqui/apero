@@ -28,6 +28,8 @@ You can access the website at the following URLs:
 - [Apéro Time - GitHub Pages](https://cletqui.github.io/apero)
 - [Apéro Time - Cloudflare Pages](https://apero.pages.dev)
 
+[![pages-build-deployment](https://github.com/cletqui/apero/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/cletqui/apero/actions/workflows/pages/pages-build-deployment)
+
 Feel free to visit and explore the website!
 
 ## Features
