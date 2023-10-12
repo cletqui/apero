@@ -45,8 +45,8 @@ Feel free to visit and explore the website!
 - [x] Organise all buttons with emojis/icons in a dropdown hidden header (minimalistic).
 - [x] Improve the time zone field and detect apéro time efficiently, handle all cases.
 - [x] Handle mobile and non standard display through css.
-- [ ] Add links to GitHub repo in error handling.
-- [ ] Display country/apéro information in GUI.
+- [x] Add links to GitHub repo in error handling.
+- [x] Display country/apéro information in GUI.
 - [ ] Complete `data/apero.json` with every countries ([flags](https://iconbuddy.app/circle-flags)?) and more fields.
 - [ ] Add non-alcoholic drinks (juices, mocktails).
 - [ ] Add animations in GUI.
