@@ -3,24 +3,26 @@
 const APERO_DATA_URL = "./data/apero.json";
 
 const icons = {
-  BURGER: "./icons/menu-burger.svg",
-  CROSS: "./icons/cross.svg",
-  MOON: "./icons/moon.svg",
-  SUN: "./icons/sun.svg",
-  CLOCK: "icons/clock-five.svg",
-  STOPWATCH: "icons/stopwatch.svg",
-  HOURGLASS_START: "./icons/hourglass-start.svg",
-  HOURGLASS_END: "./icons/hourglass-end.svg",
-  GLASS_CHEERS: "./icons/glass-cheers.svg",
-  CALENDAR_CLOCK: "./icons/calendar-clock.svg",
-  INTERROGATION: "./icons/interrogation.svg",
-  EXCLAMATION: "./icons/exclamation.svg",
-  EASTER_EGG: "./icons/easter-egg.svg",
-  EUROPA: "./icons/earth-europa.svg",
   AFRICA: "./icons/earth-africa.svg",
   AMERICAS: "./icons/earth-americas.svg",
   ASIA: "./icons/earth-asia.svg",
+  BURGER: "./icons/menu-burger.svg",
+  CALENDAR_CLOCK: "./icons/calendar-clock.svg",
+  CLOCK: "./icons/clock-five.svg",
+  COMPRESS: "./icons/compress.svg",
+  CROSS: "./icons/cross.svg",
+  EASTER_EGG: "./icons/easter-egg.svg",
+  EUROPA: "./icons/earth-europa.svg",
+  EXCLAMATION: "./icons/exclamation.svg",
+  EXPAND: "./icons/expand.svg",
+  GLASS_CHEERS: "./icons/glass-cheers.svg",
+  HOURGLASS_END: "./icons/hourglass-end.svg",
+  HOURGLASS_START: "./icons/hourglass-start.svg",
+  INTERROGATION: "./icons/interrogation.svg",
+  MOON: "./icons/moon.svg",
   PLANET: "./icons/planet-ringed.svg",
+  STOPWATCH: "./icons/stopwatch.svg",
+  SUN: "./icons/sun.svg",
 };
 
 const SECONDS_INTERVAL = 1000;
@@ -105,6 +107,21 @@ const toggleTheme = () => {
 
   // Update the 'data-theme' attribute of the <html> element based on 'isDarkMode'
   document.querySelector("html").dataset.theme = themeAttribute;
+};
+
+const toggleFullScreen = () => {
+  // Determine the icon source 
+  let iconSrc = document.fullscreenElement ? icons.COMPRESS : icons.EXPAND;
+
+  // Toggle full screen (https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API#examples)
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+
+  // Update the icon source
+  document.getElementById("full-screen-icon").src = iconSrc;
 };
 
 /**
@@ -803,6 +820,10 @@ const addEventListeners = () => {
   document
     .getElementById("theme-button")
     .addEventListener("click", toggleTheme);
+  // Full screen Button
+  document
+    .getElementById("full-screen-button")
+    .addEventListener("click", toggleFullScreen);
   // Seconds Button
   document
     .getElementById("seconds-button")
