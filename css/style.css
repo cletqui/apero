@@ -114,8 +114,8 @@ header .menu button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
   height: 4vmax;
   width: 4vmax;
 }
