@@ -53,10 +53,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1a1a1a;
-  background-color: var(--background-color);
-  color: #f4f4f4;
-  color: var(--text-color);
+  background-color: var(--background-color, #1a1a1a);
+  color: var(--text-color, #f4f4f4);
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -70,8 +68,7 @@ header {
   align-items: center;
   justify-content: right;
   text-align: right;
-  color: #f4f4f4;
-  color: var(--text-color);
+  color: var(--text-color, #f4f4f4);
   position: fixed;
   top: 0;
   width: 100%;
@@ -79,31 +76,37 @@ header {
   padding: 0.5vmax;
   padding-right: 2%;
 }
-
-header .menu {
-  display: flex;
-  justify-content: right;
-}
-
-header.menu-hidden {
-  transition: background-image 0.3s ease-in-out;
-  background-image: none;
-}
-header.menu-hidden .menu {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-header.menu-visible {
-  transition: background-image 0.3s ease-in-out;
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(
     200deg,
     var(--header-background-color),
     var(--background-color) 69%
   );
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  z-index: -1;
+}
+
+header .menu {
+  visibility: hidden;
+  display: flex;
+  justify-content: right;
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
+}
+
+header.menu-visible::before {
+  opacity: 1;
 }
 header.menu-visible .menu {
-  transition: opacity 0.3s ease-in-out;
+  visibility: visible;
+  transition: opacity 300ms ease-in-out;
   opacity: 1;
 }
 
@@ -149,20 +152,21 @@ main .clock {
 main .time {
   font-size: 20vmin;
   display: inline;
-  color: #f4f4f4;
-  color: var(--text-color);
+  color: var(--text-color, #f4f4f4);
   margin-top: 0%;
   margin-bottom: 4vmin;
 }
 
 main .date {
   font-size: 1vmax;
+  opacity: 50%;
   margin-top: 0%;
   margin-bottom: 1vmin;
 }
 
 main .time-zone {
   font-size: 1vmax;
+  opacity: 50%;
   margin-top: 0%;
   margin-bottom: 4vmin;
 }
@@ -188,14 +192,18 @@ main img.icon {
 
 main img.icon {
   display: flex;
-  filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg)
-    brightness(109%) contrast(91%);
-  filter: var(--text-color-svg);
+  filter: var(
+    --text-color-svg,
+    invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg) brightness(109%)
+      contrast(91%)
+  );
 }
 main img.icon.unselected {
-  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
-    contrast(83%);
-  filter: var(--icon-unselected);
+  filter: var(
+    --icon-unselected,
+    invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
+      contrast(83%)
+  );
 }
 
 /* Footer */
@@ -224,54 +232,59 @@ footer .link {
 footer .link img {
   cursor: pointer;
   border-radius: 0%;
-  filter: invert(93%) sepia(0%) saturate(28%) hue-rotate(159deg) brightness(84%)
-    contrast(103%);
-  filter: var(--footer-img-color-svg);
+  filter: var(
+    --footer-img-color-svg,
+    invert(93%) sepia(0%) saturate(28%) hue-rotate(159deg) brightness(84%)
+      contrast(103%)
+  );
 }
 footer .link img:hover {
-  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
-    contrast(83%);
-  filter: var(--footer-img-color-hover-svg);
+  filter: var(
+    --footer-img-color-hover-svg,
+    invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
+      contrast(83%)
+  );
 }
 
 /* Global */
 
 img.icon {
   display: flex;
-  filter: invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg)
-    brightness(109%) contrast(91%);
-  filter: var(--text-color-svg);
+  filter: var(
+    --text-color-svg,
+    invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg) brightness(109%)
+      contrast(91%)
+  );
 }
 img.icon.unselected {
-  filter: invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
-    contrast(83%);
-  filter: var(--icon-unselected);
+  filter: var(
+    --icon-unselected,
+    invert(44%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(88%)
+      contrast(83%)
+  );
 }
 
 button:hover img.icon {
-  filter: invert(5%) sepia(2%) saturate(48%) hue-rotate(314deg) brightness(101%)
-    contrast(89%);
-  filter: var(--background-color-svg);
+  filter: var(
+    --background-color-svg,
+    invert(5%) sepia(2%) saturate(48%) hue-rotate(314deg) brightness(101%)
+      contrast(89%)
+  );
 }
 
 button {
   padding: 15px 15px;
-  background-color: #1a1a1a;
-  background-color: var(--background-color);
-  color: #f4f4f4;
-  color: var(--text-color);
-  border: 2px solid #f4f4f4;
-  border: 2px solid var(--text-color);
+  background-color: var(--background-color, #1a1a1a);
+  color: var(--text-color, #f4f4f4);
+  border: 2px solid var(--text-color, #f4f4f4);
   cursor: pointer;
   margin: 1vmax;
   border-radius: 50px;
 }
 
 button:hover {
-  background-color: #f4f4f4;
-  background-color: var(--text-color);
-  color: #1a1a1a;
-  color: var(--background-color);
+  background-color: var(--text-color, #f4f4f4);
+  color: var(--background-color, #1a1a1a);
 }
 
 .tooltip {
@@ -283,10 +296,8 @@ button:hover {
 
 .tooltip .tooltip-text {
   visibility: hidden;
-  background-color: #000000;
-  background-color: var(--header-background-color);
-  color: #f4f4f4;
-  color: var(--text-color);
+  background-color: var(--header-background-color, #000000);
+  color: var(--text-color, #f4f4f4);
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
