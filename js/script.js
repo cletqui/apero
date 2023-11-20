@@ -146,7 +146,7 @@ const toggleTheme = () => {
    *
    * @type {string}
    */
-  const iconSrc = isDarkMode ? icons.MOON : icons.SUN;
+  const iconSrc = isDarkMode ? icons.SUN : icons.MOON;
 
   /**
    * The value of the 'data-theme' attribute based on the current theme.
@@ -171,7 +171,7 @@ const toggleFullScreen = () => {
    *
    * @type {string}
    */
-  let iconSrc = document.fullscreenElement ? icons.COMPRESS : icons.EXPAND;
+  let iconSrc = document.fullscreenElement ? icons.EXPAND : icons.COMPRESS;
 
   // Toggle full screen
   if (!document.fullscreenElement) {
@@ -195,15 +195,15 @@ const toggleSeconds = () => {
    */
   const showSeconds = document
     .getElementById("seconds-icon")
-    .src.endsWith(icons.CLOCK.substring(icons.CLOCK.lastIndexOf("/"))); // Get rid of the "." at the beginning of the path string
+    .src.endsWith(icons.STOPWATCH.substring(icons.STOPWATCH.lastIndexOf("/"))); // Get rid of the "." at the beginning of the path string
 
   // Update the timeOptions to include or exclude seconds based on 'showSeconds'
   timeOptions.second = showSeconds ? "2-digit" : undefined;
 
   // Update the clock icon based on 'showSeconds'
   document.getElementById("seconds-icon").src = showSeconds
-    ? icons.STOPWATCH
-    : icons.CLOCK;
+    ? icons.CLOCK
+    : icons.STOPWATCH;
 
   // Update the clock to apply the change immediately
   updateClock();
