@@ -1,6 +1,6 @@
 /* Global Constants */
 
-const APERO_DATA_URL = "https://data.cybai.re/apero";
+const APERO_DATA_URL = "https://api.cybai.re/data/apero";
 
 const iconPath = "./icons/";
 const getIconPath = (icon) => `${iconPath}${icon}.svg`;
