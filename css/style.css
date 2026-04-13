@@ -186,12 +186,9 @@ main .apero-info-hidden {
 }
 
 main img.icon {
+  display: flex;
   height: 1.8vmax;
   width: 1.8vmax;
-}
-
-main img.icon {
-  display: flex;
   filter: var(
     --text-color-svg,
     invert(82%) sepia(100%) saturate(15%) hue-rotate(355deg) brightness(109%)
