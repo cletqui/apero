@@ -1,6 +1,6 @@
 /* Global Constants */
 
-const APERO_DATA_URL = "./data/apero.json";
+const APERO_DATA_URL = "https://data.cybai.re/apero";
 
 const iconPath = "./icons/";
 const getIconPath = (icon) => `${iconPath}${icon}.svg`;
@@ -99,11 +99,15 @@ const showMenu = () => {
  * Initializes the theme based on the user's preferred color scheme.
  */
 const initiateTheme = () => {
-  const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)");
-  isDarkMode = defaultTheme.matches;
-  document.querySelector("html").dataset.theme = `${
-    isDarkMode ? "dark" : "light"
-  }-theme`;
+  const saved = window.localStorage.getItem("theme");
+  isDarkMode = saved
+    ? saved === "dark"
+    : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  document.querySelector("html").dataset.theme =
+    `${isDarkMode ? "dark" : "light"}-theme`;
+  document.getElementById("theme-icon").src = isDarkMode
+    ? icons.SUN
+    : icons.MOON;
 };
 
 /**
@@ -111,12 +115,12 @@ const initiateTheme = () => {
  */
 const toggleTheme = () => {
   isDarkMode = !isDarkMode;
+  window.localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   document.getElementById("theme-icon").src = isDarkMode
     ? icons.SUN
     : icons.MOON;
-  document.querySelector("html").dataset.theme = `${
-    isDarkMode ? "dark" : "light"
-  }-theme`;
+  document.querySelector("html").dataset.theme =
+    `${isDarkMode ? "dark" : "light"}-theme`;
 };
 
 /**
@@ -125,12 +129,11 @@ const toggleTheme = () => {
 const toggleFullScreen = () => {
   if (!document.fullscreenElement) {
     document.documentElement.requestFullscreen();
-  } else if (document.exitFullscreen) {
+    document.getElementById("full-screen-icon").src = icons.COMPRESS;
+  } else {
     document.exitFullscreen();
+    document.getElementById("full-screen-icon").src = icons.EXPAND;
   }
-  document.getElementById("full-screen-icon").src = document.fullscreenElement
-    ? icons.EXPAND
-    : icons.COMPRESS;
 };
 
 /**
@@ -245,8 +248,8 @@ const updateClock = () => {
   updateElement(
     "date",
     capitalizeFirstLetter(
-      now.toLocaleDateString(languageFormat, dateTimeOptions)
-    )
+      now.toLocaleDateString(languageFormat, dateTimeOptions),
+    ),
   );
   updateElement("time-zone", `(${userTimezone})`);
 };
@@ -316,30 +319,30 @@ const getTimeZoneInfo = (timeZone) => {
     const [continent, city] = timeZone.split("/");
     const timeZoneData = apero?.[continent]?.[city];
 
-    if (timeZoneData) {
+    // Treat missing entries and empty objects ({}) the same way
+    if (timeZoneData && Object.keys(timeZoneData).length > 0) {
       return timeZoneData;
     }
 
-    console.error(`No time zone ${timeZone} found in apéro data: ${error}`);
-
     const link = getLink(
       "https://github.com/cletqui/apero/#contributing",
-      "GitHub"
+      "GitHub",
     );
     const errorMessage =
       languageFormat === "fr-FR"
-        ? `Aucun fuseau horaire ${timeZone} n'a été trouvé dans apero.json. Pour y ajouter ce fuseau horaire, proposez-la sur ${link}.`
-        : `No time zone ${timeZone} found in apero.json. To add this time zone, submit it on ${link}.`;
+        ? `Aucun fuseau horaire ${timeZone} trouvé. Pour l'ajouter, proposez-le sur ${link}.`
+        : `No time zone ${timeZone} found in apéro data. To add it, submit it on ${link}.`;
 
     throw new Error(errorMessage);
   } catch (error) {
-    console.error(`Invalid user time zone: ${timeZone}: ${error}`);
+    // Re-throw errors we generated ourselves
+    if (error instanceof Error) throw error;
 
     const link = getLink("https://github.com/cletqui/apero/issues", "GitHub");
     const errorMessage =
       languageFormat === "fr-FR"
-        ? `Votre fuseau horaire semble invalide. Vous pouvez signaler ce problème sur ${link}.`
-        : `Your time zone appears to be invalid. You can report this issue to ${link}.`;
+        ? `Votre fuseau horaire semble invalide. Signalez ce problème sur ${link}.`
+        : `Your time zone appears to be invalid. Report this issue on ${link}.`;
 
     throw new Error(errorMessage);
   }
@@ -358,20 +361,16 @@ const getAperoInfo = (timeZone) => {
 
     // Check if the retrieved apéro data contains the 'aperoInfo' field
     if (timeZoneInfo && timeZoneInfo.aperoInfo) {
-      return timeZoneInfo.aperoInfo; // Return the apéro information if it exists
+      return timeZoneInfo.aperoInfo;
     } else {
-      console.error(
-        `Apéro info not found for ${timeZone} in apéro data: ${error}`
-      );
-
       const link = getLink(
         "https://github.com/cletqui/apero/#contributing",
-        "GitHub"
+        "GitHub",
       );
       const errorMessage =
         languageFormat === "fr-FR"
-          ? `Aucune information sur l'apéro à ${timeZone}. Vous pouvez contribuer au projet et ajouter ce fuseau horaire sur ${link}.`
-          : `Apéro info not found for ${timeZone}. You can contribute to the project and add this time zone on ${link}.`;
+          ? `Aucune information sur l'apéro à ${timeZone}. Contribuez au projet sur ${link}.`
+          : `Apéro info not found for ${timeZone}. Contribute to the project on ${link}.`;
 
       throw new Error(errorMessage);
     }
@@ -389,14 +388,15 @@ const getAperoInfo = (timeZone) => {
  */
 const getTimezoneTime = (timeZone) => {
   try {
-    const timeZoneOptions = {
-      ...timeOptions, // Default time options
-      timeZone: timeZone,
-      timeZoneName: "short",
-    };
-
-    // Get the current time in the specified time zone
-    return new Date().toLocaleTimeString(undefined, timeZoneOptions);
+    // Always use 24h format and a fixed locale so the HH:MM:SS split is reliable,
+    // regardless of whether the user has toggled 12h display mode.
+    return new Date().toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+      timeZone,
+    });
   } catch (error) {
     console.error(`Error getting time in ${timeZone}: ${error}`);
 
@@ -484,10 +484,10 @@ const randomAperoTooltipText = (timeZone) => {
   const textCountry =
     languageFormat === "fr-FR"
       ? `La capitale de ${countryName} est ${capital}, mais vous pouvez profiter de l'apéro dans d'autres grandes villes comme ${majorCities.join(
-          ", "
+          ", ",
         )}.`
       : `The capital of ${countryName} is ${capital}, but you can enjoy apéro in other big cities like ${majorCities.join(
-          ", "
+          ", ",
         )}.`;
   const textAperoTime =
     languageFormat === "fr-FR"
@@ -496,23 +496,23 @@ const randomAperoTooltipText = (timeZone) => {
   const textDrinks =
     languageFormat === "fr-FR"
       ? `Pendant l'apéro en ${countryName}, vous pouvez profiter de boissons typiques comme ${drinks.join(
-          ", "
+          ", ",
         )}.`
       : `During apéro in ${countryName}, you can enjoy typical drinks like ${drinks.join(
-          ", "
+          ", ",
         )}.`;
   const textSnacks =
     languageFormat === "fr-FR"
-      ? `Pendant l'apéro en ${countryName}, vous pouvez profiter d'en-cas typiques comme ${drinks.join(
-          ", "
+      ? `Pendant l'apéro en ${countryName}, vous pouvez profiter d'en-cas typiques comme ${snacks.join(
+          ", ",
         )}.`
       : `During apéro in ${countryName}, you can enjoy typical apéro snacks like ${snacks.join(
-          ", "
+          ", ",
         )}.`;
   const textBrands =
     languageFormat === "fr-FR"
       ? `Les marques de boisson connues en ${countryName} son ${brands.join(
-          ", "
+          ", ",
         )}.`
       : `Typical drink brands in ${countryName} include ${brands.join(", ")}.`;
   const textToast =
@@ -569,7 +569,7 @@ const updateAperoLocal = () => {
     } else if (isAperoNow === 0) {
       message =
         languageFormat === "fr-FR"
-          ? `It's time for apéro in ${tooltip}! Santé!`
+          ? `C'est l'heure de l'apéro à ${tooltip} ! Santé !`
           : `It's time for apéro in ${tooltip}! Cheers!`;
       icon = icons.GLASS_CHEERS;
     } else {
